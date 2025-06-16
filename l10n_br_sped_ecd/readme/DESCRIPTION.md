@@ -1,6 +1,3 @@
-Arquivo ECD do SPED
-~~~~~~~~~~~~~~~~~~~
-
 Este módulo contém toda a estrutura dos registros da ECD do SPED.
 Ou seja se vocẽ preencher todos registros do SPED, o arquivo digital vai sair certinho.
 **Porem o mapeamento dos dados a partir das transações do Odoo é um trabalho parcial
