@@ -5,6 +5,7 @@ from datetime import date
 
 from odoo.exceptions import UserError
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -71,6 +72,7 @@ class TestRecomputeEntryCst(CreditMixin, SpedEntradaCommon):
             line._sped_credit("pis")
         self.assertNotIn("Recalculate Entry CST", error.exception.args[0])
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_stop_reaches_the_screen_for_a_draft_in_a_debug_declaration(self):
         """Step by step: an imported entry of use and consumption still in typing,
         with the entry CST 50 of the old rule; a declaration of the EFD

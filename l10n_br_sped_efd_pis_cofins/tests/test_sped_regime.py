@@ -3,6 +3,7 @@
 
 from odoo.exceptions import UserError
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -25,6 +26,7 @@ class TestSpedPisCofinsContributionCode(CreditMixin, SpedEntradaCommon):
         self.assertEqual(self._sped_records(declaration, "M210")[0]["COD_CONT"], "51")
         self.assertEqual(self._sped_records(declaration, "M610")[0]["COD_CONT"], "51")
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_generation_stops_when_the_code_cannot_be_determined(self):
         """No code is worse than a message: the M210 went out as |M210||..."""
         self._entry("fo_compras_compras_comercializacao", "401")

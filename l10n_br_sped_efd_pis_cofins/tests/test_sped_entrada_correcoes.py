@@ -4,6 +4,7 @@
 from datetime import datetime
 
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -85,6 +86,7 @@ class TestSpedPisCofinsCorrecoesCredit(SpedPisCofinsEntradaMixin, SpedEntradaCom
 
     profit_calculation = "real"
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_c170_with_credit_carries_the_account_and_the_0500(self):
         """COD_CTA of a credit CST (50 to 66) is the account of the bill line
         and the 0500 declares it."""

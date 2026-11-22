@@ -6,6 +6,7 @@ from datetime import date, datetime
 
 from odoo.exceptions import UserError
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -264,6 +265,7 @@ class TestSpedPisCofinsCredit(CreditMixin, SpedEntradaCommon):
         self.assertEqual(m200["VL_TOT_CONT_NC_DEV"], "16,50")
         self.assertEqual(m200["VL_CONT_NC_REC"], "16,50")
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_file_stops_when_the_credit_has_no_assessment(self):
         """The M200 comes from the assessment: credit in the documents and no
         posted assessment is a file the PVA would refuse."""
@@ -274,6 +276,7 @@ class TestSpedPisCofinsCredit(CreditMixin, SpedEntradaCommon):
             declaration.button_create_sped_files()
         self.assertIn("assessment", error.exception.args[0])
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_file_stops_when_the_assessment_does_not_match_the_documents(self):
         """Posted before a late entry: the credit of the documents is not the
         credit of the assessment, and the message says so."""

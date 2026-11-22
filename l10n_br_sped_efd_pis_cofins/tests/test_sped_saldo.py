@@ -5,6 +5,7 @@ from datetime import date
 
 from odoo.exceptions import UserError
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -106,6 +107,7 @@ class TestSpedPisCofinsCreditBalance(CreditMixin, SpedEntradaCommon):
         self.assertEqual(m200["VL_TOT_CRED_DESC_ANT"], "16,50")
         self.assertEqual(self._number(m200["VL_TOT_CONT_NC_DEV"]), 0.0)
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_file_stops_when_an_earlier_month_was_never_assessed(self):
         """June has credit and no assessment at all; July is assessed and posted.
         The balance of July starts from zero and the credit of June would be lost

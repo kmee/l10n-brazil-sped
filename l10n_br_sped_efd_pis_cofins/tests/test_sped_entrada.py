@@ -4,6 +4,7 @@
 from datetime import date, datetime
 
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -162,12 +163,14 @@ class TestSpedPisCofinsEntradaNonCumulative(
         self.assertEqual(len(records), 1)
         return records[0]
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_credit_entry_cst_reaches_the_c170(self):
         self._entry_document()
         c170 = self._c170(self._declaration_july())
         self.assertEqual(c170["CST_PIS"], "50")
         self.assertEqual(c170["CST_COFINS"], "50")
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_credit_cst_and_values_are_booked(self):
         self._entry_document()
         c170 = self._c170(self._declaration_july())

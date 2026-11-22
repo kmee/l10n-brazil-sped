@@ -6,6 +6,7 @@ from datetime import date
 
 from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -244,6 +245,7 @@ class TestCreditOpeningChain(CreditMixin, SpedEntradaCommon):
         self.assertFalse(pis.opening_balance_warning)
         self.assertEqual(self._sped_records(self._declaration_month(7), "1100"), [])
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_stop_of_the_balance_points_to_the_opening_balance(self):
         """Credit from before the system that is not registered: the message of
         the stop says where to register it."""

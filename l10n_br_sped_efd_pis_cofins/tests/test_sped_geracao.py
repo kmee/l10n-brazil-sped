@@ -6,6 +6,7 @@ from unittest import mock
 
 from odoo.exceptions import UserError
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -51,6 +52,7 @@ class TestSpedPisCofinsGeneration(SpedPisCofinsEntradaMixin, SpedEntradaCommon):
         declaration.button_create_sped_files()
         self.assertIn("|0100|", self._generated_text(declaration))
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_a_register_that_cannot_be_pulled_stops_the_generation(self):
         """A register that fails to pull is only a note in the history and the
         file would go out without it: the generation stops with the reason."""

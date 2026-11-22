@@ -99,9 +99,28 @@ class SpedEfdPisCofinsPullTest(AccountMoveBRCommon):
 
     @classmethod
     def setup_independent_company(cls, **kwargs):
-        # the common of l10n_br_account sets up the Lucro Presumido by the name
-        kwargs.update(name="empresa 1 Lucro Presumido", industry_type="00")
-        return super().setup_independent_company(**kwargs)
+        kwargs.pop("name", None)
+        kwargs.update(
+            {
+                "tax_framework": "3",
+                "is_industry": True,
+                "industry_type": "00",
+                "profit_calculation": "presumed",
+                "ripi": True,
+                "piscofins_id": cls.env.ref(
+                    "l10n_br_fiscal.tax_pis_cofins_columativo"
+                ).id,
+                "icms_regulation_id": cls.env.ref(
+                    "l10n_br_fiscal.tax_icms_regulation"
+                ).id,
+                "cnae_main_id": cls.env.ref("l10n_br_fiscal.cnae_3101200").id,
+                "document_type_id": cls.env.ref("l10n_br_fiscal.document_55").id,
+            }
+        )
+        company = super().setup_independent_company(**kwargs)
+        company.name = "empresa 1 Lucro Presumido"
+        company.partner_id.state_id = cls.env.ref("base.state_br_sp").id
+        return company
 
     def test_pull_from_odoo_registers_created(self):
         """Test that Pull from Odoo creates the expected SPED registers."""
