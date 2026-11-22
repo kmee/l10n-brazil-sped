@@ -8,7 +8,6 @@
     documents do not produce.
 -->
 <odoo>
-
     <!-- Input tax is only recoverable when the fiscal operation says so
          (company dependent, so it only reaches the active demo company). -->
     <record id="l10n_br_fiscal.fo_compras" model="l10n_br_fiscal.operation">
@@ -78,5 +77,4 @@
             eval="[ref('demo_in_invoice_insumo'), ref('demo_out_invoice_producao')]"
         />
     </function>
-
 </odoo>
