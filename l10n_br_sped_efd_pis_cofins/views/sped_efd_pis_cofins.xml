@@ -8,16 +8,15 @@
     />
 
     <record id="declaration_efd_pis_cofins_action" model="ir.actions.act_window">
-    <field name="name">EFD_PIS_COFINS Declaration</field>
-    <field name="res_model">l10n_br_sped.efd_pis_cofins.0000</field>
-    <field name="view_mode">tree,form</field>
+        <field name="name">EFD_PIS_COFINS Declaration</field>
+        <field name="res_model">l10n_br_sped.efd_pis_cofins.0000</field>
+        <field name="view_mode">tree,form</field>
     </record>
     <menuitem
         action="declaration_efd_pis_cofins_action"
         parent="efd_pis_cofins"
         id="declaration_efd_pis_cofins"
     />
-
 
     <menuitem name="BLOCO 0" parent="efd_pis_cofins" id="efd_pis_cofins_0" />
 
@@ -117,7 +116,6 @@
         id="efd_pis_cofins_0900"
     />
 
-
     <menuitem name="BLOCO A" parent="efd_pis_cofins" id="efd_pis_cofins_a" />
 
     <record id="efd_pis_cofins_a010_action" model="ir.actions.act_window">
@@ -130,7 +128,6 @@
         parent="efd_pis_cofins_a"
         id="efd_pis_cofins_a010"
     />
-
 
     <menuitem name="BLOCO C" parent="efd_pis_cofins" id="efd_pis_cofins_c" />
 
@@ -145,7 +142,6 @@
         id="efd_pis_cofins_c010"
     />
 
-
     <menuitem name="BLOCO D" parent="efd_pis_cofins" id="efd_pis_cofins_d" />
 
     <record id="efd_pis_cofins_d010_action" model="ir.actions.act_window">
@@ -158,7 +154,6 @@
         parent="efd_pis_cofins_d"
         id="efd_pis_cofins_d010"
     />
-
 
     <menuitem name="BLOCO F" parent="efd_pis_cofins" id="efd_pis_cofins_f" />
 
@@ -173,7 +168,6 @@
         id="efd_pis_cofins_f010"
     />
 
-
     <menuitem name="BLOCO I" parent="efd_pis_cofins" id="efd_pis_cofins_i" />
 
     <record id="efd_pis_cofins_i010_action" model="ir.actions.act_window">
@@ -186,7 +180,6 @@
         parent="efd_pis_cofins_i"
         id="efd_pis_cofins_i010"
     />
-
 
     <menuitem name="BLOCO M" parent="efd_pis_cofins" id="efd_pis_cofins_m" />
 
@@ -297,9 +290,7 @@
         id="efd_pis_cofins_m800"
     />
 
-
     <menuitem name="BLOCO P" parent="efd_pis_cofins" id="efd_pis_cofins_p" />
-
 
     <menuitem name="BLOCO 1" parent="efd_pis_cofins" id="efd_pis_cofins_1" />
 
