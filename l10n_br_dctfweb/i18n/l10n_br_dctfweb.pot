@@ -1,0 +1,1822 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_br_dctfweb
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "A suspension can only cover a debit of its own assessment."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "A transmitted MIT cannot go back to draft. Rectify it instead."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_special_event__event_type__5
+msgid "Absorption (absorbed)"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_special_event__event_type__6
+msgid "Absorption (absorbing)"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__monetary_variation__2
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_monetary_variation__2
+msgid "Accrual basis"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__active
+msgid "Active"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__suspension_type__1
+msgid "Administrative"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__after_special_event
+msgid "After Special Event"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__8
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__8
+msgid "Agricultural production or consumer cooperative society"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__allows_scp
+msgid "Allows Scp"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__amount_total
+msgid "Amount Total"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_special_event.py:0
+#, python-format
+msgid "An assessment accepts at most %s special events."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid ""
+"An assessment with movement needs at least one debit. Tick 'Without "
+"movement' if there was no taxable fact."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "An assessment without movement cannot carry debits."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__periodicity__annual
+msgid "Annual"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__profit_taxation__1
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_profit_taxation__1
+msgid "Annual actual profit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__year
+msgid "AnoApuracao: the year of the assessment period."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_debit_year
+msgid "AnoDebito: annual IRPJ or CSLL adjustment, declared in March."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__debit_year
+msgid "AnoDebito: year of the annual IRPJ or CSLL adjustment."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__is_postponed
+msgid "AnoPostergado: IRPJ or CSLL postponed from an earlier period."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__postponed_year
+msgid "AnoPostergado: year of the postponed IRPJ or CSLL period."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__4
+msgid "April"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__profit_taxation__4
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_profit_taxation__4
+msgid "Arbitrated profit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Assess"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "Assess the MIT before closing it."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "Assess the MIT before exporting it."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__state__assessed
+msgid "Assessed"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__assessment_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__assessment_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__assessment_id
+msgid "Assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__periodicity
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__periodicity
+msgid "Assessment periodicity of the code, as published in the manual."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__8
+msgid "August"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Back to draft"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__real_profit_balance
+msgid ""
+"BalancoLucroReal: the entity raised a suspension or reduction balance sheet "
+"in the month. Only for annual actual profit."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__cofins
+msgid "COFINS"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__cpss
+msgid "CPSS"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__crc_number
+msgid "CRC number"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__crc_state_id
+msgid "CRC state"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__csll
+msgid "CSLL"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__monetary_variation__1
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_monetary_variation__1
+msgid "Cash basis"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__monetary_variation__3
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_monetary_variation__3
+msgid "Cash basis, high exchange rate volatility"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Close"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__state__closed
+msgid "Closed"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__state
+msgid ""
+"Closed means the local assessment is final and the JSON is built. "
+"Transmitted means the authority accepted it."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__6
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__6
+msgid ""
+"Closed supplementary pension entity, or non-profit open supplementary "
+"pension entity"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__establishment_cnpj
+msgid "CnpjEstabelecimento: the 6 digits after the CNPJ root."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_establishment
+msgid "CnpjEstabelecimento: the establishment the debit belongs to."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__incorporation_cnpj
+msgid ""
+"CnpjIncorporacao: 6 digits for an establishment of the company, or the whole"
+" 14 digit CNPJ for a joint venture development."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_incorporation
+msgid "CnpjIncorporacao: the real estate development the debit belongs to."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__scp_cnpj
+msgid "CnpjScp: the 14 digit CNPJ of the unincorporated joint venture."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__allows_scp
+msgid "CnpjScp: the unincorporated joint venture the debit belongs to."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__code
+msgid "Code"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__gold_city_id
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_gold_city
+msgid "CodigoMunicipioOuro: the city the gold was produced in."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__court_city_id
+msgid "CodigoMunicipioSj: the city the court sits in."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__with_deposit
+msgid "ComDeposito: the judicial suspension has a deposit."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model,name:l10n_br_dctfweb.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__company_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__company_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__company_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__company_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__7
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__7
+msgid "Cooperative society"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__court_number
+msgid "Court Number"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__court_city_id
+msgid "Court city"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__create_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__create_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__create_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__create_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__create_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__create_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__create_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__create_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__create_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__create_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__3
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__3
+msgid "Credit cooperative"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pis_cofins_regime__2
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pis_cofins_regime__2
+msgid "Cumulative"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__currency_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__currency_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__currency_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.actions.act_window,name:l10n_br_dctfweb.action_dctfweb_assessment
+#: model:ir.ui.menu,name:l10n_br_dctfweb.menu_dctfweb_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_company_form_dctfweb
+msgid "DCTFWeb/MIT"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model,name:l10n_br_dctfweb.model_l10n_br_dctfweb_assessment
+msgid "DCTFWeb/MIT Assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model,name:l10n_br_dctfweb.model_l10n_br_dctfweb_debit
+msgid "DCTFWeb/MIT Debit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model,name:l10n_br_dctfweb.model_l10n_br_dctfweb_special_event
+msgid "DCTFWeb/MIT Special Event"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model,name:l10n_br_dctfweb.model_l10n_br_dctfweb_suspension_line
+msgid "DCTFWeb/MIT Suspended Debit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model,name:l10n_br_dctfweb.model_l10n_br_dctfweb_suspension
+msgid "DCTFWeb/MIT Suspension"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__periodicity__daily
+msgid "Daily"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__decision_date
+msgid "DataDecisao."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__day
+msgid "Day"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__debit_id
+msgid "Debit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__debit_number
+msgid "Debit Number"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__debit_total
+msgid "Debit Total"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__debit_year
+msgid "Debit Year"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__amount
+msgid "Debit amount"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__debit_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Debits"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__12
+msgid "December"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__decision_date
+msgid "Decision Date"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__2
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__2
+msgid ""
+"Development agency, bank or other legal entity under art. 22, paragraph 1, "
+"of Law 8.212/1991"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__day
+msgid "DiaEvento: the day of the month the event happened."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__display_name
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__display_name
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__display_name
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__display_name
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__display_name
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__establishment_cnpj
+msgid "Establishment Cnpj"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__event_number
+msgid "Event Number"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__event_type
+msgid "Event Type"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Export JSON"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__extension
+msgid "Extension"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__2
+msgid "February"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__13
+msgid "First instance ruling not final, with suspensive effect"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_special_event__event_type__3
+msgid "Full spin-off"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__gold_city_id
+msgid "Gold origin city"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__group
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__group
+msgid "Group"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__iof
+msgid "IOF"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__ipi
+msgid "IPI"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__irpj
+msgid "IRPJ"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__profit_taxation__6
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_profit_taxation__6
+msgid "IRPJ exempt"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__profit_taxation__5
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_profit_taxation__5
+msgid "IRPJ immune"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__irrf
+msgid "IRRF"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__debit_number
+msgid ""
+"IdDebito: unique and sequential inside the assessment. The suspensions point"
+" at this number."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__debit_id
+msgid "IdDebitoSuspenso: the debit this suspension covers."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__event_number
+msgid "IdEvento: unique and sequential, from 1 to 5."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__special_event_id
+msgid ""
+"IdEventoDebito: the event up to whose date the taxable facts of this debit "
+"were considered."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__incorporation_cnpj
+msgid "Incorporation Cnpj"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_company_form_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Initial data"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__5
+msgid "Injunction in precautionary measure"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__1
+msgid "Injunction in writ of mandamus"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__4
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__4
+msgid "Insurance brokerage company"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__5
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__5
+msgid ""
+"Insurance or capitalization company, or for-profit open supplementary "
+"pension entity"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__is_postponed
+msgid "Is Postponed"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__1
+msgid "January"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__suspension_type__2
+msgid "Judicial"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__2
+msgid "Judicial deposit of the full amount"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__7
+msgid "July"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__6
+msgid "June"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment____last_update
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit____last_update
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code____last_update
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event____last_update
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension____last_update
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__write_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__write_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__write_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__write_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__write_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__write_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__write_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__write_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__write_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__write_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_revenue_code_form
+msgid "Layout requirements"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__1
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__1
+msgid "Legal entity in general"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__pj_qualification
+msgid "Legal entity qualification"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_crc_number
+msgid "MIT CRC number"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_crc_state_id
+msgid "MIT CRC state"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_pis_cofins_regime
+msgid "MIT PIS/COFINS regime"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model,name:l10n_br_dctfweb.model_l10n_br_dctfweb_revenue_code
+msgid "MIT Revenue Code"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.actions.act_window,name:l10n_br_dctfweb.action_dctfweb_revenue_code
+#: model:ir.ui.menu,name:l10n_br_dctfweb.menu_dctfweb_revenue_code
+msgid "MIT Revenue Codes"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__mit_file
+msgid "MIT file"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_pj_qualification
+msgid "MIT legal entity qualification"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_monetary_variation
+msgid "MIT monetary variation criterion"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_profit_taxation
+msgid "MIT profit taxation"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_responsible_cpf
+msgid "MIT responsible CPF"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_responsible_email
+msgid "MIT responsible e-mail"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_responsible_phone
+msgid "MIT responsible phone"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_res_company__dctfweb_responsible_phone_area
+msgid "MIT responsible phone area code"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_account_tax_group__dctfweb_revenue_code_id
+msgid "MIT revenue code"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_debit__source__manual
+msgid "Manual"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__3
+msgid "March"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__5
+msgid "May"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_special_event__event_type__2
+msgid "Merger"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__month
+msgid "MesApuracao: the month of the assessment period."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__mit_code
+msgid "Mit Code"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__mit_filename
+msgid "Mit Filename"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__monetary_variation
+msgid "Monetary variation criterion"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__month
+msgid "Month"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__periodicity__monthly
+msgid "Monthly"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__12
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__12
+msgid "More than one qualification during the month"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__reason
+msgid "MotivoSuspensao: only for a judicial suspension."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__name
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__name
+msgid "Name"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "New assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pis_cofins_regime__1
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pis_cofins_regime__1
+msgid "Non-cumulative"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pis_cofins_regime__3
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pis_cofins_regime__3
+msgid "Non-cumulative and cumulative"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pis_cofins_regime__4
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pis_cofins_regime__4
+msgid "Not applicable"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__11
+msgid "November"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__process_number
+msgid ""
+"NumeroProcesso: 20 digits for a lawsuit, 17 for an administrative process."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__10
+msgid "October"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "Only a draft or assessed MIT can be assessed again."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "Only a transmitted MIT can be rectified."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__9
+msgid "Ordinary action ruling favourable to the taxpayer, upheld by the TRF"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Origin"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__other_contributions
+msgid "Other contributions"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__pis_cofins_regime
+msgid "PIS/COFINS regime"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__pis_pasep
+msgid "PIS/PASEP"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__period
+msgid ""
+"PaDebito: the day for a daily code, the ten-day period for a ten-day code."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_period
+msgid "PaDebito: the day or the ten-day period of a daily or ten-day code."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_special_event__event_type__4
+msgid "Partial spin-off"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__period
+msgid "Period of the debit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__periodicity
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__periodicity
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_revenue_code_search
+msgid "Periodicity"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__responsible_phone_area
+msgid "Phone area code"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__responsible_phone
+msgid "Phone number"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__postponed_quarter
+msgid "Postponed Quarter"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__postponed_year
+msgid "Postponed Year"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__4
+msgid "Preliminary injunction"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__profit_taxation__3
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_profit_taxation__3
+msgid "Presumed profit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__process_number
+msgid "Process Number"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__third_party_process
+msgid ""
+"ProcessoTerceiro: the lawsuit belongs to a third party, the taxpayer is not "
+"the plaintiff."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__profit_taxation
+msgid "Profit Taxation"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__9
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__9
+msgid "Public agency or foundation"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__periodicity__quarterly
+msgid "Quarterly"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__profit_taxation__2
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_profit_taxation__2
+msgid "Quarterly actual profit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__group__ret
+msgid "RET/Unified payment"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_debit__source__computed
+msgid "Read from the tax assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__reason
+msgid "Reason"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__rectification_sequence
+msgid "Rectification Sequence"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__rectification_of_id
+msgid "Rectifies"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Rectify"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_debit_year
+msgid "Requires Debit Year"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_establishment
+msgid "Requires Establishment"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_gold_city
+msgid "Requires Gold City"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_incorporation
+msgid "Requires Incorporation"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__requires_period
+msgid "Requires Period"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_company_form_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Responsible"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__responsible_cpf
+msgid "Responsible CPF"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__responsible_email
+msgid "Responsible e-mail"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__revenue_code_id
+msgid "Revenue Code"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_account_tax_group__dctfweb_revenue_code_id
+msgid ""
+"Revenue code the debits of this group are confessed under in the MIT. Leave "
+"it empty for a tax the MIT does not cover, such as ICMS, or for a group "
+"whose debits are declared in the eSocial or in the EFD-Reinf."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__code
+msgid "Revenue code, 4 digits, as published in the DARF table."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__scp_cnpj
+msgid "SCP CNPJ"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__12
+msgid "STF extraordinary appeal decision favourable to the taxpayer"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__11
+msgid "STJ special appeal decision favourable to the taxpayer"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__no_movement
+msgid ""
+"SemMovimento: no taxable fact in the period. A company files it once and "
+"only files again when there is movement."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__month__9
+msgid "September"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__profit_taxation__7
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_profit_taxation__7
+msgid "Simples Nacional"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__source
+msgid "Source"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__special_event_id
+msgid "Special event"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__special_event_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Special events"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__state
+msgid "State"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__11
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__11
+msgid ""
+"State, Federal District, municipality or direct public administration body"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__pj_qualification__10
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__res_company__dctfweb_pj_qualification__10
+msgid ""
+"State-owned company, mixed-capital company or legal entity under art. 34, "
+"III, of Law 10.833/2003"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_search
+msgid "Status"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__suspended_total
+msgid "Suspended Total"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__amount
+msgid "Suspended amount"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__line_ids
+msgid "Suspended debits"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__suspension_id
+msgid "Suspension"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__suspension_type
+msgid "Suspension Type"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__real_profit_balance
+msgid "Suspension or reduction balance sheet"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__suspension_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+msgid "Suspensions"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__10
+msgid "TRF decision favourable to the taxpayer"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model,name:l10n_br_dctfweb.model_account_tax_group
+msgid "Tax Group"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__tax_assessment_id
+msgid "Tax assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__tax_assessment_ids
+msgid "Tax assessments"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_revenue_code_search
+msgid "Tax group"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__group
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__group
+msgid "Tax group the debit is written under, inside the Debitos object."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_revenue_code__periodicity__ten_day
+msgid "Ten-day"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_special_event__event_type__1
+msgid "Termination"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__mit_code
+msgid "The 6 digits the layout writes in CodigoDebito, code plus extension."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "The CPF of the responsible is required."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "The CPF of the responsible must have 11 digits."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid ""
+"The MIT %(name)s cannot be closed:\n"
+"%(pendencies)s"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid ""
+"The MIT only covers facts generated from %s on. Earlier periods were "
+"confessed in the DCTF PGD."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The SCP CNPJ of the debit %s must have 14 digits."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid ""
+"The assessment has special events, so the debit %s needs the event its "
+"taxable facts were considered up to."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "The company %s has no valid CNPJ."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_special_event.py:0
+#, python-format
+msgid "The day of the special event must be between 1 and %s."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid ""
+"The debit %s cannot point at a special event and be after the last event at "
+"the same time."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The debit %s needs the establishment CNPJ."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The debit %s needs the gold origin city."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The debit %s needs the incorporation CNPJ."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The debit %s needs the period of the debit (PaDebito)."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The debit %s needs the quarter of the postponed period."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The debit %s needs the year of the postponed period."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The debit of %s must be positive."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The establishment CNPJ of the debit %s must have 6 digits."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_revenue_code.py:0
+#, python-format
+msgid "The extension of the revenue code %s must have 2 digits."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "The judicial suspension %s needs its reason."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "The judicial suspension %s needs the court city."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "The judicial suspension %s needs the court number."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "The judicial suspension %s needs the decision date."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid ""
+"The layout does not accept a suspension in an assessment that has special "
+"events."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_special_event.py:0
+#, python-format
+msgid "The layout does not accept two special events on the same day."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "The legal entity qualification is required."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "The monetary variation criterion is required."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_debit.py:0
+#, python-format
+msgid "The period of the debit %(label)s must be between 1 and %(limit)s."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__tax_assessment_id
+msgid "The persisted assessment this amount was read from."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__tax_assessment_ids
+msgid "The persisted assessments this confession was read from."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid ""
+"The process number %s must have 20 digits for a lawsuit or 17 for an "
+"administrative process."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid "The profit taxation form is required."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_revenue_code.py:0
+#, python-format
+msgid "The revenue code %s must have 4 digits."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "The suspended amount must be positive."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "The suspended amount of the debit %s is larger than the debit itself."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "The suspension %s needs at least one suspended debit."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__after_special_event
+msgid ""
+"The taxable fact happened after the last special event of the month, so the "
+"debit goes to ListaDebitosAposEvento."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_assessment.py:0
+#, python-format
+msgid ""
+"These assessments were skipped because their tax group has no MIT revenue "
+"code: %s"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__third_party_process
+msgid "Third Party Process"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.constraint,message:l10n_br_dctfweb.constraint_l10n_br_dctfweb_assessment_unique_period_company
+msgid "This company already has an assessment for this period."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.constraint,message:l10n_br_dctfweb.constraint_l10n_br_dctfweb_revenue_code_unique_code_extension
+msgid "This revenue code and extension are already registered."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_special_event__event_type
+msgid "TipoEvento."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__suspension_type
+msgid "TipoSuspensao."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_search
+msgid "To close"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_tree
+msgid "Total"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_assessment__state__transmitted
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_search
+msgid "Transmitted"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__postponed_quarter
+msgid "TrimPostergado: quarter of the postponed period."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_debit__amount
+msgid "ValorDebito: the assessed amount of the debit."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension_line__amount
+msgid "ValorSuspenso."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__court_number
+msgid "VaraJudiciaria."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_revenue_code__extension
+msgid "Variation of the revenue code, 2 digits."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_suspension__with_deposit
+msgid "With Deposit"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__no_movement
+msgid "Without movement"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb.selection__l10n_br_dctfweb_suspension__reason__8
+msgid "Writ of mandamus ruling favourable to the taxpayer"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,field_description:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__year
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb.view_dctfweb_assessment_search
+msgid "Year"
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#: model:ir.model.fields,help:l10n_br_dctfweb.field_l10n_br_dctfweb_assessment__rectification_sequence
+msgid "Zero for the original assessment, then one per rectification."
+msgstr ""
+
+#. module: l10n_br_dctfweb
+#. odoo-python
+#: code:addons/l10n_br_dctfweb/models/dctfweb_suspension.py:0
+#, python-format
+msgid "without number"
+msgstr ""
