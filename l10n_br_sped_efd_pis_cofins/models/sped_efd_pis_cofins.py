@@ -206,8 +206,6 @@ def _previous_credit(env, declaration, tax_domain):
     from before the system), the file is not generated and the message says so.
     """
     assessment = _find_assessment(env, declaration, tax_domain, "non_cumulative")
-    # `_()` finds the language in a `context` of the caller
-    context = env.context  # noqa: F841
     if not assessment:
         return [], 0.0
     # a month with movement that was never assessed breaks the chain of the balance
@@ -221,7 +219,7 @@ def _previous_credit(env, declaration, tax_domain):
     )
     if abs(opening - assessment.previous_balance) > 0.01:
         raise UserError(
-            _(
+            env._(
                 "The %(tax)s credit balance that the assessment of the period "
                 "starts from (%(balance)s) is not what the posted assessments of "
                 "the earlier periods give (%(layers)s): assess and post the "
@@ -260,14 +258,9 @@ def _credit_groups(env, declaration, tax_domain):
     if not rows and not assessment.credit_total:
         return []
     label = tax_domain.upper()
-    # `_()` finds the language of the message in a `context` of the caller, or in
-    # the `self` of a method: in a function of the module it is this one, or the
-    # message goes out in the language of the user of the session, not the one of
-    # the declaration
-    context = env.context  # noqa: F841
     if not assessment:
         raise UserError(
-            _(
+            env._(
                 "The documents of the period book %(tax)s credit (CST 50 to 66), "
                 "so the file needs the %(tax)s assessment of the non-cumulative "
                 "regime of the period, posted. Assess it and generate the file "
@@ -278,7 +271,7 @@ def _credit_groups(env, declaration, tax_domain):
     total = round(sum(row["value"] for row in rows), 2)
     if abs(total - assessment.credit_total) > 0.01:
         raise UserError(
-            _(
+            env._(
                 "The %(tax)s credit of the documents (%(documents)s) is not the "
                 "credit of the posted assessment (%(assessment)s): assess the "
                 "period again before generating the file.",
@@ -397,11 +390,9 @@ def _check_regime(assessment):
     """The contribution code (table 4.3.5) and the field of the M200 the detail
     points at come from the regime of the assessment: without it the register
     would go out with a blank code, which the PVA refuses."""
-    env = getattr(assessment, "env", None)  # a plain object in a unit test
-    context = env.context if env else {}  # noqa: F841
     if assessment.regime not in COD_CONT_BY_REGIME:
         raise UserError(
-            _(
+            assessment.env._(
                 "The contribution code (table 4.3.5) of the assessment "
                 "%(assessment)s cannot be determined: its tax group does not "
                 "say the PIS/COFINS regime and the company does not tell it "
