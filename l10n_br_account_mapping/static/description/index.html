@@ -369,23 +369,27 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:1e863b63bfd95ed5703a77479e7d2f96be9cc46f543ff5c86c253c05a7a92d7e
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/KMEE/kmee-odoo-addons/tree/18.0/l10n_br_account_mapping"><img alt="KMEE/kmee-odoo-addons" src="https://img.shields.io/badge/github-KMEE%2Fkmee--odoo--addons-lightgray.png?logo=github" /></a></p>
-<p>Mapeia as contas do plano do Odoo para <strong>planos de contas externos</strong>: o plano do
-escritório de contabilidade que recebe a exportação contábil e o plano
-referencial da RFB usado no registro I051 do SPED Contábil.</p>
-<p>Uma empresa pode ter vários planos de destino ao mesmo tempo (dois escritórios,
-período de transição, referencial). Em cada plano, o registro central é a
-<strong>conta do destino</strong> (código e nome como o destino a conhece), e um vínculo diz
-quais contas do Odoo desaguam nela: <strong>N contas do Odoo para 1 conta do
-destino</strong>, que é a relação típica com o plano mais enxuto do escritório.</p>
-<p>Uma conta do Odoo só pode desaguar em uma conta por plano (o código exportado
-seria ambíguo); em planos diferentes, cada conta pode cair onde precisar.</p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/kmee/l10n-brazil-sped/tree/18.0/l10n_br_account_mapping"><img alt="kmee/l10n-brazil-sped" src="https://img.shields.io/badge/github-kmee%2Fl10n--brazil--sped-lightgray.png?logo=github" /></a></p>
+<p>Mapeia as contas do plano do Odoo para <strong>planos de contas externos</strong>: o
+plano do escritório de contabilidade que recebe a exportação contábil e
+o plano referencial da RFB usado no registro I051 do SPED Contábil.</p>
+<p>Uma empresa pode ter vários planos de destino ao mesmo tempo (dois
+escritórios, período de transição, referencial). Em cada plano, o
+registro central é a <strong>conta do destino</strong> (código e nome como o destino
+a conhece), e um vínculo diz quais contas do Odoo desaguam nela: <strong>N
+contas do Odoo para 1 conta do destino</strong>, que é a relação típica com o
+plano mais enxuto do escritório.</p>
+<p>Uma conta do Odoo só pode desaguar em uma conta por plano (o código
+exportado seria ambíguo); em planos diferentes, cada conta pode cair
+onde precisar.</p>
 <p>O desenho espelha o <tt class="docutils literal">account_consolidation</tt> do Odoo Enterprise
-(<tt class="docutils literal">consolidation.chart</tt>/<tt class="docutils literal">consolidation.account</tt>), sem depender dele e sem o
-escopo de consolidação financeira (períodos, taxas de câmbio): aqui é apenas o
-mapeamento. Quem tem o Enterprise encontra o mesmo vocabulário.</p>
-<p>Este módulo define o cadastro e a resolução (<tt class="docutils literal">plan.resolve(conta)</tt>); quem o
-consome são a exportação contábil e, futuramente, o SPED Contábil.</p>
+(<tt class="docutils literal">consolidation.chart</tt>/<tt class="docutils literal">consolidation.account</tt>), sem depender dele e
+sem o escopo de consolidação financeira (períodos, taxas de câmbio):
+aqui é apenas o mapeamento. Quem tem o Enterprise encontra o mesmo
+vocabulário.</p>
+<p>Este módulo define o cadastro e a resolução (<tt class="docutils literal">plan.resolve(conta)</tt>);
+quem o consome são a exportação contábil e, futuramente, o SPED
+Contábil.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -400,10 +404,10 @@ consome são a exportação contábil e, futuramente, o SPED Contábil.</p>
 </div>
 <div class="section" id="bug-tracker">
 <h1><a class="toc-backref" href="#toc-entry-1">Bug Tracker</a></h1>
-<p>Bugs are tracked on <a class="reference external" href="https://github.com/KMEE/kmee-odoo-addons/issues">GitHub Issues</a>.
+<p>Bugs are tracked on <a class="reference external" href="https://github.com/kmee/l10n-brazil-sped/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/KMEE/kmee-odoo-addons/issues/new?body=module:%20l10n_br_account_mapping%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/kmee/l10n-brazil-sped/issues/new?body=module:%20l10n_br_account_mapping%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -424,7 +428,7 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <h2><a class="toc-backref" href="#toc-entry-5">Maintainers</a></h2>
 <p>Current maintainer:</p>
 <p><a class="reference external image-reference" href="https://github.com/mileo"><img alt="mileo" src="https://github.com/mileo.png?size=40px" /></a></p>
-<p>This module is part of the <a class="reference external" href="https://github.com/KMEE/kmee-odoo-addons/tree/18.0/l10n_br_account_mapping">KMEE/kmee-odoo-addons</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/kmee/l10n-brazil-sped/tree/18.0/l10n_br_account_mapping">kmee/l10n-brazil-sped</a> project on GitHub.</p>
 <p>You are welcome to contribute.</p>
 </div>
 </div>

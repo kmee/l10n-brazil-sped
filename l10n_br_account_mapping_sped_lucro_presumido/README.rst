@@ -16,25 +16,25 @@ Plano Referencial RFB 2 - PJ em Geral - Lucro Presumido
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-KMEE%2Fkmee--odoo--addons-lightgray.png?logo=github
-    :target: https://github.com/KMEE/kmee-odoo-addons/tree/18.0/l10n_br_account_mapping_sped_lucro_presumido
-    :alt: KMEE/kmee-odoo-addons
+.. |badge3| image:: https://img.shields.io/badge/github-kmee%2Fl10n--brazil--sped-lightgray.png?logo=github
+    :target: https://github.com/kmee/l10n-brazil-sped/tree/18.0/l10n_br_account_mapping_sped_lucro_presumido
+    :alt: kmee/l10n-brazil-sped
 
 |badge1| |badge2| |badge3|
 
-Carga oficial do **plano referencial 2 da RFB**
-(PJ em Geral - Lucro Presumido), abas P100A, P150A do pacote de tabelas
-dinamicas do SPED, leiaute 12.
+Carga oficial do **plano referencial 2 da RFB** (PJ em Geral - Lucro
+Presumido), abas P100A, P150A do pacote de tabelas dinamicas do SPED,
+leiaute 12.
 
-Sao 1120 contas referenciais, com tipo
-(sintetica/analitica), hierarquia, natureza e vigencia. O modulo
-e gerado por ``tools/gerar_modulo_plano.py`` a partir da planilha
-publicada em http://sped.rfb.gov.br e atualizado por ``-u`` quando
-a RFB publica um leiaute novo.
+Sao 1120 contas referenciais, com tipo (sintetica/analitica),
+hierarquia, natureza e vigencia. O modulo e gerado por
+``tools/gerar_modulo_plano.py`` a partir da planilha publicada em
+http://sped.rfb.gov.br e atualizado por ``-u`` quando a RFB publica um
+leiaute novo.
 
-Depois de instalar, vincule as contas do Odoo as contas
-referenciais (analiticas) e aponte o plano na empresa: e o que
-alimenta o registro I051 da ECD.
+Depois de instalar, vincule as contas do Odoo as contas referenciais
+(analiticas) e aponte o plano na empresa: e o que alimenta o registro
+I051 da ECD.
 
 **Table of contents**
 
@@ -44,10 +44,10 @@ alimenta o registro I051 da ECD.
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues <https://github.com/KMEE/kmee-odoo-addons/issues>`_.
+Bugs are tracked on `GitHub Issues <https://github.com/kmee/l10n-brazil-sped/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/KMEE/kmee-odoo-addons/issues/new?body=module:%20l10n_br_account_mapping_sped_lucro_presumido%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/kmee/l10n-brazil-sped/issues/new?body=module:%20l10n_br_account_mapping_sped_lucro_presumido%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -55,17 +55,17 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * KMEE
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Luis Felipe Mileo <mileo@kmee.com.br>
+- Luis Felipe Mileo <mileo@kmee.com.br>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 .. |maintainer-mileo| image:: https://github.com/mileo.png?size=40px
     :target: https://github.com/mileo
@@ -75,6 +75,6 @@ Current maintainer:
 
 |maintainer-mileo| 
 
-This module is part of the `KMEE/kmee-odoo-addons <https://github.com/KMEE/kmee-odoo-addons/tree/18.0/l10n_br_account_mapping_sped_lucro_presumido>`_ project on GitHub.
+This module is part of the `kmee/l10n-brazil-sped <https://github.com/kmee/l10n-brazil-sped/tree/18.0/l10n_br_account_mapping_sped_lucro_presumido>`_ project on GitHub.
 
 You are welcome to contribute.

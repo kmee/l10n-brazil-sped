@@ -11,7 +11,7 @@
     "author": "KMEE, Odoo Community Association (OCA)",
     "maintainers": ["mileo"],
     "development_status": "Beta",
-    "website": "https://github.com/KMEE/kmee-odoo-addons",
+    "website": "https://github.com/kmee/l10n-brazil-sped",
     "depends": ["l10n_br_account_mapping_sped"],
     "data": [
         "data/mapping_plan_l12.xml",

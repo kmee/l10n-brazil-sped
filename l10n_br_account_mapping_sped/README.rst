@@ -16,33 +16,35 @@ Plano Referencial da RFB (SPED)
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-KMEE%2Fkmee--odoo--addons-lightgray.png?logo=github
-    :target: https://github.com/KMEE/kmee-odoo-addons/tree/18.0/l10n_br_account_mapping_sped
-    :alt: KMEE/kmee-odoo-addons
+.. |badge3| image:: https://img.shields.io/badge/github-kmee%2Fl10n--brazil--sped-lightgray.png?logo=github
+    :target: https://github.com/kmee/l10n-brazil-sped/tree/18.0/l10n_br_account_mapping_sped
+    :alt: kmee/l10n-brazil-sped
 
 |badge1| |badge2| |badge3|
 
-Liga os planos de contas de destino ao **plano referencial da RFB**, que é a
-base do registro **I051** do SPED Contábil (ECD): o mapeamento entre cada conta
-da empresa e a conta correspondente do plano referencial.
+Liga os planos de contas de destino ao **plano referencial da RFB**, que
+é a base do registro **I051** do SPED Contábil (ECD): o mapeamento entre
+cada conta da empresa e a conta correspondente do plano referencial.
 
 Como funciona:
 
-1. Crie um plano de destino marcado como **Plano referencial da RFB**, com o
-   código do plano na tabela oficial (campo ``COD_PLAN_REF`` do I051; por
-   exemplo, PJ em geral do Lucro Real usa o plano 1).
-2. Vincule as contas do Odoo às contas referenciais, como em qualquer plano de
-   destino (N contas do Odoo por conta referencial).
+1. Crie um plano de destino marcado como **Plano referencial da RFB**,
+   com o código do plano na tabela oficial (campo ``COD_PLAN_REF`` do
+   I051; por exemplo, PJ em geral do Lucro Real usa o plano 1).
+2. Vincule as contas do Odoo às contas referenciais, como em qualquer
+   plano de destino (N contas do Odoo por conta referencial).
 3. Aponte o plano na empresa (campo *Plano referencial da RFB*).
 
-O gerador da ECD consome ``account.l10n_br_sped_referential_line()``: para cada
-conta do I050, o método devolve ``COD_PLAN_REF``/``COD_CTA_REF`` quando a conta
-está mapeada, ou vazio quando não está (o I051 é opcional por conta).
+O gerador da ECD consome ``account.l10n_br_sped_referential_line()``:
+para cada conta do I050, o método devolve
+``COD_PLAN_REF``/``COD_CTA_REF`` quando a conta está mapeada, ou vazio
+quando não está (o I051 é opcional por conta).
 
-**Carga da tabela oficial**: as contas do plano referencial são publicadas pela
-RFB nas tabelas dinâmicas do SPED (site do SPED, ECF/ECD). Importe-as pelo
-import padrão do Odoo no modelo *Conta do Plano de Destino* (colunas: plano,
-código, nome). Os dados de demonstração deste módulo são apenas ilustrativos.
+**Carga da tabela oficial**: as contas do plano referencial são
+publicadas pela RFB nas tabelas dinâmicas do SPED (site do SPED,
+ECF/ECD). Importe-as pelo import padrão do Odoo no modelo *Conta do
+Plano de Destino* (colunas: plano, código, nome). Os dados de
+demonstração deste módulo são apenas ilustrativos.
 
 **Table of contents**
 
@@ -52,10 +54,10 @@ código, nome). Os dados de demonstração deste módulo são apenas ilustrativo
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues <https://github.com/KMEE/kmee-odoo-addons/issues>`_.
+Bugs are tracked on `GitHub Issues <https://github.com/kmee/l10n-brazil-sped/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/KMEE/kmee-odoo-addons/issues/new?body=module:%20l10n_br_account_mapping_sped%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/kmee/l10n-brazil-sped/issues/new?body=module:%20l10n_br_account_mapping_sped%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -63,17 +65,17 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * KMEE
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Luis Felipe Mileo <mileo@kmee.com.br>
+- Luis Felipe Mileo <mileo@kmee.com.br>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 .. |maintainer-mileo| image:: https://github.com/mileo.png?size=40px
     :target: https://github.com/mileo
@@ -83,6 +85,6 @@ Current maintainer:
 
 |maintainer-mileo| 
 
-This module is part of the `KMEE/kmee-odoo-addons <https://github.com/KMEE/kmee-odoo-addons/tree/18.0/l10n_br_account_mapping_sped>`_ project on GitHub.
+This module is part of the `kmee/l10n-brazil-sped <https://github.com/kmee/l10n-brazil-sped/tree/18.0/l10n_br_account_mapping_sped>`_ project on GitHub.
 
 You are welcome to contribute.
