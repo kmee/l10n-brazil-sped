@@ -8,16 +8,15 @@
     />
 
     <record id="declaration_efd_icms_ipi_action" model="ir.actions.act_window">
-    <field name="name">EFD_ICMS_IPI Declaration</field>
-    <field name="res_model">l10n_br_sped.efd_icms_ipi.0000</field>
-    <field name="view_mode">tree,form</field>
+        <field name="name">EFD_ICMS_IPI Declaration</field>
+        <field name="res_model">l10n_br_sped.efd_icms_ipi.0000</field>
+        <field name="view_mode">tree,form</field>
     </record>
     <menuitem
         action="declaration_efd_icms_ipi_action"
         parent="efd_icms_ipi"
         id="declaration_efd_icms_ipi"
     />
-
 
     <menuitem name="BLOCO 0" parent="efd_icms_ipi" id="efd_icms_ipi_0" />
 
@@ -172,7 +171,6 @@
         id="efd_icms_ipi_0600"
     />
 
-
     <menuitem name="BLOCO B" parent="efd_icms_ipi" id="efd_icms_ipi_b" />
 
     <record id="efd_icms_ipi_b020_action" model="ir.actions.act_window">
@@ -264,7 +262,6 @@
         parent="efd_icms_ipi_b"
         id="efd_icms_ipi_b500"
     />
-
 
     <menuitem name="BLOCO C" parent="efd_icms_ipi" id="efd_icms_ipi_c" />
 
@@ -384,7 +381,6 @@
         id="efd_icms_ipi_c860"
     />
 
-
     <menuitem name="BLOCO D" parent="efd_icms_ipi" id="efd_icms_ipi_d" />
 
     <record id="efd_icms_ipi_d100_action" model="ir.actions.act_window">
@@ -466,7 +462,6 @@
         id="efd_icms_ipi_d695"
     />
 
-
     <menuitem name="BLOCO E" parent="efd_icms_ipi" id="efd_icms_ipi_e" />
 
     <record id="efd_icms_ipi_e100_action" model="ir.actions.act_window">
@@ -515,7 +510,6 @@
         id="efd_icms_ipi_e500"
     />
 
-
     <menuitem name="BLOCO G" parent="efd_icms_ipi" id="efd_icms_ipi_g" />
 
     <record id="efd_icms_ipi_g110_action" model="ir.actions.act_window">
@@ -528,7 +522,6 @@
         parent="efd_icms_ipi_g"
         id="efd_icms_ipi_g110"
     />
-
 
     <menuitem name="BLOCO H" parent="efd_icms_ipi" id="efd_icms_ipi_h" />
 
@@ -543,7 +536,6 @@
         id="efd_icms_ipi_h005"
     />
 
-
     <menuitem name="BLOCO K" parent="efd_icms_ipi" id="efd_icms_ipi_k" />
 
     <record id="efd_icms_ipi_k100_action" model="ir.actions.act_window">
@@ -556,7 +548,6 @@
         parent="efd_icms_ipi_k"
         id="efd_icms_ipi_k100"
     />
-
 
     <menuitem name="BLOCO 1" parent="efd_icms_ipi" id="efd_icms_ipi_1" />
 
