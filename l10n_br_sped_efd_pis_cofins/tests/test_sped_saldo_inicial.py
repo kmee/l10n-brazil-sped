@@ -208,15 +208,13 @@ class TestCreditOpeningChain(CreditMixin, SpedEntradaCommon):
             [("tax_domain", "=", "pis"), ("date_from", "=", date(2026, 7, 1))]
         )
         self.assertIn("opening balance of the credit", pis.opening_balance_warning)
-        account = pis.tax_group_id.with_company(
-            self.company
-        ).tax_receivable_account_id
+        account = pis.tax_group_id.with_company(self.company).tax_receivable_account_id
         other = self.env["account.account"].create(
             {
                 "name": "Opening balance",
                 "code": "OPENBAL",
                 "account_type": "equity",
-                "company_id": self.company.id,
+                "company_ids": [self.company.id],
             }
         )
         journal = self.env["account.journal"].search(
@@ -281,7 +279,7 @@ class TestCreditOpeningImport(CreditMixin, SpedEntradaCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.company.partner_id.cnpj_cpf = "11.222.333/0001-81"
+        cls.company.partner_id.vat = "11.222.333/0001-81"
 
     def _import(self, text):
         wizard = self.env["l10n_br_pis_cofins.credit.opening.import"].create(

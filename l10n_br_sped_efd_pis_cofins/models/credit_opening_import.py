@@ -84,7 +84,7 @@ class CreditOpeningImport(models.TransientModel):
                 _("The file is not an EFD Contribuicoes: the record 0000 is missing.")
             )
         company_cnpj = "".join(
-            ch for ch in (self.company_id.partner_id.cnpj_cpf or "") if ch.isdigit()
+            ch for ch in (self.company_id.partner_id.vat or "") if ch.isdigit()
         )
         if company_cnpj != cnpj:
             raise UserError(
@@ -155,7 +155,7 @@ class CreditOpeningImport(models.TransientModel):
         return {
             "type": "ir.actions.act_window",
             "res_model": opening._name,
-            "view_mode": "tree,form",
+            "view_mode": "list,form",
             "domain": [("id", "in", created.ids)],
             "name": _("Opening balance of the PIS/COFINS credit"),
         }

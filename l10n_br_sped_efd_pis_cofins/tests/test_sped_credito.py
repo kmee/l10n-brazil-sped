@@ -26,7 +26,7 @@ class CreditMixin(SpedPisCofinsEntradaMixin):
             {
                 "name": "Accountant",
                 "is_accountant": True,
-                "cnpj_cpf": "111.444.777-35",
+                "vat": "111.444.777-35",
                 "crc_code": "1SP123456/O-0",
                 "email": "accountant@example.com",
                 "country_id": self.env.ref("base.br").id,
@@ -85,11 +85,12 @@ class CreditMixin(SpedPisCofinsEntradaMixin):
         ledger, post."""
         group = self.env["account.tax.group"].search(
             [
+                ("company_id", "=", self.company.id),
                 (
                     "fiscal_tax_group_id",
                     "=",
                     self.env.ref(f"l10n_br_fiscal.tax_group_{tax_domain}").id,
-                )
+                ),
             ],
             limit=1,
         )
@@ -108,7 +109,7 @@ class CreditMixin(SpedPisCofinsEntradaMixin):
                             "name": f"{tax_domain} {code}",
                             "code": f"{tax_domain.upper()}{code}",
                             "account_type": account_type,
-                            "company_id": self.company.id,
+                            "company_ids": [self.company.id],
                         }
                     )
                     .id

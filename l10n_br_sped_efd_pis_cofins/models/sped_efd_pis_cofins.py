@@ -484,7 +484,7 @@ class Registro0000(models.Model):
 
     def _get_accountant_required(self):
         # what the layout marks as mandatory in the 0100 (the descriptor of the PVA)
-        return [("cnpj_cpf", _("CPF")), ("crc_code", _("CRC"))]
+        return [("vat", _("CPF")), ("crc_code", _("CRC"))]
 
     def button_create_sped_files(self):
         """The credit block (M100 to M505) and the M200/M600 come from the
@@ -528,7 +528,7 @@ class Registro0000(models.Model):
             # "DT_INI": (will use the declaration field directly),
             # "DT_FIN": (will use the declaration field directly),
             "NOME": record.legal_name,
-            "CNPJ": misc.punctuation_rm(record.cnpj_cpf),
+            "CNPJ": misc.punctuation_rm(record.vat),
             "UF": record.state_id.code,
             "COD_MUN": misc.punctuation_rm(record.city_id.ibge_code),
             "SUFRAMA": record.l10n_br_isuf_code
@@ -574,14 +574,12 @@ class Registro0100(models.Model):
         return {
             "NOME": record.legal_name or record.name,
             "CPF": not record.is_company
-            and misc.punctuation_rm(record.cnpj_cpf or "")
+            and misc.punctuation_rm(record.vat or "")
             or "",
             # `crc_code` does exist on res.partner in this series, and the PVA
             # rejects the record without it: "mandatory field" on 0100 field 4.
             "CRC": record.crc_code or "",
-            "CNPJ": record.is_company
-            and misc.punctuation_rm(record.cnpj_cpf or "")
-            or "",
+            "CNPJ": record.is_company and misc.punctuation_rm(record.vat or "") or "",
             "CEP": misc.punctuation_rm(record.zip or ""),
             "END": record.street_name or record.street or "",
             "NUM": record.street_number or "",
@@ -664,7 +662,7 @@ class Registro0140(models.Model):
         return {
             "COD_EST": str(record.id),
             "NOME": record.legal_name,
-            "CNPJ": misc.punctuation_rm(record.cnpj_cpf),
+            "CNPJ": misc.punctuation_rm(record.vat),
             "UF": record.state_id.code,
             "IE": misc.punctuation_rm(record.l10n_br_ie_code or ""),
             "COD_MUN": record.city_id.ibge_code,
@@ -692,13 +690,11 @@ class Registro0150(models.Model):
             "COD_PART": record._get_sped_cod_part(),
             "NOME": record.legal_name or record.name,
             "COD_PAIS": record.country_id.ibge_code or "01058",
-            "CNPJ": record.is_company
-            and misc.punctuation_rm(record.cnpj_cpf or "")
-            or "",
+            "CNPJ": record.is_company and misc.punctuation_rm(record.vat or "") or "",
             "CPF": not record.is_company
-            and misc.punctuation_rm(record.cnpj_cpf or "")
+            and misc.punctuation_rm(record.vat or "")
             or "",
-            "IE": misc.punctuation_rm(record.inscr_est or ""),
+            "IE": misc.punctuation_rm(record.l10n_br_ie_code or ""),
             "COD_MUN": record.city_id.ibge_code or "",
             "SUFRAMA": record.l10n_br_isuf_code or "",
             "END": record.street_name or record.street or "",
@@ -939,7 +935,7 @@ class RegistroA010(models.Model):
     @api.model
     def _map_from_odoo(self, record, parent_record, declaration, index=0):
         return {
-            "CNPJ": misc.punctuation_rm(declaration.company_id.cnpj_cpf),
+            "CNPJ": misc.punctuation_rm(declaration.company_id.vat),
         }
 
 
@@ -1082,7 +1078,7 @@ class RegistroC010(models.Model):
     @api.model
     def _map_from_odoo(self, record, parent_record, declaration, index=0):
         return {
-            "CNPJ": misc.punctuation_rm(declaration.company_id.cnpj_cpf),
+            "CNPJ": misc.punctuation_rm(declaration.company_id.vat),
             "IND_ESCRI": "2",  # 2=Individualizada
         }
 
@@ -2051,7 +2047,7 @@ class RegistroD010(models.Model):
     @api.model
     def _map_from_odoo(self, record, parent_record, declaration, index=0):
         return {
-            "CNPJ": misc.punctuation_rm(declaration.company_id.cnpj_cpf),
+            "CNPJ": misc.punctuation_rm(declaration.company_id.vat),
         }
 
 
@@ -2523,7 +2519,7 @@ class RegistroF010(models.Model):
     @api.model
     def _map_from_odoo(self, record, parent_record, declaration, index=0):
         return {
-            "CNPJ": misc.punctuation_rm(declaration.company_id.cnpj_cpf),
+            "CNPJ": misc.punctuation_rm(declaration.company_id.vat),
         }
 
 
@@ -3018,7 +3014,7 @@ class RegistroF600(models.Model):
             "VL_RET": wh_pis + wh_cofins,
             "COD_REC": "",
             "IND_NAT_REC": "0",  # 0=Receita de Natureza Não Cumulativa
-            "CNPJ": misc.punctuation_rm(record.partner_id.cnpj_cpf or ""),
+            "CNPJ": misc.punctuation_rm(record.partner_id.vat or ""),
             "VL_RET_PIS": wh_pis,
             "VL_RET_COFINS": wh_cofins,
             "IND_DEC": "0",  # 0=PJ beneficiária da retenção
