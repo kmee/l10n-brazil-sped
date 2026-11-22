@@ -788,7 +788,10 @@ class Registro0460(models.Model):
               AND btrim(manual_fiscal_additional_data) != ''
             ORDER BY txt
         """
-        return query, [declaration.fiscal_document_ids.ids]
+        documents = self.env["l10n_br_sped.efd_icms_ipi.c100"]._get_booked_documents(
+            declaration
+        )
+        return query, [documents.ids]
 
     @api.model
     def _map_from_odoo(self, record, parent_record, declaration, index=0):

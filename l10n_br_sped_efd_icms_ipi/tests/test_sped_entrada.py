@@ -133,6 +133,8 @@ class TestSpedEfdIcmsIpiEntrada(EntradaHelpers, SpedEntradaCommon):
         self.assertNotIn("|C170|", text)
         self.assertNotIn("|C190|", text)
         self.assertNotIn("|C195|", text)
+        # nor the 0460 of its observation, that no C195 would refer to
+        self.assertNotIn("|0460|", text)
 
     def test_the_entry_received_after_its_emission_is_regular(self):
         """Emitted in June and received in July is a regular entry of July (00,
