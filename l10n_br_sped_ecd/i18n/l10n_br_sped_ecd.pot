@@ -227,6 +227,11 @@ msgid "BLOCO K"
 msgstr ""
 
 #. module: l10n_br_sped_ecd
+#: model:ir.model.fields,field_description:l10n_br_sped_ecd.field_l10n_br_sped_ecd_0000__num_ord
+msgid "Book Number"
+msgstr ""
+
+#. module: l10n_br_sped_ecd
 #: model:ir.model.fields,field_description:l10n_br_sped_ecd.field_l10n_br_sped_ecd_0000__brl_currency_id
 #: model:ir.model.fields,field_description:l10n_br_sped_ecd.field_l10n_br_sped_ecd_0007__brl_currency_id
 #: model:ir.model.fields,field_description:l10n_br_sped_ecd.field_l10n_br_sped_ecd_0020__brl_currency_id
@@ -3620,12 +3625,6 @@ msgstr ""
 #: model:ir.model.fields,help:l10n_br_sped_ecd.field_l10n_br_sped_ecd_9_j900__NAT_LIVRO
 #: model:ir.model.fields,help:l10n_br_sped_ecd.field_l10n_br_sped_ecd_j900__NAT_LIVRO
 msgid "Natureza do livro; finalidade a que se destinou o instrumento."
-msgstr ""
-
-#. module: l10n_br_sped_ecd
-#: model:ir.model.fields,field_description:l10n_br_sped_ecd.field_l10n_br_sped_ecd_0000__activity_calendar_event_id
-#: model:ir.model.fields,field_description:l10n_br_sped_ecd.field_l10n_br_sped_ecd_9_0000__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
 msgstr ""
 
 #. module: l10n_br_sped_ecd
