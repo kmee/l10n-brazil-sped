@@ -114,7 +114,7 @@
     <menuitem
         id="menu_credit_opening_import"
         name="Importar saldo inicial da EFD Contribui&#231;&#245;es"
-        parent="account.menu_finance_entries_actions"
+        parent="account.menu_finance_entries"
         action="credit_opening_import_action"
         groups="account.group_account_manager"
         sequence="93"
@@ -123,7 +123,7 @@
     <menuitem
         id="menu_credit_opening"
         name="Saldo inicial de cr&#233;dito de PIS/COFINS"
-        parent="account.menu_finance_entries_actions"
+        parent="account.menu_finance_entries"
         action="credit_opening_action"
         groups="account.group_account_manager"
         sequence="92"
