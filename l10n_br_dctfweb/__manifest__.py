@@ -7,7 +7,7 @@
     "category": "Localization/Brazil",
     "license": "AGPL-3",
     "author": "KMEE, Odoo Community Association (OCA)",
-    "website": "https://github.com/OCA/l10n-brazil",
+    "website": "https://github.com/kmee/l10n-brazil-sped",
     "development_status": "Alpha",
     "maintainers": ["mileo"],
     "depends": [
