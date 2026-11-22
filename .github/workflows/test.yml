@@ -11,7 +11,7 @@ on:
 
 jobs:
   unreleased-deps:
-    runs-on: ubuntu-latest
+    runs-on: [kmee-l10n-br]
     name: Detect unreleased dependencies
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
               fi
           done
   test:
-    runs-on: ubuntu-22.04
+    runs-on: [kmee-l10n-br]
     permissions:
       contents: write
     container: ${{ matrix.container }}
@@ -49,8 +49,6 @@ jobs:
           POSTGRES_USER: odoo
           POSTGRES_PASSWORD: odoo
           POSTGRES_DB: odoo
-        ports:
-          - 5432:5432
     env:
       OCA_ENABLE_CHECKLOG_ODOO: "1"
     steps:
