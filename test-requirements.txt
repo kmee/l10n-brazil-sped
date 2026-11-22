@@ -1,0 +1,29 @@
+odoo_test_helper
+signxml==3.2.2
+xmldiff
+# Same pins as OCA/l10n-brazil 18.0: requests-pkcs12 1.23+ requires
+# cryptography>=42, while the oca-ci 18.0 image ships cryptography 3.4.8,
+# and installing a newer cryptography there breaks pyOpenSSL
+# (oca_install_addons can no longer probe the addons path).
+requests_pkcs12<1.23
+# OCA/l10n-brazil addons the modules of this repository depend on, from the
+# 18.0-sped-base-full branch of the kmee fork: OCA/l10n-brazil 18.0 with the
+# ports of the SPED base that are not merged yet (l10n_br_sped_base
+# rewritten, CST of the entries, tax creditability, net cost in stock and
+# purchase, tax without credit, revenue code of the taxes, accountant of the
+# demo, closing of the result in l10n_br_account). See the README. Remove
+# each line when the addon is released on PyPI with the change.
+odoo-addon-l10n_br_account @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_account
+odoo-addon-l10n_br_base @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_base
+odoo-addon-l10n_br_coa @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_coa
+odoo-addon-l10n_br_coa_generic @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_coa_generic
+odoo-addon-l10n_br_coa_simple @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_coa_simple
+odoo-addon-l10n_br_fiscal @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_fiscal
+odoo-addon-l10n_br_fiscal_certificate @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_fiscal_certificate
+odoo-addon-l10n_br_fiscal_edi @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_fiscal_edi
+odoo-addon-l10n_br_nfe @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_nfe
+odoo-addon-l10n_br_nfe_spec @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_nfe_spec
+odoo-addon-l10n_br_sped_base @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_sped_base
+odoo-addon-l10n_br_stock @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_stock
+odoo-addon-l10n_br_stock_account @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=l10n_br_stock_account
+odoo-addon-spec_driven_model @ git+https://github.com/kmee/l10n-brazil@18.0-sped-base-full#subdirectory=spec_driven_model
