@@ -3,12 +3,11 @@
     <menuitem name="ECF" parent="l10n_br_sped_base.menu_root" id="ecf" sequence="2" />
 
     <record id="declaration_ecf_action" model="ir.actions.act_window">
-    <field name="name">ECF Declaration</field>
-    <field name="res_model">l10n_br_sped.ecf.0000</field>
-    <field name="view_mode">tree,form</field>
+        <field name="name">ECF Declaration</field>
+        <field name="res_model">l10n_br_sped.ecf.0000</field>
+        <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="declaration_ecf_action" parent="ecf" id="declaration_ecf" />
-
 
     <menuitem name="BLOCO 0" parent="ecf" id="ecf_0" />
 
@@ -56,7 +55,6 @@
     </record>
     <menuitem action="ecf_0930_action" parent="ecf_0" id="ecf_0930" />
 
-
     <menuitem name="BLOCO E" parent="ecf" id="ecf_e" />
 
     <record id="ecf_e010_action" model="ir.actions.act_window">
@@ -82,7 +80,6 @@
     </record>
     <menuitem action="ecf_e030_action" parent="ecf_e" id="ecf_e030" />
 
-
     <menuitem name="BLOCO J" parent="ecf" id="ecf_j" />
 
     <record id="ecf_j050_action" model="ir.actions.act_window">
@@ -98,7 +95,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecf_j100_action" parent="ecf_j" id="ecf_j100" />
-
 
     <menuitem name="BLOCO K" parent="ecf" id="ecf_k" />
 
@@ -129,7 +125,6 @@
     </record>
     <menuitem action="ecf_k935_action" parent="ecf_k" id="ecf_k935" />
 
-
     <menuitem name="BLOCO L" parent="ecf" id="ecf_l" />
 
     <record id="ecf_l030_action" model="ir.actions.act_window">
@@ -140,7 +135,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecf_l030_action" parent="ecf_l" id="ecf_l030" />
-
 
     <menuitem name="BLOCO M" parent="ecf" id="ecf_m" />
 
@@ -162,7 +156,6 @@
     </record>
     <menuitem action="ecf_m030_action" parent="ecf_m" id="ecf_m030" />
 
-
     <menuitem name="BLOCO N" parent="ecf" id="ecf_n" />
 
     <record id="ecf_n030_action" model="ir.actions.act_window">
@@ -173,7 +166,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecf_n030_action" parent="ecf_n" id="ecf_n030" />
-
 
     <menuitem name="BLOCO P" parent="ecf" id="ecf_p" />
 
@@ -186,7 +178,6 @@
     </record>
     <menuitem action="ecf_p030_action" parent="ecf_p" id="ecf_p030" />
 
-
     <menuitem name="BLOCO Q" parent="ecf" id="ecf_q" />
 
     <record id="ecf_q100_action" model="ir.actions.act_window">
@@ -195,7 +186,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecf_q100_action" parent="ecf_q" id="ecf_q100" />
-
 
     <menuitem name="BLOCO T" parent="ecf" id="ecf_t" />
 
@@ -208,7 +198,6 @@
     </record>
     <menuitem action="ecf_t030_action" parent="ecf_t" id="ecf_t030" />
 
-
     <menuitem name="BLOCO U" parent="ecf" id="ecf_u" />
 
     <record id="ecf_u030_action" model="ir.actions.act_window">
@@ -220,7 +209,6 @@
     </record>
     <menuitem action="ecf_u030_action" parent="ecf_u" id="ecf_u030" />
 
-
     <menuitem name="BLOCO V" parent="ecf" id="ecf_v" />
 
     <record id="ecf_v010_action" model="ir.actions.act_window">
@@ -229,7 +217,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecf_v010_action" parent="ecf_v" id="ecf_v010" />
-
 
     <menuitem name="BLOCO W" parent="ecf" id="ecf_w" />
 
@@ -248,7 +235,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecf_w300_action" parent="ecf_w" id="ecf_w300" />
-
 
     <menuitem name="BLOCO X" parent="ecf" id="ecf_x" />
 
@@ -385,7 +371,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecf_x510_action" parent="ecf_x" id="ecf_x510" />
-
 
     <menuitem name="BLOCO Y" parent="ecf" id="ecf_y" />
 
