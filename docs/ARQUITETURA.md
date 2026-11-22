@@ -65,9 +65,9 @@ dele, o que traz consequências que o repositório principal não tem:
 - os addons do OCA/l10n-brazil vêm da branch `16.0-sped-base` do fork da KMEE, listados
   um a um no `test-requirements.txt`, até que os pull requests da base sejam publicados
   no PyPI (veja o README);
-- o `l10n_br_sped_setup_tests` é um módulo só de CI que carrega o plano de contas
-  brasileiro nas empresas demo, que o OCA/l10n-brazil recebe dos próprios módulos de
-  plano de contas.
+- o `l10n_br_sped_setup_tests` é um módulo só de CI que instala o que os testes esperam
+  encontrar no OCA/l10n-brazil completo: os planos de contas das empresas demo e das
+  empresas de teste, o `l10n_br_stock_account` e o `l10n_br_nfe`.
 
 ## Séries
 

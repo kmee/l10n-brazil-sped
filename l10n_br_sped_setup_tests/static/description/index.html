@@ -372,12 +372,21 @@ ul.auto-toc {
 <p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/kmee/l10n-brazil-sped/tree/16.0/l10n_br_sped_setup_tests"><img alt="kmee/l10n-brazil-sped" src="https://img.shields.io/badge/github-kmee%2Fl10n--brazil--sped-lightgray.png?logo=github" /></a></p>
 <p>Módulo técnico para o CI deste repositório. Não se destina a bancos de
 produção.</p>
-<p>O CI instala apenas os módulos deste repositório e suas dependências.
-Sem um módulo de plano de contas brasileiro, as empresas de demonstração
-do <tt class="docutils literal">l10n_br_base</tt> não têm plano de contas e qualquer teste que crie
-uma fatura nelas falha. Depender do <tt class="docutils literal">l10n_br_coa_generic</tt> carrega o
-plano brasileiro nas empresas de demonstração, como no CI do
-OCA/l10n-brazil.</p>
+<p>O CI instala apenas os módulos deste repositório e suas dependências, e
+os testes dos módulos do SPED foram escritos no CI do OCA/l10n-brazil,
+que instala a localização inteira. Este módulo traz o que eles esperam
+encontrar no banco:</p>
+<ul class="simple">
+<li><tt class="docutils literal">l10n_br_coa_generic</tt> e <tt class="docutils literal">l10n_br_coa_simple</tt>: o plano de contas
+das empresas de demonstração e das empresas que o common de testes do
+<tt class="docutils literal">l10n_br_account</tt> cria;</li>
+<li><tt class="docutils literal">l10n_br_stock_account</tt>: a valorização do estoque pelo custo
+líquido, sem a qual os testes de entrada sem direito a crédito são
+pulados;</li>
+<li><tt class="docutils literal">l10n_br_nfe</tt>: a NF-e de venda dos testes só gera a chave de acesso
+pelo processador da NF-e; sem ele, a confirmação recusa a nota de uma
+empresa sem CNPJ.</li>
+</ul>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
