@@ -5575,6 +5575,22 @@ msgid "Código de ajuste"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_fiscal_tax_definition__sped_cod_aj
+msgid ""
+"Código de ajuste da apuração do ICMS (Tabela 5.3) usado no registro C197 do "
+"SPED EFD ICMS/IPI para este benefício fiscal. Quando vazio, o C197 usa o "
+"cBenef declarado pelo fornecedor."
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_fiscal_icms_relief__sped_cod_aj
+msgid ""
+"Código de ajuste da apuração do ICMS (Tabela 5.3) usado no registro C197 do "
+"SPED EFD ICMS/IPI para este motivo de desoneração. Quando vazio, o C197 usa "
+"o cBenef declarado pelo fornecedor."
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_1200__COD_AJ_APUR
 #: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_1200__COD_AJ_APUR
 msgid "Código de ajuste, conforme informado na tabela indicada no item 5.1.1"
@@ -19941,6 +19957,12 @@ msgid "Resumo do Movimento Diário."
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_fiscal_icms_relief__sped_cod_aj
+#: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_fiscal_tax_definition__sped_cod_aj
+msgid "SPED Adjustment Code"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_e310__VL_SLD_CRED_TRANSPORTAR_DIFAL
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_e310__VL_SLD_CRED_TRANSPORTAR_DIFAL
 msgid "Saldo credor a transportar"
@@ -21582,6 +21604,16 @@ msgid "Tanque que armazena o combustível"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_fiscal_tax_definition
+msgid "Tax Definition"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_fiscal_icms_relief
+msgid "Tax ICMS Relief"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_c165__TEMPER
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_c165__TEMPER
 msgid "Temperatura em graus Celsius utilizada"
@@ -21618,6 +21650,14 @@ msgid ""
 "Texto livre da informação complementar existente no documento fiscal, "
 "inclusive espécie de normas legais, poder normativo, número, capitulação, "
 "data e demais referências pertinentes com indicações referentes ao tributo"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/fiscal_data.py:0
+msgid ""
+"The SPED adjustment code must have exactly 10 positions (table 5.3 of the "
+"EFD ICMS/IPI): %s"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
