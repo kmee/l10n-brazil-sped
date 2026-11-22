@@ -10,10 +10,7 @@ from lxml.builder import E
 
 from odoo import api, fields, models
 
-from odoo.addons.l10n_br_sped_base.models.sped_mixin import (
-    EDITABLE_ON_DRAFT,
-    LAYOUT_VERSIONS,
-)
+from odoo.addons.l10n_br_sped_base.models.sped_mixin import LAYOUT_VERSIONS
 from odoo.addons.l10n_br_sped_base.models.sped_signer import (
     QUALIFICACAO_SIGNATARIO,
 )
@@ -85,8 +82,8 @@ class Registro0000(models.Model):
     @api.model
     def _append_top_view_elements(self, group, inline=False):
         res = super()._append_top_view_elements(group)
-        group.append(E.field(name="ind_esc", required="1", attrs=EDITABLE_ON_DRAFT))
-        group.append(E.field(name="num_ord", required="1", attrs=EDITABLE_ON_DRAFT))
+        group.append(E.field(name="ind_esc", required="1", readonly="state != 'draft'"))
+        group.append(E.field(name="num_ord", required="1", readonly="state != 'draft'"))
         return res
 
     _NATUREZA_DO_LIVRO = {
