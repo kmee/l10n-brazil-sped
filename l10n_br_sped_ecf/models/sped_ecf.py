@@ -122,7 +122,7 @@ class Registro0000(models.Model):
         for linha in linhas:
             doc = linha.document_id
             parceiro = doc.partner_id
-            cnpj = "".join(c for c in (parceiro.cnpj_cpf or "") if c.isdigit())
+            cnpj = "".join(c for c in (parceiro.vat or "") if c.isdigit())
             nome_doc = f"{doc.document_type_id.code} {doc.document_number or doc.id}"
             por_codigo = {}
             for imposto, base, valor, campo in (
@@ -306,10 +306,8 @@ class Registro0000(models.Model):
             self.env["account.account"]
             .with_company(self.company_id)
             .search(
-                [
-                    ("company_id", "=", self.company_id.id),
-                    ("l10n_br_sped_referential_code", "!=", False),
-                ]
+                self.env["account.account"]._check_company_domain(self.company_id)
+                + [("l10n_br_sped_referential_code", "!=", False)]
             )
         )
         por_codigo = {}
@@ -838,12 +836,12 @@ class RegistroJ050(models.Model):
         groups = (
             self.env["account.group"]
             .with_company(company)
-            .search([("company_id", "=", company.id)])
+            .search(self.env["account.group"]._check_company_domain(company))
         )
         accounts = (
             self.env["account.account"]
             .with_company(company)
-            .search([("company_id", "=", company.id)])
+            .search(self.env["account.account"]._check_company_domain(company))
         )
 
         group_nat = {}

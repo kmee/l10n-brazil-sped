@@ -91,7 +91,7 @@ class EcfShareholder(models.Model):
         for shareholder in self.filtered("partner_id"):
             partner = shareholder.partner_id
             shareholder.name = partner.name
-            shareholder.cpf_cnpj = partner.vat or partner.cnpj_cpf
+            shareholder.cpf_cnpj = partner.vat
             shareholder.country_id = partner.country_id
 
     def _sped_values(self, declaration):

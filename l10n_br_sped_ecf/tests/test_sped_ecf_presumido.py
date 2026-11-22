@@ -373,7 +373,7 @@ class TestEcfPresumido(common.TransactionCase):
         )
         conta_servico = self.env["account.account"].search(
             [
-                ("company_id", "=", self.company.id),
+                ("company_ids", "in", self.company.ids),
                 ("l10n_br_ecf_revenue_line", "=", "8"),
             ],
             limit=1,

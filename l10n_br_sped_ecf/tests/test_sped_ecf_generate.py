@@ -52,7 +52,7 @@ class SpedEcfGenerateTest(common.TransactionCase):
         # the ECF reports the balance sheet after the closing of the result
         account = self.env["account.account"].search(
             [
-                ("company_id", "=", self.company.id),
+                ("company_ids", "in", self.company.ids),
                 ("internal_group", "=", "equity"),
             ],
             limit=1,

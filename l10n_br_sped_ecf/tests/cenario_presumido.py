@@ -316,7 +316,7 @@ class CenarioPresumido:
                         "code": codigo,
                         "name": nome,
                         "account_type": tipo,
-                        "company_id": self.company.id,
+                        "company_ids": [self.company.id],
                         "l10n_br_sped_referential_code": referencial,
                         "l10n_br_ecf_revenue_line": linha_p200,
                         "l10n_br_ecf_withholding_line": linha_wh,
