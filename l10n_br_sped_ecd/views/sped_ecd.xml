@@ -3,12 +3,11 @@
     <menuitem name="ECD" parent="l10n_br_sped_base.menu_root" id="ecd" sequence="2" />
 
     <record id="declaration_ecd_action" model="ir.actions.act_window">
-    <field name="name">ECD Declaration</field>
-    <field name="res_model">l10n_br_sped.ecd.0000</field>
-    <field name="view_mode">tree,form</field>
+        <field name="name">ECD Declaration</field>
+        <field name="res_model">l10n_br_sped.ecd.0000</field>
+        <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="declaration_ecd_action" parent="ecd" id="declaration_ecd" />
-
 
     <menuitem name="BLOCO 0" parent="ecd" id="ecd_0" />
 
@@ -40,7 +39,6 @@
     </record>
     <menuitem action="ecd_0150_action" parent="ecd_0" id="ecd_0150" />
 
-
     <menuitem name="BLOCO I" parent="ecd" id="ecd_i" />
 
     <record id="ecd_i010_action" model="ir.actions.act_window">
@@ -49,7 +47,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecd_i010_action" parent="ecd_i" id="ecd_i010" />
-
 
     <menuitem name="BLOCO J" parent="ecd" id="ecd_j" />
 
@@ -66,7 +63,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem action="ecd_j900_action" parent="ecd_j" id="ecd_j900" />
-
 
     <menuitem name="BLOCO K" parent="ecd" id="ecd_k" />
 

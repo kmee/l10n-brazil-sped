@@ -1,6 +1,7 @@
 # Copyright 2024 - TODAY, Akretion - Raphael Valyi <raphael.valyi@akretion.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.en.html).
 """Generation of block I from the Odoo ledger: the tests assert amounts."""
+
 from io import StringIO
 
 from odoo.tests import tagged
