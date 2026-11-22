@@ -2063,7 +2063,7 @@ class RegistroC197(models.Model):
                     rel.code,
                     ''
                 ) AS descr,
-                COALESCE(pt.default_code, '') AS cod_item,
+                COALESCE(NULLIF(pp.default_code, ''), pp.id::text) AS cod_item,
                 fdl.icms_base AS vl_bc_icms,
                 fdl.icms_percent AS aliq_icms,
                 fdl.icms_value AS vl_icms,
@@ -2073,7 +2073,6 @@ class RegistroC197(models.Model):
             LEFT JOIN l10n_br_fiscal_tax_definition benef
                 ON benef.id = fdl.icms_tax_benefit_id
             LEFT JOIN product_product pp ON pp.id = fdl.product_id
-            LEFT JOIN product_template pt ON pt.id = pp.product_tmpl_id
             WHERE fdl.document_id = %s
               AND (COALESCE(fdl.icms_relief_value, 0) > 0
                    OR COALESCE(fdl.icms_tax_benefit_code, '') != ''

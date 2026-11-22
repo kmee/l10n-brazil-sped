@@ -196,6 +196,18 @@ class TestSpedEfdIcmsIpiCorrecoes(EntradaHelpers, SpedEntradaCommon):
         c197 = self._sped_records(self._declaration_july(), "C197")
         self.assertEqual([rec["COD_AJ"] for rec in c197], ["SP12345678"])
 
+    def test_c197_cod_item_is_the_one_of_the_0200(self):
+        """C197 COD_ITEM points to the 0200 (REGRA_EXISTE_COD_ITEM_V2): the
+        same code as the C170, also for a product without a reference."""
+        self.product_a.default_code = False
+        _doc, line = self._entry_document(manual_fiscal_additional_data="Obs")
+        line.partner_icms_tax_benefit_code = "SP12345678"
+        declaration = self._declaration_july()
+        c197 = self._sped_records(declaration, "C197")
+        self.assertEqual(
+            [rec["COD_ITEM"] for rec in c197], [self._c170(declaration)["COD_ITEM"]]
+        )
+
     def test_the_sped_adjustment_code_must_have_10_positions(self):
         with self.assertRaises(ValidationError):
             self.env["l10n_br_fiscal.icms.relief"].create(
