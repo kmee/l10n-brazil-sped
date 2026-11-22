@@ -38,6 +38,10 @@ def load_posted_invoice_demo(env):
         )
         return
 
+    # The sale is an NF-e: posting it fills the spec models of the NF-e, which
+    # the registry only binds in _register_hook, after every module is loaded.
+    env["l10n_br_fiscal.document"]._register_hook()
+
     user = env.user
     previous_company = user.company_id
     previous_companies = user.company_ids

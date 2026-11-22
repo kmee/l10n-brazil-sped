@@ -19,9 +19,9 @@ class TestRegimeOfTheGroup(TransactionCase):
     def _assessment(self, tax_domain, regime="not_applicable"):
         group = self.env["account.tax.group"].create(
             {
-                "name": "%s (teste do regime)" % tax_domain,
+                "name": f"{tax_domain} (teste do regime)",
                 "fiscal_tax_group_id": self.env.ref(
-                    "l10n_br_fiscal.tax_group_%s" % tax_domain
+                    f"l10n_br_fiscal.tax_group_{tax_domain}"
                 ).id,
                 "regime": regime,
             }

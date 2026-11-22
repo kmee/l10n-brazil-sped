@@ -23,8 +23,8 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
     """
 
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         # Opt in to the fiscal tax definitions of the demo company: without
         # them the engine has nothing approved to apply and the invoice posts
         # with no tax, which is exactly the failure this test exists to catch.
@@ -57,11 +57,19 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
             post=True,
         )
 
+    @classmethod
+    def _tax_group(cls, name):
+        """The tax group of the chart is loaded per company on 18.0."""
+        key = f"{cls.company.id}_{name}"
+        return cls.env.ref(
+            f"l10n_br_coa.{key}", raise_if_not_found=False
+        ) or cls.env.ref(f"account.{key}")
+
     def _assessment(self, group_xmlid):
         return self.env["l10n_br_tax.assessment"].create(
             {
                 "company_id": self.company.id,
-                "tax_group_id": self.env.ref(group_xmlid).id,
+                "tax_group_id": self._tax_group(group_xmlid).id,
                 "date_from": "2026-07-01",
                 "date_to": "2026-07-31",
             }
@@ -88,13 +96,12 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
         """The ICMS the invoice booked is the ICMS the assessment reports."""
         icms_lines = self.invoice.line_ids.filtered(
             lambda ml: ml.tax_line_id
-            and ml.tax_line_id.tax_group_id
-            == self.env.ref("l10n_br_coa.tax_group_icms")
+            and ml.tax_line_id.tax_group_id == self._tax_group("tax_group_icms")
         )
         booked = sum(icms_lines.mapped("credit")) - sum(icms_lines.mapped("debit"))
         self.assertGreater(booked, 0.0, "the sale booked no ICMS to assess")
 
-        assessment = self._assessment("l10n_br_coa.tax_group_icms")
+        assessment = self._assessment("tax_group_icms")
         assessment.action_compute()
 
         self.assertAlmostEqual(assessment.debit_total, booked, places=2)
@@ -120,19 +127,19 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
         left out here is a block that serializes nothing.
         """
         for group_xmlid in (
-            "l10n_br_coa.tax_group_icms",
-            "l10n_br_coa.tax_group_ipi",
-            "l10n_br_coa.tax_group_pis",
-            "l10n_br_coa.tax_group_cofins",
+            "tax_group_icms",
+            "tax_group_ipi",
+            "tax_group_pis",
+            "tax_group_cofins",
         ):
             with self.subTest(group=group_xmlid):
-                group = self.env.ref(group_xmlid)
+                group = self._tax_group(group_xmlid)
                 booked_lines = self.invoice.line_ids.filtered(
                     lambda ml, g=group: ml.tax_line_id
                     and ml.tax_line_id.tax_group_id == g
                 )
                 if not booked_lines:
-                    self.skipTest("%s not applied by this operation" % group.name)
+                    self.skipTest(f"{group.name} not applied by this operation")
                 booked = sum(booked_lines.mapped("credit")) - sum(
                     booked_lines.mapped("debit")
                 )
@@ -157,8 +164,7 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
         """
         recoverable = self.purchase.line_ids.filtered(
             lambda ml: ml.tax_line_id
-            and ml.tax_line_id.tax_group_id
-            == self.env.ref("l10n_br_coa.tax_group_icms")
+            and ml.tax_line_id.tax_group_id == self._tax_group("tax_group_icms")
             and ml.debit
         )
         booked = sum(recoverable.mapped("debit")) - sum(recoverable.mapped("credit"))
@@ -166,7 +172,7 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
             booked, 0.0, "the purchase booked no recoverable ICMS to assess"
         )
 
-        assessment = self._assessment("l10n_br_coa.tax_group_icms")
+        assessment = self._assessment("tax_group_icms")
         assessment.action_compute()
 
         self.assertAlmostEqual(assessment.credit_total, booked, places=2)
@@ -183,7 +189,7 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
         Keeping it in the set is what made the credit cancel out, so the guard
         belongs on the selection of taxes rather than on the arithmetic.
         """
-        assessment = self._assessment("l10n_br_coa.tax_group_icms")
+        assessment = self._assessment("tax_group_icms")
         counterparts = assessment._get_taxes().filtered(
             lambda tax: assessment._is_counterpart_tax(tax)
         )
@@ -195,7 +201,7 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
         model = self.env["l10n_br_tax.assessment"]
         taxes = self.env["account.tax"].search(
             [
-                ("tax_group_id", "=", self.env.ref("l10n_br_coa.tax_group_pis").id),
+                ("tax_group_id", "=", self._tax_group("tax_group_pis").id),
                 ("company_id", "=", self.company.id),
                 ("type_tax_use", "=", type_tax_use),
             ]
@@ -207,13 +213,13 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
     def test_the_cumulative_regime_takes_no_input_credit(self):
         """The cumulative PIS has no input credit: what is due is the PIS of the
         sale, whatever the purchase booked."""
-        self.env.ref("l10n_br_coa.tax_group_pis").regime = "cumulative"
+        self._tax_group("tax_group_pis").regime = "cumulative"
         sale_pis = -self._pis_booked(self.invoice, "sale")
         purchase_pis = self._pis_booked(self.purchase, "purchase")
         self.assertGreater(sale_pis, 0.0, "the sale booked no PIS")
         self.assertGreater(purchase_pis, 0.0, "the purchase booked no input PIS")
 
-        assessment = self._assessment("l10n_br_coa.tax_group_pis")
+        assessment = self._assessment("tax_group_pis")
         assessment.action_compute()
 
         self.assertEqual(assessment.regime, "cumulative")
@@ -229,11 +235,11 @@ class TestAssessmentFromFiscalInvoice(AccountMoveBRCommon):
         )
 
     def test_the_non_cumulative_regime_takes_the_input_credit(self):
-        self.env.ref("l10n_br_coa.tax_group_pis").regime = "non_cumulative"
+        self._tax_group("tax_group_pis").regime = "non_cumulative"
         purchase_pis = self._pis_booked(self.purchase, "purchase")
         self.assertGreater(purchase_pis, 0.0, "the purchase booked no input PIS")
 
-        assessment = self._assessment("l10n_br_coa.tax_group_pis")
+        assessment = self._assessment("tax_group_pis")
         assessment.action_compute()
 
         self.assertEqual(assessment.regime, "non_cumulative")

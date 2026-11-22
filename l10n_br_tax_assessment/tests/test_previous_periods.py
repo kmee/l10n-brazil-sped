@@ -15,13 +15,21 @@ class TestPreviousPeriods(AccountMoveBRCommon):
     from one month to the next, against posted supplier bills."""
 
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.configure_normal_company_taxes()
         cls.company = cls.company_data["company"]
         # the ICMS of the input becomes recoverable, so the bill books it
         cls.env.ref("l10n_br_fiscal.fo_compras").deductible_taxes = True
-        cls.icms_group = cls.env.ref("l10n_br_coa.tax_group_icms")
+        cls.icms_group = cls._tax_group("tax_group_icms")
+
+    @classmethod
+    def _tax_group(cls, name):
+        """The tax group of the chart is loaded per company on 18.0."""
+        key = f"{cls.company.id}_{name}"
+        return cls.env.ref(
+            f"l10n_br_coa.{key}", raise_if_not_found=False
+        ) or cls.env.ref(f"account.{key}")
 
     def _purchase(self, number, invoice_date):
         return self.init_invoice(
@@ -38,10 +46,7 @@ class TestPreviousPeriods(AccountMoveBRCommon):
 
     def _configure_closing_accounts(self):
         group = self.icms_group.with_company(self.company)
-        if (
-            group.tax_payable_account_id
-            and group.tax_receivable_account_id
-        ):
+        if group.tax_payable_account_id and group.tax_receivable_account_id:
             return
         accounts = {
             "tax_payable_account_id": ("ICMSPAY", "liability_current"),
@@ -55,7 +60,7 @@ class TestPreviousPeriods(AccountMoveBRCommon):
                         "name": code,
                         "code": code,
                         "account_type": account_type,
-                        "company_id": self.company.id,
+                        "company_ids": [self.company.id],
                     }
                 )
                 .id

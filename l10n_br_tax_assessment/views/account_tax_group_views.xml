@@ -14,7 +14,7 @@
     </record>
 
     <record id="view_tax_group_tree_regime" model="ir.ui.view">
-        <field name="name">account.tax.group.tree.l10n_br_tax_assessment</field>
+        <field name="name">account.tax.group.list.l10n_br_tax_assessment</field>
         <field name="model">account.tax.group</field>
         <field name="inherit_id" ref="account.view_tax_group_tree" />
         <field name="arch" type="xml">
@@ -28,7 +28,7 @@
     <menuitem
         id="menu_tax_group_regime"
         name="Grupos de imposto (regime de apuração)"
-        parent="account.menu_finance_entries_actions"
+        parent="account.menu_finance_entries"
         action="account.action_tax_group"
         groups="account.group_account_manager"
         sequence="91"

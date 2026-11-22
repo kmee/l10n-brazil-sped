@@ -5,7 +5,7 @@ import logging
 import re
 from datetime import date, datetime
 
-from odoo.tests.common import Form
+from odoo.tests import Form
 
 from odoo.addons.l10n_br_account.tests.common import AccountMoveBRCommon
 
@@ -26,34 +26,34 @@ class SpedEntradaCommon(AccountMoveBRCommon):
     profit_calculation = "presumed"
 
     @classmethod
-    def setup_company_data(cls, company_name, chart_template=None, **kwargs):
-        if company_name == "company_1_data":
-            company_name = "empresa 1 entrada"
-        else:
-            company_name = "empresa 2 entrada"
-        chart_template = cls.env.ref("l10n_br_coa_generic.l10n_br_coa_generic_template")
+    def setup_independent_company(cls, **kwargs):
+        kwargs.pop("name", None)
         piscofins = (
             "tax_pis_cofins_nao_columativo"
             if cls.profit_calculation == "real"
             else "tax_pis_cofins_columativo"
         )
-        res = super().setup_company_data(
-            company_name,
-            chart_template,
-            tax_framework="3",
-            is_industry=True,
-            industry_type="00",
-            profit_calculation=cls.profit_calculation,
-            ripi=True,
-            piscofins_id=cls.env.ref(f"l10n_br_fiscal.{piscofins}").id,
-            icms_regulation_id=cls.env.ref("l10n_br_fiscal.tax_icms_regulation").id,
-            cnae_main_id=cls.env.ref("l10n_br_fiscal.cnae_3101200").id,
-            document_type_id=cls.env.ref("l10n_br_fiscal.document_55").id,
-            **kwargs,
+        kwargs.update(
+            {
+                "tax_framework": "3",
+                "is_industry": True,
+                "industry_type": "00",
+                "profit_calculation": cls.profit_calculation,
+                "ripi": True,
+                "piscofins_id": cls.env.ref(f"l10n_br_fiscal.{piscofins}").id,
+                "icms_regulation_id": cls.env.ref(
+                    "l10n_br_fiscal.tax_icms_regulation"
+                ).id,
+                "cnae_main_id": cls.env.ref("l10n_br_fiscal.cnae_3101200").id,
+                "document_type_id": cls.env.ref("l10n_br_fiscal.document_55").id,
+                "country_id": cls.env.ref("base.br").id,
+                "currency_id": cls.env.ref("base.BRL").id,
+            }
         )
-        res["company"].partner_id.state_id = cls.env.ref("base.state_br_sp").id
-        chart_template.load_fiscal_taxes()
-        return res
+        company = super().setup_independent_company(**kwargs)
+        company.name = "empresa 1 entrada"
+        company.partner_id.state_id = cls.env.ref("base.state_br_sp").id
+        return company
 
     @classmethod
     def setUpClass(cls):

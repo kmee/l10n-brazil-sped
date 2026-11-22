@@ -11,9 +11,11 @@ from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 
 @tagged("post_install", "-at_install")
 class TestTaxAssessment(AccountTestInvoicingCommon):
+    chart_template = "generic_coa"
+
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.Assessment = cls.env["l10n_br_tax.assessment"]
 
         cls.account_payable = cls.env["account.account"].create(
@@ -21,7 +23,7 @@ class TestTaxAssessment(AccountTestInvoicingCommon):
                 "name": "ICMS a recolher",
                 "code": "TSTPAY",
                 "account_type": "liability_current",
-                "company_id": cls.company_data["company"].id,
+                "company_ids": [cls.company_data["company"].id],
             }
         )
         cls.account_receivable = cls.env["account.account"].create(
@@ -29,7 +31,7 @@ class TestTaxAssessment(AccountTestInvoicingCommon):
                 "name": "ICMS a recuperar",
                 "code": "TSTREC",
                 "account_type": "asset_current",
-                "company_id": cls.company_data["company"].id,
+                "company_ids": [cls.company_data["company"].id],
             }
         )
 
@@ -60,7 +62,7 @@ class TestTaxAssessment(AccountTestInvoicingCommon):
     def _regime_group(self, regime):
         """One tax group per regime."""
         return self.env["account.tax.group"].create(
-            {"name": "PIS %s (teste)" % regime, "regime": regime}
+            {"name": f"PIS {regime} (teste)", "regime": regime}
         )
 
     def _add_line(self, assessment, kind, tax_amount, source="manual", code=None):
@@ -525,9 +527,11 @@ class TestTaxAssessment(AccountTestInvoicingCommon):
 class TestTaxAssessmentCompute(AccountTestInvoicingCommon):
     """`action_compute` against real invoices, refunds included."""
 
+    chart_template = "generic_coa"
+
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.company = cls.company_data["company"]
         cls.group = cls.env["account.tax.group"].create({"name": "ICMS (compute)"})
         cls.sale_tax = cls.env["account.tax"].create(
@@ -741,6 +745,8 @@ class TestTaxAssessmentDemo(AccountTestInvoicingCommon):
     month.
     """
 
+    chart_template = "generic_coa"
+
     def test_demo_assessment_is_computed_for_the_current_month(self):
         assessment = self.env.ref(
             "l10n_br_tax_assessment.demo_assessment_icms", raise_if_not_found=False
@@ -791,16 +797,18 @@ class TestTaxAssessmentClosingBook(AccountTestInvoicingCommon):
     payment slip on one side and zero (never a negative asset) on the other.
     """
 
+    chart_template = "generic_coa"
+
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.company = cls.company_data["company"]
         cls.payable = cls.env["account.account"].create(
             {
                 "name": "ICMS a recolher",
                 "code": "TAXPAY",
                 "account_type": "liability_current",
-                "company_id": cls.company.id,
+                "company_ids": [cls.company.id],
             }
         )
         cls.receivable = cls.env["account.account"].create(
@@ -808,7 +816,7 @@ class TestTaxAssessmentClosingBook(AccountTestInvoicingCommon):
                 "name": "ICMS a recuperar",
                 "code": "TAXREC",
                 "account_type": "asset_current",
-                "company_id": cls.company.id,
+                "company_ids": [cls.company.id],
             }
         )
         cls.group = cls.env["account.tax.group"].create({"name": "ICMS (encerramento)"})
@@ -829,7 +837,7 @@ class TestTaxAssessmentClosingBook(AccountTestInvoicingCommon):
     def _tax(cls, name, type_tax_use, account):
         return cls.env["account.tax"].create(
             {
-                "name": "%s (teste)" % name,
+                "name": f"{name} (teste)",
                 "amount": 18.0,
                 "type_tax_use": type_tax_use,
                 "tax_group_id": cls.group.id,

@@ -89,7 +89,7 @@
                     <notebook>
                         <page string="Memória de cálculo">
                             <field name="line_ids">
-                                <tree editable="bottom">
+                                <list editable="bottom">
                                     <field name="tax_id" />
                                     <field name="kind" />
                                     <field name="source" />
@@ -100,25 +100,21 @@
                                     <field name="base_amount" sum="Base" />
                                     <field name="tax_amount" sum="Imposto" />
                                     <field name="currency_id" invisible="1" />
-                                </tree>
+                                </list>
                             </field>
                         </page>
                     </notebook>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" />
-                    <field name="activity_ids" />
-                    <field name="message_ids" />
-                </div>
+                <chatter />
             </form>
         </field>
     </record>
 
     <record id="view_tax_assessment_tree" model="ir.ui.view">
-        <field name="name">l10n_br_tax.assessment.tree</field>
+        <field name="name">l10n_br_tax.assessment.list</field>
         <field name="model">l10n_br_tax.assessment</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="tax_group_id" />
                 <field name="date_from" />
@@ -128,20 +124,20 @@
                 <field name="amount_payable" sum="A recolher" />
                 <field name="state" widget="badge" />
                 <field name="currency_id" invisible="1" />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="action_tax_assessment" model="ir.actions.act_window">
         <field name="name">Apuração de Impostos</field>
         <field name="res_model">l10n_br_tax.assessment</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <menuitem
         id="menu_tax_assessment"
         name="Apuração de Impostos"
-        parent="account.menu_finance_entries_actions"
+        parent="account.menu_finance_entries"
         action="action_tax_assessment"
         sequence="90"
     />
