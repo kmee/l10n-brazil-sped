@@ -1,0 +1,1100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_br_tax_assessment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "A apuração %s, já encerrada, transporta o saldo desta. Reabra-a antes."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid ""
+"A apuração anterior (%(name)s) mudou depois desta ser apurada: o saldo "
+"credor transportado está em %(stale).2f, mas ela transporta %(fresh).2f. "
+"Reapure antes de encerrar."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "A data final da apuração é anterior à data inicial."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__amount_payable
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_tree
+msgid "A recolher"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__adjustment_kind
+msgid "Adjustment Kind"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__source__manual
+msgid "Ajuste manual"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
+#, python-format
+msgid ""
+"Ajuste manual sem descrição: é ela que justifica a linha para o fisco e "
+"alimenta o registro de ajuste da EFD."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__source
+msgid ""
+"Ajuste manual sobrevive ao recálculo da apuração; linha apurada é refeita a "
+"cada apuração."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__adjustment_credit_total
+msgid "Ajustes a crédito"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__adjustment_debit_total
+msgid "Ajustes a débito"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment__state__computed
+msgid "Apurada"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__source__computed
+msgid "Apurado das move lines"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+msgid "Apurar"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__assessment_id
+msgid "Apuração"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "Apuração %s"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__previous_assessment_id
+msgid "Apuração anterior"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model,name:l10n_br_tax_assessment.model_l10n_br_tax_assessment
+msgid "Apuração de Imposto sobre Consumo"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.actions.act_window,name:l10n_br_tax_assessment.action_tax_assessment
+#: model:ir.ui.menu,name:l10n_br_tax_assessment.menu_tax_assessment
+msgid "Apuração de Impostos"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_company_form_tax_assessment
+msgid "Apuração de impostos"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__previous_assessment_id
+msgid ""
+"Apuração imediatamente anterior do mesmo grupo e empresa. É de onde vem o "
+"saldo credor transportado."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "Apure antes de encerrar."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__date_to
+msgid "Até"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__previous_periods_warning
+msgid "Aviso de períodos anteriores"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__previous_periods_warning
+msgid ""
+"Aviso quando há período anterior com movimento deste imposto e sem apuração "
+"lançada: o saldo anterior desta apuração nasce errado."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+msgid "Base"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__base_amount
+msgid "Base de cálculo"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__adjustment_code
+msgid ""
+"COD_AJ_APUR da tabela 5.1.1, publicada por UF. É o que o E111 exige e o que "
+"classifica o ajuste dentro do E110."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__debit_total
+msgid ""
+"Campo 02 do E110: débitos por saídas com débito do imposto, inclusive a "
+"devolução de compra (CFOP 5202/6202)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__adjustment_debit_total
+msgid "Campo 04 do E110."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__credit_reversal_total
+msgid ""
+"Campo 05 do E110: só a soma dos ajustes de estorno de crédito do E111. "
+"Devolução de compra não entra aqui, vai ao campo 02."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__credit_total
+msgid ""
+"Campo 06 do E110: créditos por entradas com crédito do imposto, inclusive a "
+"devolução de venda (CFOP 1202/2202)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__adjustment_credit_total
+msgid "Campo 08 do E110."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__debit_reversal_total
+msgid ""
+"Campo 09 do E110: só a soma dos ajustes de estorno de débito do E111. "
+"Devolução de venda não entra aqui, vai ao campo 06."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__assessed_balance
+msgid ""
+"Campo 11 do E110: o saldo do período quando devedor, zero quando credor."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__deduction_total
+msgid ""
+"Campo 12 do E110. Abate o saldo devedor já apurado, e por isso não entra no "
+"confronto de débitos com créditos."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__amount_payable
+msgid "Campo 13 do E110: saldo devedor apurado menos deduções."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__amount_carried_forward
+msgid "Campo 14 do E110."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__special_debit_total
+msgid ""
+"Campo 15 do E110: recolhido ou a recolher extra-apuração. Não altera o saldo"
+" do período."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment__state__cancel
+msgid "Cancelada"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model,name:l10n_br_tax_assessment.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__company_id
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid ""
+"Configure no grupo de imposto %(group)s, para a empresa %(company)s: "
+"%(missing)s."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+msgid "Conta gráfica"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__create_uid
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__create_uid
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__create_date
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__create_date
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__kind__credit
+msgid "Crédito (entradas)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_tree
+msgid "Créditos"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__credit_total
+msgid "Créditos (entradas)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__account_tax_group__regime__cumulative
+msgid "Cumulativo"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__adjustment_code
+msgid "Código do ajuste"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__date_from
+msgid "De"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__kind
+msgid ""
+"De que lado da conta gráfica a linha entra. Dedução e retenção na fonte "
+"abatem o saldo devedor já apurado, e débito especial é extra-apuração: "
+"nenhum dos três entra no confronto de débitos com créditos. Retenção é "
+"separada de dedução porque o M200 da EFD Contribuições pede as duas em "
+"campos distintos."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__kind__deduction
+msgid "Dedução"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__deduction_total
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__adjustment_kind__deduction
+msgid "Deduções"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid ""
+"Defina o início da apuração pelo sistema desta empresa (Configurações > "
+"Usuários e Empresas > Empresas > aba Fiscal > Impostos > Início da apuração "
+"pelo sistema). É o primeiro mês em que o sistema leva o saldo credor de um "
+"mês para o seguinte: os meses anteriores com movimento deixam de ser "
+"exigidos, e o saldo credor que vem de antes dessa data é informado como "
+"saldo inicial (menu de apuração)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__description
+msgid "Description"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__is_return
+msgid "Devolução"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__display_name
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__display_name
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__kind__debit
+msgid "Débito (saídas)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__special_debit_total
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__adjustment_kind__special_debit
+msgid "Débito especial"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__kind__special_debit
+msgid "Débito especial (extra-apuração)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
+#, python-format
+msgid ""
+"Débito especial não existe na apuração de %s: o bloco M não tem campo para "
+"ele e o valor sumiria do arquivo em silêncio."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_tree
+msgid "Débitos"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__debit_total
+msgid "Débitos (saídas)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__company_id
+msgid "Empresa"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment__state__posted
+msgid "Encerrada"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "Encerramento da apuração %s"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+msgid "Encerrar"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "Encerre antes a apuração anterior (%s)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__kind__credit_reversal
+msgid "Estorno de crédito (ajuste E111)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__adjustment_kind__credit_reversal
+msgid "Estorno de créditos"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__kind__debit_reversal
+msgid "Estorno de débito (ajuste E111)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__adjustment_kind__debit_reversal
+msgid "Estorno de débitos"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__credit_reversal_total
+msgid "Estornos de crédito"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__debit_reversal_total
+msgid "Estornos de débito"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid ""
+"Faltam as apurações lançadas de períodos anteriores com movimento: "
+"%(months)s. Apure e lance cada período, em ordem: sem elas o saldo de "
+"crédito de que este período parte fica errado e o crédito dos meses que "
+"faltam se perde."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__tax_group_id
+msgid ""
+"Grupo apurado nesta conta gráfica (ICMS, IPI, PIS, COFINS). As contas "
+"contábeis usadas no encerramento vêm deste grupo "
+"(property_tax_payable_account_id e irmãs), que o core já modela."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__tax_group_id
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__tax_group_id
+msgid "Grupo de imposto"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.ui.menu,name:l10n_br_tax_assessment.menu_tax_group_regime
+msgid "Grupos de imposto (regime de apuração)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__id
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__id
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__tax_id
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+msgid "Imposto"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid ""
+"Impostos de entrada ignorados na apuração: o regime cumulativo não dá "
+"direito a crédito (Lei 9.718/1998): %s"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid ""
+"Impostos ignorados na apuração por não serem de venda nem de compra "
+"(type_tax_use): %s"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__informed_on
+msgid "Informado em"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__informed_by
+msgid "Informado por"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_opening_form
+msgid ""
+"Informe o saldo credor de ICMS ou de IPI que a empresa já\n"
+"                        tinha antes do início da apuração pelo sistema: é o saldo do\n"
+"                        fim do mês anterior ao início, o campo 10 do E110 (ou o\n"
+"                        saldo credor anterior do E520) da primeira apuração. Quem\n"
+"                        informou fica registrado. O sistema não faz lançamento\n"
+"                        contábil: o saldo de impostos a recuperar deve estar no\n"
+"                        balanço de abertura."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_res_company__tax_assessment_start
+msgid "Início da apuração pelo sistema"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.constraint,message:l10n_br_tax_assessment.constraint_l10n_br_tax_assessment_opening_company_group_unique
+msgid "Já existe um saldo credor inicial deste imposto para a empresa."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid ""
+"Já existe uma apuração deste grupo de imposto com período sobreposto nesta "
+"empresa."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.constraint,message:l10n_br_tax_assessment.constraint_l10n_br_tax_assessment_unique_period_group_company
+msgid ""
+"Já existe uma apuração deste grupo de imposto, regime e período nesta "
+"empresa."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__kind
+msgid "Kind"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__move_id
+msgid "Lançamento de encerramento"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment____last_update
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line____last_update
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__write_uid
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__write_uid
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__write_date
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__write_date
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__adjustment_kind
+msgid "Lido do quarto dígito do código do ajuste."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__is_return
+msgid ""
+"Linha apurada de devolução: devolução de compra soma ao débito (campo 02 do "
+"E110) e devolução de venda soma ao crédito (campo 06), como qualquer nota "
+"fiscal. Os estornos (campos 05 e 09) são só os ajustes do E111."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model,name:l10n_br_tax_assessment.model_l10n_br_tax_assessment_line
+msgid "Linha da Apuração de Imposto"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+msgid "Memória de cálculo"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__currency_id
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__currency_id
+msgid "Moeda"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__name
+msgid "Name"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "Nova apuração"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__account_tax_group__regime__non_cumulative
+msgid "Não cumulativo"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "Não há diário do tipo Diversos na empresa %s."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__account_tax_group__regime__not_applicable
+msgid "Não se aplica"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
+#, python-format
+msgid ""
+"O código de ajuste %(code)s é do tipo %(kind)s, que entra na apuração como "
+"%(expected)s, e não como %(got)s."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
+#, python-format
+msgid ""
+"O código de ajuste %s não tem as 3 posições da tabela 4.5.4 (ajustes da "
+"apuração do IPI)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
+#, python-format
+msgid ""
+"O código de ajuste %s não tem as 8 posições da tabela 5.1.1 (UF, tipo de "
+"apuração, tipo de ajuste e sequencial)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
+#, python-format
+msgid ""
+"O código de ajuste %s tem um quarto dígito fora da tabela 5.1.1: só 0 a 5 "
+"são tipos de ajuste válidos."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
+#, python-format
+msgid ""
+"O código de ajuste %s tem um terceiro dígito inválido: ele diz de qual "
+"apuração é o ajuste, e só aceita 0 (imposto próprio) ou 1 (substituição "
+"tributária)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/res_company.py:0
+#, python-format
+msgid "O início da apuração pelo sistema é o primeiro dia de um mês."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid ""
+"O lançamento de encerramento %s está postado. Estorne-o antes de reabrir a "
+"apuração."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.constraint,message:l10n_br_tax_assessment.constraint_l10n_br_tax_assessment_opening_amount_positive
+msgid "O saldo credor não pode ser negativo."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__description
+msgid ""
+"Obrigatório no ajuste manual: é o que justifica a linha para o fisco e "
+"alimenta a descrição do registro de ajuste na EFD."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__adjustment_kind__other_credit
+msgid "Outros créditos"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__adjustment_kind__other_debit
+msgid "Outros débitos"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_res_company__tax_assessment_start
+msgid ""
+"Primeiro dia do primeiro mês em que o sistema apura os impostos desta "
+"empresa (ICMS, IPI, PIS e COFINS). A partir dele a apuração leva o saldo "
+"credor de um mês para o seguinte e exige a apuração lançada dos meses com "
+"movimento; os meses anteriores não são exigidos. O saldo credor que vem de "
+"antes dessa data é informado como saldo inicial (menu de apuração). Em base "
+"existente, defina-o antes de apurar; em empresa sem movimento anterior, é o "
+"mês da primeira apuração."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment__state__draft
+msgid "Rascunho"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__regime
+msgid "Regime"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__regime
+msgid ""
+"Regime apurado, herdado do grupo de imposto (critério de partição: um grupo por regime, então uma apuração nunca mistura regimes nem conta a mesma linha duas vezes). PIS e COFINS têm apuração separada por regime, como o M200 da EFD Contribuições pede; ICMS e IPI usam 'Não se aplica'. Quando o grupo de PIS ou COFINS não informa o regime, vale o da empresa: cumulativo no Lucro Presumido e Arbitrado, não cumulativo no Lucro Real.\n"
+"O campo é armazenado porque entra na chave única do período, e o grupo o declara obrigatório: um regime nulo faria a chave deixar de valer, porque no Postgres NULL nunca é igual a NULL."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_account_tax_group__regime
+msgid "Regime de apuração"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_account_tax_group__regime
+msgid ""
+"Regime de apuração dos impostos deste grupo. PIS e COFINS têm apuração "
+"separada por regime, como o M200 da EFD Contribuições pede: contribuinte com"
+" receita mista configura um grupo por regime. ICMS e IPI usam 'Não se "
+"aplica'. Quando o grupo de PIS ou COFINS fica em 'Não se aplica', a apuração"
+" usa o regime da empresa: cumulativo no Lucro Presumido e Arbitrado, não "
+"cumulativo no Lucro Real."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+msgid "Resultado"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__withholding_total
+#: model:ir.model.fields.selection,name:l10n_br_tax_assessment.selection__l10n_br_tax_assessment_line__kind__withholding
+msgid "Retenção na fonte"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
+#, python-format
+msgid ""
+"Retenção na fonte não existe na apuração de %s: o E110 não tem campo para "
+"ela, e o valor quebraria a igualdade que o PVA valida (campo 13 = 11 - 12)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__withholding_total
+msgid ""
+"Retido na fonte e deduzido no período. Abate o saldo devedor já apurado, "
+"igual à dedução, mas em campo próprio."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__amount
+msgid "Saldo credor"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__amount_carried_forward
+msgid "Saldo credor a transportar"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__previous_balance
+msgid "Saldo credor anterior"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening__amount
+msgid ""
+"Saldo credor do imposto no fim do mês anterior ao início da apuração pelo "
+"sistema (o campo 10 do E110 da primeira apuração)."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.ui.menu,name:l10n_br_tax_assessment.menu_tax_assessment_opening
+msgid "Saldo credor inicial (ICMS e IPI)"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.actions.act_window,name:l10n_br_tax_assessment.action_tax_assessment_opening
+#: model:ir.model,name:l10n_br_tax_assessment.model_l10n_br_tax_assessment_opening
+msgid "Saldo credor inicial da apuração"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__previous_balance
+msgid ""
+"Saldo credor transportado do período anterior. Positivo quando há crédito a "
+"aproveitar. É o campo 10 do E110."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__assessed_balance
+msgid "Saldo devedor apurado"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__balance
+msgid "Saldo do período"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__source
+msgid "Source"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__state
+msgid "State"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "Só é possível apurar uma apuração em rascunho ou já apurada."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__tax_domain
+msgid "Tax Domain"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model,name:l10n_br_tax_assessment.model_account_tax_group
+msgid "Tax Group"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__balance
+msgid ""
+"Todo o lado devedor menos todo o lado credor, já descontado o saldo credor "
+"anterior. Positivo = saldo devedor apurado; negativo = saldo credor a "
+"transportar."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__tax_domain
+msgid ""
+"Tributo brasileiro do grupo. É por aqui que a escrituração acha a apuração "
+"que deve serializar: o bloco E procura icms, o bloco M procura pis e cofins."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line__tax_amount
+msgid "Valor do imposto"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model_terms:ir.ui.view,arch_db:l10n_br_tax_assessment.view_tax_assessment_form
+msgid "Voltar a rascunho"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "conta de imposto a pagar"
+msgstr ""
+
+#. module: l10n_br_tax_assessment
+#. odoo-python
+#: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
+#, python-format
+msgid "conta de imposto a recuperar"
+msgstr ""
