@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,14 +16,12 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "A apuração %s, já encerrada, transporta o saldo desta. Reabra-a antes."
 msgstr ""
 
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid ""
 "A apuração anterior (%(name)s) mudou depois desta ser apurada: o saldo "
 "credor transportado está em %(stale).2f, mas ela transporta %(fresh).2f. "
@@ -33,7 +31,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "A data final da apuração é anterior à data inicial."
 msgstr ""
 
@@ -81,7 +78,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
-#, python-format
 msgid ""
 "Ajuste manual sem descrição: é ela que justifica a linha para o fisco e "
 "alimenta o registro de ajuste da EFD."
@@ -127,7 +123,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "Apuração %s"
 msgstr ""
 
@@ -162,7 +157,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "Apure antes de encerrar."
 msgstr ""
 
@@ -292,7 +286,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid ""
 "Configure no grupo de imposto %(group)s, para a empresa %(company)s: "
 "%(missing)s."
@@ -377,7 +370,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid ""
 "Defina o início da apuração pelo sistema desta empresa (Configurações > "
 "Usuários e Empresas > Empresas > aba Fiscal > Impostos > Início da apuração "
@@ -423,7 +415,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
-#, python-format
 msgid ""
 "Débito especial não existe na apuração de %s: o bloco M não tem campo para "
 "ele e o valor sumiria do arquivo em silêncio."
@@ -453,7 +444,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "Encerramento da apuração %s"
 msgstr ""
 
@@ -465,7 +455,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "Encerre antes a apuração anterior (%s)."
 msgstr ""
 
@@ -502,7 +491,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid ""
 "Faltam as apurações lançadas de períodos anteriores com movimento: "
 "%(months)s. Apure e lance cada período, em ordem: sem elas o saldo de "
@@ -529,8 +517,8 @@ msgstr ""
 #: model:ir.model.fields,help:l10n_br_tax_assessment.field_l10n_br_tax_assessment__tax_group_id
 msgid ""
 "Grupo apurado nesta conta gráfica (ICMS, IPI, PIS, COFINS). As contas "
-"contábeis usadas no encerramento vêm deste grupo "
-"(property_tax_payable_account_id e irmãs), que o core já modela."
+"contábeis usadas no encerramento vêm deste grupo (tax_payable_account_id e "
+"irmãs), que o core já modela."
 msgstr ""
 
 #. module: l10n_br_tax_assessment
@@ -585,7 +573,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid ""
 "Impostos de entrada ignorados na apuração: o regime cumulativo não dá "
 "direito a crédito (Lei 9.718/1998): %s"
@@ -594,7 +581,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid ""
 "Impostos ignorados na apuração por não serem de venda nem de compra "
 "(type_tax_use): %s"
@@ -640,7 +626,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid ""
 "Já existe uma apuração deste grupo de imposto com período sobreposto nesta "
 "empresa."
@@ -661,13 +646,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__move_id
 msgid "Lançamento de encerramento"
-msgstr ""
-
-#. module: l10n_br_tax_assessment
-#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment____last_update
-#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_line____last_update
-#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment_opening____last_update
-msgid "Last Modified on"
 msgstr ""
 
 #. module: l10n_br_tax_assessment
@@ -700,11 +678,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #: model:ir.model,name:l10n_br_tax_assessment.model_l10n_br_tax_assessment_line
 msgid "Linha da Apuração de Imposto"
-msgstr ""
-
-#. module: l10n_br_tax_assessment
-#: model:ir.model.fields,field_description:l10n_br_tax_assessment.field_l10n_br_tax_assessment__message_main_attachment_id
-msgid "Main Attachment"
 msgstr ""
 
 #. module: l10n_br_tax_assessment
@@ -757,7 +730,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "Nova apuração"
 msgstr ""
 
@@ -789,7 +761,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "Não há diário do tipo Diversos na empresa %s."
 msgstr ""
 
@@ -801,7 +772,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
-#, python-format
 msgid ""
 "O código de ajuste %(code)s é do tipo %(kind)s, que entra na apuração como "
 "%(expected)s, e não como %(got)s."
@@ -810,7 +780,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
-#, python-format
 msgid ""
 "O código de ajuste %s não tem as 3 posições da tabela 4.5.4 (ajustes da "
 "apuração do IPI)."
@@ -819,7 +788,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
-#, python-format
 msgid ""
 "O código de ajuste %s não tem as 8 posições da tabela 5.1.1 (UF, tipo de "
 "apuração, tipo de ajuste e sequencial)."
@@ -828,7 +796,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
-#, python-format
 msgid ""
 "O código de ajuste %s tem um quarto dígito fora da tabela 5.1.1: só 0 a 5 "
 "são tipos de ajuste válidos."
@@ -837,7 +804,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
-#, python-format
 msgid ""
 "O código de ajuste %s tem um terceiro dígito inválido: ele diz de qual "
 "apuração é o ajuste, e só aceita 0 (imposto próprio) ou 1 (substituição "
@@ -847,14 +813,12 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/res_company.py:0
-#, python-format
 msgid "O início da apuração pelo sistema é o primeiro dia de um mês."
 msgstr ""
 
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid ""
 "O lançamento de encerramento %s está postado. Estorne-o antes de reabrir a "
 "apuração."
@@ -946,7 +910,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment_line.py:0
-#, python-format
 msgid ""
 "Retenção na fonte não existe na apuração de %s: o E110 não tem campo para "
 "ela, e o valor quebraria a igualdade que o PVA valida (campo 13 = 11 - 12)."
@@ -1031,7 +994,6 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "Só é possível apurar uma apuração em rascunho ou já apurada."
 msgstr ""
 
@@ -1088,13 +1050,11 @@ msgstr ""
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "conta de imposto a pagar"
 msgstr ""
 
 #. module: l10n_br_tax_assessment
 #. odoo-python
 #: code:addons/l10n_br_tax_assessment/models/tax_assessment.py:0
-#, python-format
 msgid "conta de imposto a recuperar"
 msgstr ""
