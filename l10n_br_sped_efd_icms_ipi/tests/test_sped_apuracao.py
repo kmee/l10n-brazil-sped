@@ -22,7 +22,7 @@ class TestSpedEfdIcmsIpiApuracao(EntradaHelpers, SpedEntradaCommon):
             {
                 "name": "Accountant",
                 "is_accountant": True,
-                "cnpj_cpf": "111.444.777-35",
+                "vat": "111.444.777-35",
                 "crc_code": "1SP123456/O-0",
                 "phone": "11999999999",
                 "email": "accountant@example.com",

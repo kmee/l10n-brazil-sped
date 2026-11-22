@@ -28,11 +28,12 @@ class TestSpedEfdIcmsIpiEntradaSemCredito(EntradaHelpers, SpedEntradaCommon):
         """Without a posted IPI assessment the E500 tree stays out of the file."""
         group = self.env["account.tax.group"].search(
             [
+                ("company_id", "=", self.company.id),
                 (
                     "fiscal_tax_group_id",
                     "=",
                     self.env.ref("l10n_br_fiscal.tax_group_ipi").id,
-                )
+                ),
             ],
             limit=1,
         )
@@ -48,7 +49,7 @@ class TestSpedEfdIcmsIpiEntradaSemCredito(EntradaHelpers, SpedEntradaCommon):
                         "name": code,
                         "code": code,
                         "account_type": account_type,
-                        "company_id": self.company.id,
+                        "company_ids": [self.company.id],
                     }
                 )
                 .id

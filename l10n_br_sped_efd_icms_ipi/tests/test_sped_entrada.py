@@ -33,11 +33,12 @@ class EntradaHelpers:
         post."""
         group = self.env["account.tax.group"].search(
             [
+                ("company_id", "=", self.company.id),
                 (
                     "fiscal_tax_group_id",
                     "=",
                     self.env.ref("l10n_br_fiscal.tax_group_icms").id,
-                )
+                ),
             ],
             limit=1,
         )
@@ -47,7 +48,7 @@ class EntradaHelpers:
                     "name": "ICMS a recolher",
                     "code": "ICMSPAY",
                     "account_type": "liability_current",
-                    "company_id": self.company.id,
+                    "company_ids": [self.company.id],
                 }
             )
             receivable = self.env["account.account"].create(
@@ -55,7 +56,7 @@ class EntradaHelpers:
                     "name": "ICMS a recuperar",
                     "code": "ICMSREC",
                     "account_type": "asset_current",
-                    "company_id": self.company.id,
+                    "company_ids": [self.company.id],
                 }
             )
             group.with_company(self.company).write(

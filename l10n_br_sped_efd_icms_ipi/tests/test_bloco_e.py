@@ -151,7 +151,7 @@ class TestBlocoE(common.TransactionCase):
             self.assessment.state = state
             self.assertFalse(
                 self._pull_bloco_e().reg_E110_ids,
-                "apuração %s não pode entrar no arquivo" % state,
+                f"apuração {state} não pode entrar no arquivo",
             )
             self.env["l10n_br_sped.efd_icms_ipi.e100"].search(
                 [("declaration_id", "=", self.declaration.id)]

@@ -209,9 +209,13 @@ class Registro0000(models.Model):
         group.append(
             E.field(name="cod_obrigacao", required="1", readonly="state != 'draft'")
         )
-        group.append(E.field(name="cod_receita", required="1", readonly="state != 'draft'"))
+        group.append(
+            E.field(name="cod_receita", required="1", readonly="state != 'draft'")
+        )
         group.append(E.field(name="dt_vcto_obrigacao", readonly="state != 'draft'"))
-        group.append(E.field(name="ind_apur", required="1", readonly="state != 'draft'"))
+        group.append(
+            E.field(name="ind_apur", required="1", readonly="state != 'draft'")
+        )
         group.append(
             E.field(
                 name="CLAS_ESTAB_IND",
@@ -242,7 +246,7 @@ class Registro0000(models.Model):
     def _get_accountant_required(self):
         # what the layout marks as mandatory in the 0100 (the descriptor of the PVA)
         return [
-            ("cnpj_cpf", _("CPF")),
+            ("vat", _("CPF")),
             ("crc_code", _("CRC")),
             ("email", _("e-mail")),
             ("city_id", _("city")),
@@ -298,12 +302,12 @@ class Registro0000(models.Model):
             # "DT_INI": (will use declaration field directly),
             # "DT_FIN": (will use declaration field directly),
             "NOME": record.legal_name,
-            "CNPJ": misc.punctuation_rm(record.cnpj_cpf),
-            # "CPF": misc.punctuation_rm(record.cnpj_cpf),  # TODO if produtor rural?
+            "CNPJ": misc.punctuation_rm(record.vat),
+            # "CPF": misc.punctuation_rm(record.vat),  # TODO if produtor rural?
             "UF": record.state_id.code,
-            "IE": misc.punctuation_rm(record.inscr_est),
+            "IE": misc.punctuation_rm(record.l10n_br_ie_code),
             "COD_MUN": misc.punctuation_rm(record.city_id.ibge_code),
-            "IM": misc.punctuation_rm(record.inscr_mun or ""),
+            "IM": misc.punctuation_rm(record.l10n_br_im_code or ""),
             "SUFRAMA": record.l10n_br_isuf_code
             or "",  # Inscrição da entidade na SUFRAMA
             "IND_PERFIL": "A",  # Perfil de apresentação do arquivo fiscal; A – Per...
@@ -381,7 +385,7 @@ class Registro0015(models.Model):
     @api.model
     def _map_from_odoo(self, record, parent_record, declaration, index=0):
         return {
-            "UF_ST": misc.punctuation_rm(record.inscr_est),
+            "UF_ST": misc.punctuation_rm(record.l10n_br_ie_code),
             "IE_ST": record.state_id.code,
         }
 
@@ -413,9 +417,9 @@ class Registro0100(models.Model):
             phone = phone[2:]
         return {
             "NOME": record.name,
-            "CPF": misc.punctuation_rm(record.cnpj_cpf or ""),
+            "CPF": misc.punctuation_rm(record.vat or ""),
             "CRC": misc.punctuation_rm(record.crc_code or ""),
-            "CNPJ": misc.punctuation_rm(record.parent_id.cnpj_cpf or ""),
+            "CNPJ": misc.punctuation_rm(record.parent_id.vat or ""),
             "CEP": misc.punctuation_rm(record.zip or ""),
             "END": record.street_name or "",
             "NUM": misc.punctuation_rm(record.street_number or ""),
@@ -448,7 +452,7 @@ class Registro0150(models.Model):
             "COD_PART": record._get_sped_cod_part(),
             "NOME": record.legal_name or record.name,
             "COD_PAIS": record.country_id.bc_code,
-            "IE": misc.punctuation_rm(record.inscr_est),
+            "IE": misc.punctuation_rm(record.l10n_br_ie_code),
             "SUFRAMA": record.l10n_br_isuf_code or "",
             "END": record.street_name[:60] if record.street_name else "",
             "NUM": misc.punctuation_rm(record.street_number),
@@ -457,9 +461,9 @@ class Registro0150(models.Model):
         }
         if record.country_id.bc_code == "1058":
             if record.company_type == "person":
-                vals["CPF"] = misc.punctuation_rm(record.cnpj_cpf)
+                vals["CPF"] = misc.punctuation_rm(record.vat)
             else:
-                vals["CNPJ"] = misc.punctuation_rm(record.cnpj_cpf)
+                vals["CNPJ"] = misc.punctuation_rm(record.vat)
             vals["COD_MUN"] = misc.punctuation_rm(record.city_id.ibge_code)
         else:
             vals["COD_MUN"] = "9999999"
@@ -4872,7 +4876,7 @@ class RegistroH010(models.Model):
 
     @api.model
     def _odoo_domain(self, parent_record, declaration):
-        return [("type", "=", "product"), ("qty_available", ">", 0.0)]
+        return [("is_storable", "=", True), ("qty_available", ">", 0.0)]
 
     @api.model
     def _map_from_odoo(self, record, parent_record, declaration, index=0):
@@ -5008,7 +5012,7 @@ class RegistroK200(models.Model):
     @api.model
     def _k200_domain(self):
         return [
-            ("type", "=", "product"),
+            ("is_storable", "=", True),
             ("ncm_id", "!=", False),
             ("qty_available", ">", 0.0),
         ]
@@ -5133,11 +5137,11 @@ class RegistroK235(models.Model):
     def _odoo_domain(self, parent_record, declaration):
         # parent_record is the `mrp.production` from K230.
         # We look for all done stock moves that were raw materials for this MO.
-        # We only report storable products (type='product'), ignoring consumables/services.
+        # We only report storable products, ignoring consumables and services.
         return [
             ("raw_material_production_id", "=", parent_record.id),
             ("state", "=", "done"),
-            ("product_id.type", "=", "product"),
+            ("product_id.is_storable", "=", True),
         ]
 
     @api.model
