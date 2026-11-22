@@ -3,7 +3,7 @@
 {
     "name": "DCTFWeb/MIT (Brazil)",
     "summary": "Assess the federal debits of the MIT and build its JSON file",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Localization/Brazil",
     "license": "AGPL-3",
     "author": "KMEE, Odoo Community Association (OCA)",

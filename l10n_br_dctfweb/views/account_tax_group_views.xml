@@ -14,7 +14,7 @@
     </record>
 
     <record id="view_tax_group_tree_dctfweb" model="ir.ui.view">
-        <field name="name">account.tax.group.tree.dctfweb</field>
+        <field name="name">account.tax.group.list.dctfweb</field>
         <field name="model">account.tax.group</field>
         <field name="inherit_id" ref="account.view_tax_group_tree" />
         <field name="arch" type="xml">

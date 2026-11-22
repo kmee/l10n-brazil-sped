@@ -12,12 +12,12 @@ class TestDctfwebAssessment(AccountTestInvoicingCommon):
     """The MIT confesses what the tax assessment already persisted."""
 
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.company = cls.company_data["company"]
         cls.company.write(
             {
-                "cnpj_cpf": "12.345.678/0001-95",
+                "vat": "12.345.678/0001-95",
                 "dctfweb_pj_qualification": "1",
                 "dctfweb_profit_taxation": "3",
                 "dctfweb_monetary_variation": "2",

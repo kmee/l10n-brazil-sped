@@ -17,14 +17,27 @@ class TestDctfwebDemo(TransactionCase):
     """
 
     def _demo(self, xmlid):
-        record = self.env.ref("l10n_br_dctfweb.%s" % xmlid, raise_if_not_found=False)
+        record = self.env.ref(f"l10n_br_dctfweb.{xmlid}", raise_if_not_found=False)
         if not record:
             self.skipTest("database without demo data")
         return record.sudo()
 
+    def _tax_group(self, name):
+        """The tax group of the chart of the demo company: one per company on
+        18.0, by the chart template or by the fiscal taxes of l10n_br_account."""
+        company = self.env.ref(
+            "l10n_br_base.empresa_lucro_presumido", raise_if_not_found=False
+        )
+        if not company:
+            return False
+        key = f"{company.id}_{name}"
+        return self.env.ref(
+            f"l10n_br_coa.{key}", raise_if_not_found=False
+        ) or self.env.ref(f"account.{key}", raise_if_not_found=False)
+
     def test_the_demo_tax_groups_carry_their_revenue_code(self):
         """Without the mapping the assessment reads nothing at all."""
-        pis = self.env.ref("l10n_br_coa.tax_group_pis", raise_if_not_found=False)
+        pis = self._tax_group("tax_group_pis")
         if not pis:
             self.skipTest("database without the Brazilian chart of accounts")
         self.assertEqual(
@@ -32,12 +45,12 @@ class TestDctfwebDemo(TransactionCase):
             "810902",
             "the cumulative PIS code, the regime the demo assessment uses",
         )
-        cofins = self.env.ref("l10n_br_coa.tax_group_cofins").sudo()
+        cofins = self._tax_group("tax_group_cofins").sudo()
         self.assertEqual(cofins.dctfweb_revenue_code_id.mit_code, "217201")
 
     def test_icms_stays_without_a_code(self):
         """ICMS is not confessed in the MIT: the demo must not map it."""
-        icms = self.env.ref("l10n_br_coa.tax_group_icms", raise_if_not_found=False)
+        icms = self._tax_group("tax_group_icms")
         if not icms:
             self.skipTest("database without the Brazilian chart of accounts")
         self.assertFalse(icms.sudo().dctfweb_revenue_code_id)
@@ -84,7 +97,7 @@ class TestDctfwebDemo(TransactionCase):
     def test_the_skipped_icms_assessment_is_in_the_chatter(self):
         """Silence about a skipped group would be a trap for the accountant."""
         mit = self._demo("demo_mit_current")
-        icms = self.env.ref("l10n_br_coa.tax_group_icms", raise_if_not_found=False)
+        icms = self._tax_group("tax_group_icms")
         if not icms:
             self.skipTest("database without the Brazilian chart of accounts")
         skipped = (

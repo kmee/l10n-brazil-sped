@@ -19,10 +19,10 @@ class TestMitPayload(AccountTestInvoicingCommon):
     """
 
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.company = cls.company_data["company"]
-        cls.company.write({"cnpj_cpf": "12.345.678/0001-95"})
+        cls.company.write({"vat": "12.345.678/0001-95"})
         cls.code_pis = cls.env.ref("l10n_br_dctfweb.revenue_code_810902")
         cls.code_cofins = cls.env.ref("l10n_br_dctfweb.revenue_code_217201")
         cls.code_ipi = cls.env.ref("l10n_br_dctfweb.revenue_code_066803")

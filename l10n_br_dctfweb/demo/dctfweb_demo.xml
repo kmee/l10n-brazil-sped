@@ -3,7 +3,8 @@
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
 <odoo>
     <!--
-      The revenue code of each demo tax group.
+      The revenue code of each tax group of the demo company (one group per
+      company on 18.0).
 
       The tax assessment demo sets PIS and COFINS to the cumulative regime, so
       the codes here are the cumulative ones: a non cumulative code would
@@ -11,17 +12,26 @@
       "demais produtos" code, which is what a company that is not in one of
       the special regimes (drinks, vehicles, cigarettes) uses.
     -->
-    <record id="l10n_br_coa.tax_group_pis" model="account.tax.group">
-        <field name="dctfweb_revenue_code_id" ref="revenue_code_810902" />
-    </record>
+    <function model="account.tax.group" name="write">
+        <value
+            eval="[ref('l10n_br_coa.%s_tax_group_pis' % ref('l10n_br_base.empresa_lucro_presumido'), False) or ref('account.%s_tax_group_pis' % ref('l10n_br_base.empresa_lucro_presumido'))]"
+        />
+        <value eval="{'dctfweb_revenue_code_id': ref('revenue_code_810902')}" />
+    </function>
 
-    <record id="l10n_br_coa.tax_group_cofins" model="account.tax.group">
-        <field name="dctfweb_revenue_code_id" ref="revenue_code_217201" />
-    </record>
+    <function model="account.tax.group" name="write">
+        <value
+            eval="[ref('l10n_br_coa.%s_tax_group_cofins' % ref('l10n_br_base.empresa_lucro_presumido'), False) or ref('account.%s_tax_group_cofins' % ref('l10n_br_base.empresa_lucro_presumido'))]"
+        />
+        <value eval="{'dctfweb_revenue_code_id': ref('revenue_code_217201')}" />
+    </function>
 
-    <record id="l10n_br_coa.tax_group_ipi" model="account.tax.group">
-        <field name="dctfweb_revenue_code_id" ref="revenue_code_512301" />
-    </record>
+    <function model="account.tax.group" name="write">
+        <value
+            eval="[ref('l10n_br_coa.%s_tax_group_ipi' % ref('l10n_br_base.empresa_lucro_presumido'), False) or ref('account.%s_tax_group_ipi' % ref('l10n_br_base.empresa_lucro_presumido'))]"
+        />
+        <value eval="{'dctfweb_revenue_code_id': ref('revenue_code_512301')}" />
+    </function>
 
     <!--
       The initial data of the demo company. ICMS is left without a code on

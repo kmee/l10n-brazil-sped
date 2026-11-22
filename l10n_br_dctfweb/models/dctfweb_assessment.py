@@ -310,7 +310,7 @@ class DctfwebAssessment(models.Model):
     @api.model
     def _establishment_cnpj(self, company):
         """The last 6 digits of the establishment CNPJ, order number plus check."""
-        digits = "".join(filter(str.isdigit, company.cnpj_cpf or ""))
+        digits = "".join(filter(str.isdigit, company.vat or ""))
         return digits[-6:] if len(digits) == 14 else False
 
     def action_assess(self):
@@ -388,7 +388,7 @@ class DctfwebAssessment(models.Model):
                     _("The MIT %(name)s cannot be closed:\n%(pendencies)s")
                     % {
                         "name": record.name,
-                        "pendencies": "\n".join("- %s" % p for p in pendencies),
+                        "pendencies": "\n".join(f"- {p}" for p in pendencies),
                     }
                 )
             payload = record._build_mit_payload()
@@ -447,7 +447,7 @@ class DctfwebAssessment(models.Model):
     def _company_cnpj_root(self):
         """The 8 first digits of the company CNPJ, which name the file."""
         self.ensure_one()
-        digits = "".join(filter(str.isdigit, self.company_id.cnpj_cpf or ""))
+        digits = "".join(filter(str.isdigit, self.company_id.vat or ""))
         return digits[:8] if len(digits) == 14 else False
 
     def _mit_filename(self):

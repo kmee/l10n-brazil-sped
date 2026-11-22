@@ -9,7 +9,7 @@ class TestRevenueCode(TransactionCase):
     """The revenue code table is the authority's, and it carries the rules."""
 
     def _code(self, xmlid):
-        return self.env.ref("l10n_br_dctfweb.%s" % xmlid)
+        return self.env.ref(f"l10n_br_dctfweb.{xmlid}")
 
     def test_the_whole_table_is_loaded(self):
         """The manual publishes 240 codes: all of them have to be there."""
