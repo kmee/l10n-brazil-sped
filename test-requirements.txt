@@ -1,7 +1,7 @@
 odoo-test-helper
 xmldiff
 # Same pin as OCA/l10n-brazil 16.0
-pyopenssl==22.1.0
+pyopenssl==26.0.0
 # l10n_br_nfe 16.0 imports brazil_fiscal_client and brazilfiscalreport
 # without declaring them in its manifest; OCA/l10n-brazil 16.0 gets them from
 # the root requirements.txt (same pins as kmee/l10n-brazil-fiscal-contrib).
