@@ -3,6 +3,7 @@
 
 from datetime import datetime
 
+from odoo.exceptions import ValidationError
 from odoo.tests.common import tagged
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
@@ -124,3 +125,95 @@ class TestSpedEfdIcmsIpiCorrecoes(EntradaHelpers, SpedEntradaCommon):
         self.assertEqual(self._c170(self._declaration_july())["COD_ENQ"], "")
         line.ipi_guideline_id = self.env.ref("l10n_br_fiscal.tax_guideline_001")
         self.assertEqual(self._c170(self._declaration_july())["COD_ENQ"], "001")
+
+    def test_0015_has_the_state_and_the_ie_of_the_substitute(self):
+        """0015: UF_ST is the state and IE_ST the state tax number the company
+        has there as a tax substitute."""
+        self._entry_document()
+        self.env["state.tax.numbers"].create(
+            {
+                "partner_id": self.company.partner_id.id,
+                "state_id": self.env.ref("base.state_br_rj").id,
+                "l10n_br_ie_code": "86.817.30-6",
+            }
+        )
+        records = self._sped_records(self._declaration_july(), "0015")
+        self.assertEqual(records, [{"UF_ST": "RJ", "IE_ST": "86817306"}])
+
+    def _relate(self, doc, **vals):
+        return self.env["l10n_br_fiscal.document.related"].create(
+            {
+                "document_id": doc.id,
+                "document_type_id": self.env.ref("l10n_br_fiscal.document_55").id,
+                "document_serie": "1",
+                "document_number": "77",
+                "document_date": datetime(2026, 6, 10).date(),
+                **vals,
+            }
+        )
+
+    def test_c113_cod_part_is_the_partner_of_the_referenced_document(self):
+        """C113 COD_PART is the code of a 0150 (REGRA_EXISTE_COD_PART_V2), not
+        the CNPJ, and the partner of a document outside the period gets one."""
+        june, _line = self._entry_document(
+            document_date=datetime(2026, 6, 10, 12, 0), partner_id=self.partner_b.id
+        )
+        doc, _line = self._entry_document()
+        self._relate(
+            doc,
+            document_related_id=june.id,
+            document_key=june.document_key,
+            document_number=june.document_number,
+        )
+        declaration = self._declaration_july()
+        c113 = self._sped_records(declaration, "C113")
+        self.assertEqual([rec["COD_PART"] for rec in c113], [str(self.partner_b.id)])
+        self.assertIn(
+            str(self.partner_b.id),
+            [rec["COD_PART"] for rec in self._sped_records(declaration, "0150")],
+        )
+
+    def test_c113_cod_part_of_a_reference_typed_by_its_cnpj(self):
+        doc, _line = self._entry_document()
+        self._relate(doc, cnpj_cpf="49.190.159/0001-05")
+        c113 = self._sped_records(self._declaration_july(), "C113")
+        self.assertEqual([rec["COD_PART"] for rec in c113], [str(self.partner_a.id)])
+
+    def test_the_sped_adjustment_code_is_on_the_benefit_and_relief_screens(self):
+        for model, view in (
+            ("l10n_br_fiscal.tax.definition", "l10n_br_fiscal.tax_definition_form"),
+            ("l10n_br_fiscal.icms.relief", "l10n_br_fiscal.tax_icms_relief_form"),
+        ):
+            view_id = self.env.ref(view).id
+            arch = self.env[model].get_view(view_id)["arch"]
+            self.assertIn('name="sped_cod_aj"', arch, model)
+
+    def test_c197_only_goes_out_with_a_10_position_code(self):
+        # the C197 hangs from the C195, the observation of the document
+        for note, code in (("Observacao 1", "SP12345678"), ("Observacao 2", "SP123")):
+            _doc, line = self._entry_document(manual_fiscal_additional_data=note)
+            line.partner_icms_tax_benefit_code = code
+        c197 = self._sped_records(self._declaration_july(), "C197")
+        self.assertEqual([rec["COD_AJ"] for rec in c197], ["SP12345678"])
+
+    def test_c197_cod_item_is_the_one_of_the_0200(self):
+        """C197 COD_ITEM points to the 0200 (REGRA_EXISTE_COD_ITEM_V2): the
+        same code as the C170, also for a product without a reference."""
+        self.product_a.default_code = False
+        _doc, line = self._entry_document(manual_fiscal_additional_data="Obs")
+        line.partner_icms_tax_benefit_code = "SP12345678"
+        declaration = self._declaration_july()
+        c197 = self._sped_records(declaration, "C197")
+        self.assertEqual(
+            [rec["COD_ITEM"] for rec in c197], [self._c170(declaration)["COD_ITEM"]]
+        )
+
+    def test_the_sped_adjustment_code_must_have_10_positions(self):
+        with self.assertRaises(ValidationError):
+            self.env["l10n_br_fiscal.icms.relief"].create(
+                {"code": "99", "name": "Test", "sped_cod_aj": "SP123"}
+            )
+        relief = self.env["l10n_br_fiscal.icms.relief"].create(
+            {"code": "98", "name": "Test 10", "sped_cod_aj": "SP90090101"}
+        )
+        self.assertEqual(relief.sped_cod_aj, "SP90090101")
