@@ -48,18 +48,14 @@ class TaxAssessment(models.Model):
         comodel_name="res.company",
         required=True,
         default=lambda self: self.env.company,
-        states={"draft": [("readonly", False)]},
-        readonly=True,
     )
     tax_group_id = fields.Many2one(
         comodel_name="account.tax.group",
         string="Grupo de imposto",
         required=True,
-        states={"draft": [("readonly", False)]},
-        readonly=True,
         help="Grupo apurado nesta conta gráfica (ICMS, IPI, PIS, COFINS). "
         "As contas contábeis usadas no encerramento vêm deste grupo "
-        "(property_tax_payable_account_id e irmãs), que o core já modela.",
+        "(tax_payable_account_id e irmãs), que o core já modela.",
     )
     tax_domain = fields.Selection(
         related="tax_group_id.fiscal_tax_group_id.tax_domain",
@@ -90,14 +86,10 @@ class TaxAssessment(models.Model):
     date_from = fields.Date(
         string="De",
         required=True,
-        states={"draft": [("readonly", False)]},
-        readonly=True,
     )
     date_to = fields.Date(
         string="Até",
         required=True,
-        states={"draft": [("readonly", False)]},
-        readonly=True,
     )
     state = fields.Selection(
         selection=[
@@ -522,7 +514,7 @@ class TaxAssessment(models.Model):
         groups = (
             self.env["account.move.line"]
             .sudo()
-            .read_group(
+            ._read_group(
                 [
                     ("company_id", "=", self.company_id.id),
                     ("parent_state", "=", "posted"),
@@ -530,15 +522,10 @@ class TaxAssessment(models.Model):
                     ("date", ">=", first_system),
                     ("date", "<", self.date_from),
                 ],
-                ["date"],
                 ["date:month"],
-                lazy=False,
             )
         )
-        moved = {
-            fields.Date.to_date(group["__range"]["date:month"]["from"])
-            for group in groups
-        }
+        moved = {month for (month,) in groups}
         covered = set()
         for assessment in self.search(
             [
@@ -719,9 +706,9 @@ class TaxAssessment(models.Model):
         self.ensure_one()
         group = self.tax_group_id.with_company(self.company_id)
         missing = []
-        if not group.property_tax_payable_account_id:
+        if not group.tax_payable_account_id:
             missing.append(_("conta de imposto a pagar"))
-        if not group.property_tax_receivable_account_id:
+        if not group.tax_receivable_account_id:
             missing.append(_("conta de imposto a recuperar"))
         if missing:
             raise UserError(
@@ -865,7 +852,7 @@ class TaxAssessment(models.Model):
                 0,
                 {
                     "name": label,
-                    "account_id": group.property_tax_payable_account_id.id,
+                    "account_id": group.tax_payable_account_id.id,
                     "debit": offset,
                     "credit": 0.0,
                 },
@@ -875,7 +862,7 @@ class TaxAssessment(models.Model):
                 0,
                 {
                     "name": label,
-                    "account_id": group.property_tax_receivable_account_id.id,
+                    "account_id": group.tax_receivable_account_id.id,
                     "debit": 0.0,
                     "credit": offset,
                 },

@@ -13,20 +13,20 @@
                         string="Apurar"
                         type="object"
                         class="oe_highlight"
-                        states="draft,computed"
+                        invisible="state not in ('draft', 'computed')"
                     />
                     <button
                         name="action_post"
                         string="Encerrar"
                         type="object"
                         class="oe_highlight"
-                        states="computed"
+                        invisible="state != 'computed'"
                     />
                     <button
                         name="action_draft"
                         string="Voltar a rascunho"
                         type="object"
-                        states="computed,posted"
+                        invisible="state not in ('computed', 'posted')"
                     />
                     <field name="state" widget="statusbar" />
                 </header>
@@ -34,7 +34,7 @@
                     <div
                         class="alert alert-warning"
                         role="alert"
-                        attrs="{'invisible': [('previous_periods_warning', '=', False)]}"
+                        invisible="not previous_periods_warning"
                     >
                         <field name="previous_periods_warning" />
                     </div>
@@ -48,15 +48,16 @@
                             <field
                                 name="company_id"
                                 groups="base.group_multi_company"
+                                readonly="state != 'draft'"
                             />
-                            <field name="tax_group_id" />
+                            <field name="tax_group_id" readonly="state != 'draft'" />
                             <field name="tax_domain" />
                             <field name="regime" />
                             <field name="currency_id" invisible="1" />
                         </group>
                         <group>
-                            <field name="date_from" />
-                            <field name="date_to" />
+                            <field name="date_from" readonly="state != 'draft'" />
+                            <field name="date_to" readonly="state != 'draft'" />
                             <field name="move_id" readonly="1" />
                         </group>
                     </group>

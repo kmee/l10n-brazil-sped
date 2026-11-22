@@ -3,13 +3,12 @@
 
 import logging
 
-from odoo import SUPERUSER_ID, Command, api, tools
+from odoo import Command, tools
 
 _logger = logging.getLogger(__name__)
 
 
-def post_init_hook(cr, registry):
-    env = api.Environment(cr, SUPERUSER_ID, {})
+def post_init_hook(env):
     if env.ref("base.module_l10n_br_tax_assessment").demo:
         load_posted_invoice_demo(env)
 
@@ -50,7 +49,7 @@ def load_posted_invoice_demo(env):
     )
     try:
         tools.convert_file(
-            env.cr,
+            env,
             "l10n_br_tax_assessment",
             "demo/account_invoice_demo.xml",
             None,
@@ -77,12 +76,12 @@ def _configure_demo_closing_accounts(env, company):
     The chart does not fill the payable and receivable accounts the closing
     entry needs, so they are read from the tax repartition lines.
     """
-    groups = env["account.tax.group"].search([])
+    groups = env["account.tax.group"].search([("company_id", "=", company.id)])
     for group in groups:
         group_in_company = group.with_company(company)
         if (
-            group_in_company.property_tax_payable_account_id
-            and group_in_company.property_tax_receivable_account_id
+            group_in_company.tax_payable_account_id
+            and group_in_company.tax_receivable_account_id
         ):
             continue
         taxes = env["account.tax"].search(
@@ -92,9 +91,9 @@ def _configure_demo_closing_accounts(env, company):
         payable = _repartition_account(taxes, "sale")
         receivable = _repartition_account(taxes, "purchase")
         if payable:
-            vals["property_tax_payable_account_id"] = payable.id
+            vals["tax_payable_account_id"] = payable.id
         if receivable:
-            vals["property_tax_receivable_account_id"] = receivable.id
+            vals["tax_receivable_account_id"] = receivable.id
         if len(vals) == 2:
             group_in_company.write(vals)
 

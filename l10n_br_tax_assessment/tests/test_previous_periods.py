@@ -39,13 +39,13 @@ class TestPreviousPeriods(AccountMoveBRCommon):
     def _configure_closing_accounts(self):
         group = self.icms_group.with_company(self.company)
         if (
-            group.property_tax_payable_account_id
-            and group.property_tax_receivable_account_id
+            group.tax_payable_account_id
+            and group.tax_receivable_account_id
         ):
             return
         accounts = {
-            "property_tax_payable_account_id": ("ICMSPAY", "liability_current"),
-            "property_tax_receivable_account_id": ("ICMSREC", "asset_current"),
+            "tax_payable_account_id": ("ICMSPAY", "liability_current"),
+            "tax_receivable_account_id": ("ICMSREC", "asset_current"),
         }
         group.write(
             {

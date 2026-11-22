@@ -35,17 +35,15 @@ class TestTaxAssessment(AccountTestInvoicingCommon):
 
     def setUp(self):
         super().setUp()
-        # One group per test: `property_tax_payable_account_id` is
-        # company_dependent (ir.property) and its cache does not follow the
-        # rollback, so a class-level group would let the test that configures
-        # the accounts leak into the one that expects them empty.
+        # One group per test, so the test that configures the accounts does
+        # not leak into the one that expects them empty.
         self.group = self.env["account.tax.group"].create({"name": "ICMS (teste)"})
 
     def _configure_group(self):
         self.group.with_company(self.company_data["company"]).write(
             {
-                "property_tax_payable_account_id": self.account_payable.id,
-                "property_tax_receivable_account_id": self.account_receivable.id,
+                "tax_payable_account_id": self.account_payable.id,
+                "tax_receivable_account_id": self.account_receivable.id,
             }
         )
 
@@ -354,17 +352,14 @@ class TestTaxAssessment(AccountTestInvoicingCommon):
     def test_post_without_configured_accounts_raises(self):
         """Without the tax group accounts there is no closing.
 
-        The chart of accounts installs GLOBAL `ir.property` records
-        (res_id=False) for `property_tax_payable_account_id` and its sibling, so
-        every new group is born with an account. To exercise the check the
-        company property has to be cleared explicitly, which is the real
-        scenario the guard protects: a database with no chart of accounts, or a
-        company whose property was removed.
+        The accounts are cleared explicitly, which is the real scenario the
+        guard protects: a database with no chart of accounts, or a group whose
+        accounts were removed.
         """
         self.group.with_company(self.company_data["company"]).write(
             {
-                "property_tax_payable_account_id": False,
-                "property_tax_receivable_account_id": False,
+                "tax_payable_account_id": False,
+                "tax_receivable_account_id": False,
             }
         )
         a = self._new_assessment()
@@ -819,8 +814,8 @@ class TestTaxAssessmentClosingBook(AccountTestInvoicingCommon):
         cls.group = cls.env["account.tax.group"].create({"name": "ICMS (encerramento)"})
         cls.group.with_company(cls.company).write(
             {
-                "property_tax_payable_account_id": cls.payable.id,
-                "property_tax_receivable_account_id": cls.receivable.id,
+                "tax_payable_account_id": cls.payable.id,
+                "tax_receivable_account_id": cls.receivable.id,
             }
         )
         # A sale tax books its amount into the payable account (the invoices

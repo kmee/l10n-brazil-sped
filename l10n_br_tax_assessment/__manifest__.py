@@ -3,7 +3,7 @@
 {
     "name": "Apuração de Impostos sobre Consumo (Brasil)",
     "summary": "Conta gráfica mensal de ICMS, IPI, PIS e COFINS",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Localization/Brazil",
     "license": "AGPL-3",
     "author": "KMEE, Odoo Community Association (OCA)",
