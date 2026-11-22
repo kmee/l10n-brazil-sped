@@ -624,11 +624,6 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
-#: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_e111
-msgid "Ajuste/Benefício/Incentivo da Apuração do ICMS."
-msgstr ""
-
-#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_1921
 msgid "Ajuste/Benefício/Incentivo da Sub- apuração do ICMS."
 msgstr ""
@@ -930,7 +925,6 @@ msgid "Apuração do ICMS Diferencial de Alíquota – UF Origem/Destino EC 87/1
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
-#: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_e110
 #: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_e210
 msgid "Apuração do ICMS."
 msgstr ""
@@ -967,6 +961,24 @@ msgstr ""
 #. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_b470
 msgid "Apuração do ISS."
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/sped_efd_icms_ipi.py:0
+#, python-format
+msgid ""
+"Assess and post the ICMS of the period before generating the file (ICMS "
+"assessment of %(start)s to %(end)s)."
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/sped_efd_icms_ipi.py:0
+#, python-format
+msgid ""
+"Assess and post the IPI of the period before generating the file, or set the"
+" activity to Outros if the company is not an IPI taxpayer."
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
@@ -2711,6 +2723,13 @@ msgid "CNPJ/CPF do participante tomador do serviço"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/sped_efd_icms_ipi.py:0
+#, python-format
+msgid "CPF"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_c115__CPF_COL
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_c115__CPF_COL
 msgid "CPF do contribuinte do local de coleta"
@@ -2750,6 +2769,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_c460__CPF_CNPJ
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_c460__CPF_CNPJ
 msgid "CPF ou CNPJ do adquirente"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/sped_efd_icms_ipi.py:0
+#, python-format
+msgid "CRC"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
@@ -8161,6 +8187,13 @@ msgid "Data de vencimento da parcela"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0000__dt_vcto_obrigacao
+msgid ""
+"Data de vencimento do ICMS apurado, usada no E116. O prazo varia por UF e "
+"por regime, então não é derivado: quem sabe o prazo é o contribuinte."
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_c112__DT_VCTO
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_c112__DT_VCTO
 msgid "Data de vencimento do documento de arrecadação"
@@ -10529,6 +10562,33 @@ msgid "ICMS a recolher"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_e111
+msgid ""
+"ICMS assessment adjustment, benefit or incentive.\n"
+"\n"
+"One record per MANUAL adjustment of the assessment. A line assessed from\n"
+"move lines does not become an E111: it is already added into E110 fields 02\n"
+"and 06, and repeating it here would double the amount.\n"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_e110
+msgid ""
+"ICMS assessment.\n"
+"\n"
+"This record computes nothing: it SERIALIZES the period ICMS assessment\n"
+"(`l10n_br_tax.assessment`), which already publishes the totals in the same\n"
+"order as the E110 fields. Recomputing here would produce a file that\n"
+"matches neither the accounting nor the payment slip, which is exactly the\n"
+"defect the assessment layer exists to prevent.\n"
+"\n"
+"Cardinality is 1:1 within E100: when there is no closed ICMS assessment for\n"
+"the period no record is generated and the structural validator reports the\n"
+"gap. That is the intended behaviour: a structure error is better than a\n"
+"block E filled with zeros.\n"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_1970__G3_06
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_1970__G3_06
 msgid "ICMS das saídas incentivadas de PI"
@@ -10544,6 +10604,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_1970__G3_02
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_1970__G3_02
 msgid "ICMS diferido nas importações"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_e116
+msgid ""
+"ICMS obligations to collect, own operations.\n"
+"\n"
+"Comes from the same assessment as E110: the amount payable is E110 field\n"
+"13, and this record only breaks it down into obligations. The PVA checks\n"
+"that the sum of the E116 records equals E110, so generating one without the\n"
+"other fails.\n"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
@@ -12275,6 +12346,14 @@ msgstr ""
 #. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields.selection,name:l10n_br_sped_efd_icms_ipi.selection__l10n_br_sped_efd_icms_ipi_0000__CLAS_ESTAB_IND__00
 msgid "Industrial - Transformação"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0000__IND_ATIV
+msgid ""
+"Industrial or equivalent (0) only for the company that is an IPI taxpayer: "
+"it then needs the IPI assessment (E500) and the classification of the "
+"establishment (0002). Any other company is Outros (1)."
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
@@ -15221,12 +15300,6 @@ msgid "N - Valor do ISS próprio a recolher pela sociedade uniprofissional"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
-#: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0000__activity_calendar_event_id
-#: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_0000__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
-msgstr ""
-
-#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0000__activity_date_deadline
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_0000__activity_date_deadline
 msgid "Next Activity Deadline"
@@ -16390,11 +16463,6 @@ msgstr ""
 #. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_1926
 msgid "Obrigações do ICMS A Recolher – Operações referentes à Sub-apuração."
-msgstr ""
-
-#. module: l10n_br_sped_efd_icms_ipi
-#: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_e116
-msgid "Obrigações do ICMS Recolhido ou a Recolher."
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
@@ -20262,6 +20330,15 @@ msgstr ""
 #. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model,name:l10n_br_sped_efd_icms_ipi.model_l10n_br_sped_efd_icms_ipi_20_b350
 msgid "Serviços prestados por instituições financeiras"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/sped_efd_icms_ipi.py:0
+#, python-format
+msgid ""
+"Set the classification of the establishment: the industrial activity needs "
+"it (record 0002)."
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
@@ -25485,6 +25562,11 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0000__dt_vcto_obrigacao
+msgid "Vencimento da obrigação"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_1320__VOL_VENDAS
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_1320__VOL_VENDAS
 msgid "Vendas (08 - 09 - 10 ) do bico"
@@ -25584,6 +25666,13 @@ msgid "Website communication history"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/sped_efd_icms_ipi.py:0
+#, python-format
+msgid "city"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0000__CLAS_ESTAB_IND
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0002__CLAS_ESTAB_IND
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_0002__CLAS_ESTAB_IND
@@ -25607,6 +25696,13 @@ msgstr ""
 #: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0221__COD_ITEM_ATOMICO
 #: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_0221__COD_ITEM_ATOMICO
 msgid "código do item atômico contido no item informado no 0200 Pai."
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/sped_efd_icms_ipi.py:0
+#, python-format
+msgid "e-mail"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
