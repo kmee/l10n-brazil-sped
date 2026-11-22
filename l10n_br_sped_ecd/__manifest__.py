@@ -8,7 +8,7 @@
     "version": "16.0.4.2.1",
     "license": "AGPL-3",
     "author": "Akretion, Odoo Community Association (OCA)",
-    "website": "https://github.com/OCA/l10n-brazil",
+    "website": "https://github.com/kmee/l10n-brazil-sped",
     "development_status": "Alpha",
     "maintainers": ["rvalyi", "renatonlima"],
     "depends": ["l10n_br_sped_base", "l10n_br_account"],

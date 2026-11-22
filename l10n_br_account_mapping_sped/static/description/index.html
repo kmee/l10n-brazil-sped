@@ -369,26 +369,28 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:db82284cf608bff888247d1efeb203627e76f97fd7f6cd45a2a4d5205369cb38
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/KMEE/kmee-odoo-addons/tree/16.0/l10n_br_account_mapping_sped"><img alt="KMEE/kmee-odoo-addons" src="https://img.shields.io/badge/github-KMEE%2Fkmee--odoo--addons-lightgray.png?logo=github" /></a></p>
-<p>Liga os planos de contas de destino ao <strong>plano referencial da RFB</strong>, que é a
-base do registro <strong>I051</strong> do SPED Contábil (ECD): o mapeamento entre cada conta
-da empresa e a conta correspondente do plano referencial.</p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/kmee/l10n-brazil-sped/tree/16.0/l10n_br_account_mapping_sped"><img alt="kmee/l10n-brazil-sped" src="https://img.shields.io/badge/github-kmee%2Fl10n--brazil--sped-lightgray.png?logo=github" /></a></p>
+<p>Liga os planos de contas de destino ao <strong>plano referencial da RFB</strong>, que
+é a base do registro <strong>I051</strong> do SPED Contábil (ECD): o mapeamento entre
+cada conta da empresa e a conta correspondente do plano referencial.</p>
 <p>Como funciona:</p>
 <ol class="arabic simple">
-<li>Crie um plano de destino marcado como <strong>Plano referencial da RFB</strong>, com o
-código do plano na tabela oficial (campo <tt class="docutils literal">COD_PLAN_REF</tt> do I051; por
-exemplo, PJ em geral do Lucro Real usa o plano 1).</li>
-<li>Vincule as contas do Odoo às contas referenciais, como em qualquer plano de
-destino (N contas do Odoo por conta referencial).</li>
+<li>Crie um plano de destino marcado como <strong>Plano referencial da RFB</strong>,
+com o código do plano na tabela oficial (campo <tt class="docutils literal">COD_PLAN_REF</tt> do
+I051; por exemplo, PJ em geral do Lucro Real usa o plano 1).</li>
+<li>Vincule as contas do Odoo às contas referenciais, como em qualquer
+plano de destino (N contas do Odoo por conta referencial).</li>
 <li>Aponte o plano na empresa (campo <em>Plano referencial da RFB</em>).</li>
 </ol>
-<p>O gerador da ECD consome <tt class="docutils literal">account.l10n_br_sped_referential_line()</tt>: para cada
-conta do I050, o método devolve <tt class="docutils literal">COD_PLAN_REF</tt>/<tt class="docutils literal">COD_CTA_REF</tt> quando a conta
-está mapeada, ou vazio quando não está (o I051 é opcional por conta).</p>
-<p><strong>Carga da tabela oficial</strong>: as contas do plano referencial são publicadas pela
-RFB nas tabelas dinâmicas do SPED (site do SPED, ECF/ECD). Importe-as pelo
-import padrão do Odoo no modelo <em>Conta do Plano de Destino</em> (colunas: plano,
-código, nome). Os dados de demonstração deste módulo são apenas ilustrativos.</p>
+<p>O gerador da ECD consome <tt class="docutils literal">account.l10n_br_sped_referential_line()</tt>:
+para cada conta do I050, o método devolve
+<tt class="docutils literal">COD_PLAN_REF</tt>/<tt class="docutils literal">COD_CTA_REF</tt> quando a conta está mapeada, ou vazio
+quando não está (o I051 é opcional por conta).</p>
+<p><strong>Carga da tabela oficial</strong>: as contas do plano referencial são
+publicadas pela RFB nas tabelas dinâmicas do SPED (site do SPED,
+ECF/ECD). Importe-as pelo import padrão do Odoo no modelo <em>Conta do
+Plano de Destino</em> (colunas: plano, código, nome). Os dados de
+demonstração deste módulo são apenas ilustrativos.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -403,10 +405,10 @@ código, nome). Os dados de demonstração deste módulo são apenas ilustrativo
 </div>
 <div class="section" id="bug-tracker">
 <h1><a class="toc-backref" href="#toc-entry-1">Bug Tracker</a></h1>
-<p>Bugs are tracked on <a class="reference external" href="https://github.com/KMEE/kmee-odoo-addons/issues">GitHub Issues</a>.
+<p>Bugs are tracked on <a class="reference external" href="https://github.com/kmee/l10n-brazil-sped/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/KMEE/kmee-odoo-addons/issues/new?body=module:%20l10n_br_account_mapping_sped%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/kmee/l10n-brazil-sped/issues/new?body=module:%20l10n_br_account_mapping_sped%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -427,7 +429,7 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <h2><a class="toc-backref" href="#toc-entry-5">Maintainers</a></h2>
 <p>Current maintainer:</p>
 <p><a class="reference external image-reference" href="https://github.com/mileo"><img alt="mileo" src="https://github.com/mileo.png?size=40px" /></a></p>
-<p>This module is part of the <a class="reference external" href="https://github.com/KMEE/kmee-odoo-addons/tree/16.0/l10n_br_account_mapping_sped">KMEE/kmee-odoo-addons</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/kmee/l10n-brazil-sped/tree/16.0/l10n_br_account_mapping_sped">kmee/l10n-brazil-sped</a> project on GitHub.</p>
 <p>You are welcome to contribute.</p>
 </div>
 </div>

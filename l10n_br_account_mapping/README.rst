@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ===========================
 Planos de Contas de Destino
 ===========================
@@ -17,35 +13,39 @@ Planos de Contas de Destino
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-KMEE%2Fkmee--odoo--addons-lightgray.png?logo=github
-    :target: https://github.com/KMEE/kmee-odoo-addons/tree/16.0/l10n_br_account_mapping
-    :alt: KMEE/kmee-odoo-addons
+.. |badge3| image:: https://img.shields.io/badge/github-kmee%2Fl10n--brazil--sped-lightgray.png?logo=github
+    :target: https://github.com/kmee/l10n-brazil-sped/tree/16.0/l10n_br_account_mapping
+    :alt: kmee/l10n-brazil-sped
 
 |badge1| |badge2| |badge3|
 
-Mapeia as contas do plano do Odoo para **planos de contas externos**: o plano do
-escritório de contabilidade que recebe a exportação contábil e o plano
-referencial da RFB usado no registro I051 do SPED Contábil.
+Mapeia as contas do plano do Odoo para **planos de contas externos**: o
+plano do escritório de contabilidade que recebe a exportação contábil e
+o plano referencial da RFB usado no registro I051 do SPED Contábil.
 
-Uma empresa pode ter vários planos de destino ao mesmo tempo (dois escritórios,
-período de transição, referencial). Em cada plano, o registro central é a
-**conta do destino** (código e nome como o destino a conhece), e um vínculo diz
-quais contas do Odoo desaguam nela: **N contas do Odoo para 1 conta do
-destino**, que é a relação típica com o plano mais enxuto do escritório.
+Uma empresa pode ter vários planos de destino ao mesmo tempo (dois
+escritórios, período de transição, referencial). Em cada plano, o
+registro central é a **conta do destino** (código e nome como o destino
+a conhece), e um vínculo diz quais contas do Odoo desaguam nela: **N
+contas do Odoo para 1 conta do destino**, que é a relação típica com o
+plano mais enxuto do escritório.
 
-Uma conta do Odoo só pode desaguar em uma conta por plano (o código exportado
-seria ambíguo); em planos diferentes, cada conta pode cair onde precisar.
+Uma conta do Odoo só pode desaguar em uma conta por plano (o código
+exportado seria ambíguo); em planos diferentes, cada conta pode cair
+onde precisar.
 
 O desenho espelha o ``account_consolidation`` do Odoo Enterprise
-(``consolidation.chart``/``consolidation.account``), sem depender dele e sem o
-escopo de consolidação financeira (períodos, taxas de câmbio): aqui é apenas o
-mapeamento. Quem tem o Enterprise encontra o mesmo vocabulário.
+(``consolidation.chart``/``consolidation.account``), sem depender dele e
+sem o escopo de consolidação financeira (períodos, taxas de câmbio):
+aqui é apenas o mapeamento. Quem tem o Enterprise encontra o mesmo
+vocabulário.
 
-Este módulo define o cadastro e a resolução (``plan.resolve(conta)``); quem o
-consome são a exportação contábil e, futuramente, o SPED Contábil.
+Este módulo define o cadastro e a resolução (``plan.resolve(conta)``);
+quem o consome são a exportação contábil e, futuramente, o SPED
+Contábil.
 
 **Table of contents**
 
@@ -55,10 +55,10 @@ consome são a exportação contábil e, futuramente, o SPED Contábil.
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues <https://github.com/KMEE/kmee-odoo-addons/issues>`_.
+Bugs are tracked on `GitHub Issues <https://github.com/kmee/l10n-brazil-sped/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/KMEE/kmee-odoo-addons/issues/new?body=module:%20l10n_br_account_mapping%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/kmee/l10n-brazil-sped/issues/new?body=module:%20l10n_br_account_mapping%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -66,17 +66,17 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * KMEE
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Luis Felipe Mileo <mileo@kmee.com.br>
+- Luis Felipe Mileo <mileo@kmee.com.br>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 .. |maintainer-mileo| image:: https://github.com/mileo.png?size=40px
     :target: https://github.com/mileo
@@ -86,6 +86,6 @@ Current maintainer:
 
 |maintainer-mileo| 
 
-This module is part of the `KMEE/kmee-odoo-addons <https://github.com/KMEE/kmee-odoo-addons/tree/16.0/l10n_br_account_mapping>`_ project on GitHub.
+This module is part of the `kmee/l10n-brazil-sped <https://github.com/kmee/l10n-brazil-sped/tree/16.0/l10n_br_account_mapping>`_ project on GitHub.
 
 You are welcome to contribute.

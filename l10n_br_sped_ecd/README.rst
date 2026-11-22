@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ==========
 SPED - ECD
 ==========
@@ -17,20 +13,14 @@ SPED - ECD
 .. |badge1| image:: https://img.shields.io/badge/maturity-Alpha-red.png
     :target: https://odoo-community.org/page/development-status
     :alt: Alpha
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fl10n--brazil-lightgray.png?logo=github
-    :target: https://github.com/OCA/l10n-brazil/tree/16.0/l10n_br_sped_ecd
-    :alt: OCA/l10n-brazil
-.. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/l10n-brazil-16-0/l10n-brazil-16-0-l10n_br_sped_ecd
-    :alt: Translate me on Weblate
-.. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/l10n-brazil&target_branch=16.0
-    :alt: Try me on Runboat
+.. |badge3| image:: https://img.shields.io/badge/github-kmee%2Fl10n--brazil--sped-lightgray.png?logo=github
+    :target: https://github.com/kmee/l10n-brazil-sped/tree/16.0/l10n_br_sped_ecd
+    :alt: kmee/l10n-brazil-sped
 
-|badge1| |badge2| |badge3| |badge4| |badge5|
+|badge1| |badge2| |badge3|
 
 Este módulo contém toda a estrutura dos registros da ECD do SPED. Ou
 seja se vocẽ preencher todos registros do SPED, o arquivo digital vai
@@ -74,13 +64,36 @@ Usage
    validador gratuito da receita por exemplo. Você pode também usar a
    opção de separar o arquivo por bloco se você quiser.
 
+Known issues / Roadmap
+======================
+
+- **Aglutinação com grupos que têm contas e subgrupos.** O balanço e a
+  DRE são aglutinados pelos grupos do plano: o grupo que só reúne contas
+  é a linha de detalhe e os grupos acima são os totais. A conta lançada
+  diretamente num grupo que também tem subgrupos sai como linha de
+  detalhe própria, e um grupo com contas do ativo e do passivo ao mesmo
+  tempo não é separado. A DRE sai sob uma linha do resultado líquido do
+  exercício.
+- **Demonstrações intermediárias e período anterior.** Sai uma
+  demonstração (J005) para o período da escrituração. Faltam as
+  demonstrações de períodos intermediários, o valor do período anterior
+  na DRE (VL_CTA_INI\_ do J150), as notas explicativas e as demais
+  demonstrações (J210, DLPA e DMPL).
+- **Recuperação da ECD anterior.** O validador avisa quando a
+  escrituração do ano anterior não foi recuperada; isso se faz no
+  próprio programa da Receita.
+- **Livros e registros não gerados.** Livros auxiliares (I012), centros
+  de custo (I100), subcontas correlatas (I053), escrituração de SCP e
+  balancetes diários (I300) seguem preenchíveis pela interface ou por
+  importação.
+
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues <https://github.com/OCA/l10n-brazil/issues>`_.
+Bugs are tracked on `GitHub Issues <https://github.com/kmee/l10n-brazil-sped/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/l10n-brazil/issues/new?body=module:%20l10n_br_sped_ecd%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/kmee/l10n-brazil-sped/issues/new?body=module:%20l10n_br_sped_ecd%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -103,16 +116,6 @@ Contributors
 Maintainers
 -----------
 
-This module is maintained by the OCA.
-
-.. image:: https://odoo-community.org/logo.png
-   :alt: Odoo Community Association
-   :target: https://odoo-community.org
-
-OCA, or the Odoo Community Association, is a nonprofit organization whose
-mission is to support the collaborative development of Odoo features and
-promote its widespread use.
-
 .. |maintainer-rvalyi| image:: https://github.com/rvalyi.png?size=40px
     :target: https://github.com/rvalyi
     :alt: rvalyi
@@ -120,10 +123,10 @@ promote its widespread use.
     :target: https://github.com/renatonlima
     :alt: renatonlima
 
-Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:
+Current maintainers:
 
 |maintainer-rvalyi| |maintainer-renatonlima| 
 
-This module is part of the `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil/tree/16.0/l10n_br_sped_ecd>`_ project on GitHub.
+This module is part of the `kmee/l10n-brazil-sped <https://github.com/kmee/l10n-brazil-sped/tree/16.0/l10n_br_sped_ecd>`_ project on GitHub.
 
-You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
+You are welcome to contribute.

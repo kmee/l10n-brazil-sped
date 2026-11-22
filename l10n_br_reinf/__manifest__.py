@@ -8,7 +8,7 @@
     "license": "AGPL-3",
     "author": "KMEE, Odoo Community Association (OCA)",
     "maintainers": ["mileo"],
-    "website": "https://github.com/OCA/l10n-brazil",
+    "website": "https://github.com/kmee/l10n-brazil-sped",
     "development_status": "Alpha",
     "version": "16.0.1.0.0",
     "depends": [
