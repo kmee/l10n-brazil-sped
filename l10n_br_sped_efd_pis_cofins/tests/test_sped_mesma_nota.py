@@ -4,6 +4,7 @@
 from datetime import date
 
 from odoo.tests.common import tagged
+from odoo.tools import mute_logger
 
 from odoo.addons.l10n_br_tax_assessment.tests.common_entrada import SpedEntradaCommon
 
@@ -96,6 +97,7 @@ class TestSpedTheSameNoteInTheTwoFiles(CreditMixin, SpedEntradaCommon):
         self.assertEqual(self._number(c100["VL_PIS"]), 0.0)
         self.assertEqual(self._number(c100["VL_COFINS"]), 0.0)
 
+    @mute_logger("odoo.addons.l10n_br_sped_base.models.sped_declaration")
     def test_the_resale_entry_is_the_same_in_the_two_files(self):
         """The credit entry keeps its ICMS and IPI in both."""
         icms, contrib = self._both("fo_compras_compras_comercializacao", "401")
