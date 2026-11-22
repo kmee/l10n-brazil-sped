@@ -42,8 +42,6 @@ class DctfwebAssessment(models.Model):
     company_id = fields.Many2one(
         comodel_name="res.company",
         required=True,
-        readonly=True,
-        states={"draft": [("readonly", False)]},
         default=lambda self: self.env.company,
     )
     currency_id = fields.Many2one(
@@ -53,16 +51,12 @@ class DctfwebAssessment(models.Model):
     )
     year = fields.Integer(
         required=True,
-        readonly=True,
-        states={"draft": [("readonly", False)]},
         default=lambda self: fields.Date.context_today(self).year,
         help="AnoApuracao: the year of the assessment period.",
     )
     month = fields.Selection(
         selection=MIT_MONTH,
         required=True,
-        readonly=True,
-        states={"draft": [("readonly", False)]},
         default=lambda self: str(fields.Date.context_today(self).month),
         help="MesApuracao: the month of the assessment period.",
     )
@@ -83,8 +77,6 @@ class DctfwebAssessment(models.Model):
     )
     no_movement = fields.Boolean(
         string="Without movement",
-        readonly=True,
-        states={"draft": [("readonly", False)]},
         help="SemMovimento: no taxable fact in the period. A company files it "
         "once and only files again when there is movement.",
     )
@@ -93,30 +85,20 @@ class DctfwebAssessment(models.Model):
     pj_qualification = fields.Selection(
         selection=MIT_PJ_QUALIFICATION,
         string="Legal entity qualification",
-        readonly=True,
-        states={"draft": [("readonly", False)]},
     )
     profit_taxation = fields.Selection(
         selection=MIT_PROFIT_TAXATION,
-        readonly=True,
-        states={"draft": [("readonly", False)]},
     )
     monetary_variation = fields.Selection(
         selection=MIT_MONETARY_VARIATION,
         string="Monetary variation criterion",
-        readonly=True,
-        states={"draft": [("readonly", False)]},
     )
     pis_cofins_regime = fields.Selection(
         selection=MIT_PIS_COFINS_REGIME,
         string="PIS/COFINS regime",
-        readonly=True,
-        states={"draft": [("readonly", False)]},
     )
     real_profit_balance = fields.Boolean(
         string="Suspension or reduction balance sheet",
-        readonly=True,
-        states={"draft": [("readonly", False)]},
         help="BalancoLucroReal: the entity raised a suspension or reduction "
         "balance sheet in the month. Only for annual actual profit.",
     )

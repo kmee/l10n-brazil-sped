@@ -165,8 +165,7 @@ class DctfwebRevenueCode(models.Model):
         self.ensure_one()
         return MIT_GROUP_JSON_KEY[self.group]
 
-    def name_get(self):
-        return [
-            (record.id, f"{record.code}-{record.extension} {record.name}")
-            for record in self
-        ]
+    @api.depends("code", "extension", "name")
+    def _compute_display_name(self):
+        for record in self:
+            record.display_name = f"{record.code}-{record.extension} {record.name}"
