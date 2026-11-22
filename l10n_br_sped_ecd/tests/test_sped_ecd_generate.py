@@ -11,6 +11,9 @@ from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 
 @tagged("post_install", "-at_install")
 class TestSpedEcdGenerate(AccountTestInvoicingCommon):
+    # without it the common guesses the chart of the country, l10n_br
+    chart_template = "generic_coa"
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
