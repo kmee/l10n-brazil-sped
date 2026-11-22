@@ -130,7 +130,7 @@ def ler_abas(xlsx_path, abas):
         header = next(rows)
         idx = {(_clean(h) or f"col{i}").upper(): i for i, h in enumerate(header)}
 
-        def col(row, *names):
+        def col(row, *names, idx=idx):
             for name in names:
                 if name in idx and idx[name] < len(row):
                     return row[idx[name]]

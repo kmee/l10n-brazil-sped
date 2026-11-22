@@ -3,7 +3,8 @@
 
 {
     "name": "Brazilian Fiscal Account Move Template",
-    "summary": "Configurable double-entry accounting templates for Brazilian fiscal documents",
+    "summary": "Configurable double-entry accounting templates for Brazilian fiscal "
+    "documents",
     "version": "16.0.1.0.0",
     "license": "AGPL-3",
     "author": "KMEE, Odoo Community Association (OCA)",
