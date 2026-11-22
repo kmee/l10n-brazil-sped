@@ -19,8 +19,8 @@ Addons do Odoo para as escriturações do SPED e a apuração de impostos, sobre
 - `l10n_br_account_mapping*`, `l10n_br_account_history`,
   `l10n_br_account_move_template`: plano referencial da Receita Federal, mapeamento
   contábil, histórico padrão e modelos de lançamento;
-- `l10n_br_sped_setup_tests`: só para o CI, carrega um plano de contas nas empresas
-  demo.
+- `l10n_br_sped_setup_tests`: só para o CI, instala o que os testes esperam do
+  OCA/l10n-brazil completo (planos de contas, `l10n_br_stock_account`, `l10n_br_nfe`).
 
 Série: `16.0`. As dependências do OCA/l10n-brazil vêm da branch `16.0-sped-base` do fork
 `kmee/l10n-brazil`, listadas uma a uma no `test-requirements.txt` (veja o README). Nunca
@@ -66,8 +66,11 @@ trás (o PostgreSQL declara um volume: dê nome a ele).
 
 ## Armadilhas de CI já pagas
 
-- O banco do CI tem só este repositório e as dependências dele. As empresas demo do
-  `l10n_br_base` ficam sem plano de contas sem o módulo de setup.
+- O banco do CI tem só este repositório e as dependências dele. Os testes do SPED
+  nasceram no CI do OCA/l10n-brazil, que instala tudo: sem o módulo de setup, as
+  empresas demo ficam sem plano de contas, os testes de entrada sem crédito são pulados
+  (falta o `l10n_br_stock_account`) e a NF-e de venda dos testes recusa a chave de
+  acesso de uma empresa sem CNPJ (falta o `l10n_br_nfe`).
 - Um addon do OCA/l10n-brazil que não está no `test-requirements.txt` vem do PyPI, na
   versão publicada, e pode não combinar com os que vêm do fork. Ao acrescentar uma
   dependência do OCA/l10n-brazil num manifest, acrescente a linha dela também.

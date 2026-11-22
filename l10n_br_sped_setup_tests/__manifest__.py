@@ -3,8 +3,8 @@
 
 {
     "name": "Brazilian SPED - Test Setup",
-    "summary": "Carrega o plano de contas brasileiro das empresas de demonstração para "
-    "o CI",
+    "summary": "Instala no CI o que os testes do SPED esperam do OCA/l10n-brazil "
+    "completo",
     "version": "16.0.1.0.0",
     "category": "Localisation",
     "license": "AGPL-3",
@@ -14,6 +14,9 @@
     "development_status": "Beta",
     "depends": [
         "l10n_br_coa_generic",
+        "l10n_br_coa_simple",
+        "l10n_br_nfe",
+        "l10n_br_stock_account",
     ],
     "installable": True,
 }
