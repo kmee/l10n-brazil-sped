@@ -14,6 +14,58 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__capital_share
+msgid "% do capital total"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__voting_share
+msgid "% do capital votante"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid "%(cnpj)s: revenue code %(code)s is not in the table of the PVA"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid "%(cnpj)s: revenue code %(code)s needs the CSLL withheld"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid "%(cnpj)s: revenue code %(code)s needs the IR withheld"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid "%(doc)s: tax %(tax)s has no revenue code"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid "%(doc)s: the customer has no CNPJ"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid "%(period)s: no entry marked as Result Closing Entry"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_sped_ecf_0000__IND_SIT_INI_PER__0
 msgid "0 - Normal"
 msgstr ""
@@ -49,6 +101,51 @@ msgid "0035 Identificação das SCP"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__01
+msgid "01 - Acionista Pessoa Fisica Domiciliado no Brasil"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__02
+msgid "02 - Socio Pessoa Fisica Domiciliado no Brasil"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__03
+msgid "03 - Acionista Pessoa Juridica Domiciliado no Brasil"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__04
+msgid "04 - Socio Pessoa Juridica Domiciliado no Brasil"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__05
+msgid "05 - Acionista Pessoa Fisica Residente ou Domiciliado no Exterior"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__06
+msgid "06 - Socio Pessoa Fisica Residente ou Domiciliado no Exterior"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__07
+msgid "07 - Acionista Pessoa Juridica Residente ou Domiciliado no Exterior"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__08
+msgid "08 - Socio Pessoa Juridica Residente ou Domiciliado no Exterior"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__09
+msgid "09 - Titular"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.actions.act_window,name:l10n_br_sped_ecf.ecf_0930_action
 #: model:ir.ui.menu,name:l10n_br_sped_ecf.ecf_0930
 msgid "0930 Identificação dos Signatários da ECF"
@@ -57,6 +154,11 @@ msgstr ""
 #. module: l10n_br_sped_ecf
 #: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_sped_ecf_0000__IND_SIT_INI_PER__1
 msgid "1 - Abertura"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_stock_valuation__1
+msgid "1 - Custo medio ponderado"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -127,13 +229,98 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__10
+msgid "10 - Administrador sem Vinculo Empregaticio"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__11
+msgid "11 - Diretor sem Vinculo Empregaticio"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__12
+msgid "12 - Presidente sem Vinculo Empregaticio"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__13
+msgid "13 - Administrador com Vinculo Empregaticio"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__14
+msgid "14 - Conselheiro de Administracao ou Fiscal"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__15
+msgid "15 - Diretor com Vinculo Empregaticio"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__16
+msgid "16 - Fundador"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__17
+msgid "17 - Presidente com Vinculo Empregaticio"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_ecf_shareholder__qualification__18
+msgid "18 - Usufrutuario de Quotas ou Acoes"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_sped_ecf_0000__IND_SIT_INI_PER__2
 msgid "2 - Cisão/Fusão"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_stock_valuation__2
+msgid "2 - PEPS"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_stock_valuation__3
+msgid "3 - Arbitramento"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__l10n_br_sped_ecf_0000__IND_SIT_INI_PER__3
 msgid "3 - Obrigatoriedade no curso do ano"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_stock_valuation__4
+msgid "4 - Custo especifico"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_stock_valuation__5
+msgid "5 - Valor realizavel liquido"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_stock_valuation__6
+msgid "6 - Inventario periodico"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_stock_valuation__7
+msgid "7 - Outros"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_stock_valuation__8
+msgid "8 - Nao ha (prestadoras de servicos)"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_profit_period__a
+msgid "A - Anual (estimativa mensal)"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -243,6 +430,26 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid ""
+"A empresa %s apura pelo lucro arbitrado, que este modulo ainda nao escritura"
+" (FORMA_TRIB 6, bloco T). Gerar a ECF como lucro presumido produziria uma "
+"apuracao incorreta."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid ""
+"A empresa %s reconhece as receitas pelo regime de caixa, e este modulo apura"
+" o lucro presumido por competencia. Gerar a ECF assim declararia a Receita "
+"um criterio diferente do usado nos recolhimentos."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_x300__TIP_MET
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_x300__TIP_MET
 msgid "A pessoa jurídica deve assinalar"
@@ -326,6 +533,11 @@ msgid "Abertura do Arquivo Digital e Identificação da Pessoa Jurídica"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model,name:l10n_br_sped_ecf.model_account_account
+msgid "Account"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y682__ACRES_PATR
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y682__ACRES_PATR
 msgid "Acréscimo Patrimonial no Mês"
@@ -387,6 +599,21 @@ msgid ""
 "parâmetro, conforme disposto nos arts. 22 a 25 e no art. 34, §§7º e 10 da "
 "Instrução Normativa RFB nº 1.312/2012, a depender do método aplicado. S = "
 "Sim N = Não"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid ""
+"Apuracao %(periodo)s: as contas de receita %(contas)s nao tem natureza "
+"declarada para a ECF e foram escrituradas em 'Demais Receitas e Ganhos de "
+"Capital' (P200, linha 20), que entra integralmente na base de calculo."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_profit_period
+msgid "Apuracao do IRPJ e da CSLL"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -602,6 +829,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__message_attachment_count
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0000__message_attachment_count
 msgid "Attachment Count"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_stock_valuation
+msgid "Avaliacao do estoque na ECF"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_monthly_estimate__b
+msgid "B - Balanco ou balancete de suspensao ou reducao"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -1298,6 +1535,7 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__cpf_cnpj
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0930__IDENT_CPF_CNPJ
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0930__IDENT_CPF_CNPJ
 msgid "CPF/CNPJ"
@@ -1319,19 +1557,42 @@ msgstr ""
 
 #. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y570__CSLL_RET
-#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y570__CSLL_RET
 msgid "CSLL Retida na Fonte"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y570__CSLL_RET
-#: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y570__CSLL_RET
 msgid ""
 "CSLL Retida na Fonte: Valor de toda a contribuição social sobre o lucro "
 "líquido retida na fonte durante o período abrangido pela declaração, "
 "incidente sobre as receitas que compõem a base de cálculo do tributo devido,"
 " independentemente de a empresa ter apurado base de cálculo negativa ou CSLL"
 " devida menor que a retida na fonte durante o período."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_withholding_line__p500-10
+msgid "CSLL retida pelas demais entidades da administracao federal"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_withholding_line__p500-12
+msgid "CSLL retida por orgaos de estados, DF e municipios"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_withholding_line__p500-9
+msgid "CSLL retida por orgaos, autarquias e fundacoes federais"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_withholding_line__p500-11
+msgid "CSLL retida por pessoa juridica de direito privado"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_revenue_recognition__cash
+msgid "Caixa"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -1440,6 +1701,29 @@ msgid "Centro de Custos"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid ""
+"Close the result of each assessment period before generating the ECF, with an entry marked as Result Closing Entry on its last day. Income and expense accounts still open:\n"
+"%(missing)s"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_monthly_estimate
+msgid ""
+"Como a empresa determinou a estimativa mensal do IRPJ e da CSLL, informado "
+"no registro 0010 (campo MES_BAL_RED). So se aplica ao lucro real com "
+"apuracao anual."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model,name:l10n_br_sped_ecf.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__company_id
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__company_id
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010__company_id
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0020__company_id
@@ -1703,6 +1987,11 @@ msgid "Company"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_revenue_recognition__accrual
+msgid "Competencia"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0030__COMPL
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0030__COMPL
 msgid "Complemento"
@@ -1921,6 +2210,11 @@ msgid "Contas da Parte B Relacionadas ao Lançamento da Parte A do e-Lalur"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__partner_id
+msgid "Contato"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model,name:l10n_br_sped_ecf.model_l10n_br_sped_ecf_9_m510
 msgid ""
 "Controle de Saldos das Contas Padrão da Parte B do e- Lalur e do\n"
@@ -1946,6 +2240,7 @@ msgid "Correio eletrônico"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__create_uid
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__create_uid
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010__create_uid
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0020__create_uid
@@ -2079,6 +2374,7 @@ msgid "Created by"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__create_date
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__create_date
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010__create_date
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0020__create_date
@@ -2212,6 +2508,24 @@ msgid "Created on"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_stock_valuation
+msgid ""
+"Criterio de avaliacao do estoque final informado no registro Y672 (campo "
+"IND_AVAL_ESTOQ)."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_revenue_recognition
+msgid ""
+"Criterio de reconhecimento das receitas do lucro presumido "
+"(0010.IND_REC_RECEITA, art. 215, par. 9, da IN RFB 1700/2017). A opcao pelo "
+"caixa e exercida no recolhimento do primeiro DARF do ano e vale para IRPJ, "
+"CSLL, PIS e COFINS ao mesmo tempo. Este modulo apura por competencia: a "
+"empresa optante pelo caixa nao deve gerar a ECF por aqui ate que a apuracao "
+"pelo recebimento seja suportada."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010__IND_REC_RECEITA
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0010__IND_REC_RECEITA
 msgid "Critério de reconhecimento de receitas"
@@ -2254,6 +2568,16 @@ msgid ""
 "aquela em que o preço foi estabelecido. Na hipótese em que o preço seja "
 "fixado com base em cotações ou índices relativos a uma média de dias, "
 "descrever o critério utilizado."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y570__CSLL_RET
+msgid "Csll Ret"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__currency_id
+msgid "Currency"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -3376,6 +3700,16 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__date_start
+msgid "Data de entrada"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__date_end
+msgid "Data de saida"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_x300__DAT_EMB
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_x300__DAT_EMB
 msgid "Data do Embarque"
@@ -3825,6 +4159,16 @@ msgid ""
 "fonte, dos demais rendimentos pagos ou creditados a sócios, a acionistas, a "
 "titular de empresa individual, a dirigentes ou a conselheiros, inclusive os "
 "lucros e dividendos não apurados em balanço e distribuídos."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__20
+msgid "Demais receitas e ganhos de capital"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__other_income
+msgid "Demais rendimentos"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -4380,6 +4724,7 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__display_name
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__display_name
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010__display_name
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0020__display_name
@@ -4542,6 +4887,11 @@ msgid ""
 "remetidos pela pessoa jurídica a outra pessoa jurídica domiciliada no Brasil"
 " ou no exterior em decorrência de participação societária avaliada pelo "
 "método da equivalência patrimonial ou pelo custo de aquisição."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_monthly_estimate__e
+msgid "E - Receita bruta e acrescimos"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -4737,6 +5087,11 @@ msgid ""
 "Estabelecimentos industriais façam jus a crédito presumido do IPI na "
 "aquisição de resíduos sólidos, de que trata a Lei nº 12.375, de 30 de "
 "dezembro de 2010: S - Sim N – Não"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_monthly_estimate
+msgid "Estimativa mensal na ECF"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -5169,6 +5524,7 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__id
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__id
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010__id
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0020__id
@@ -5574,7 +5930,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y570__IR_RET
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y600__VL_IR_RET
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y612__VL_IR_RET
-#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y570__IR_RET
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y600__VL_IR_RET
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y612__VL_IR_RET
 msgid "IR Retido na Fonte"
@@ -5582,7 +5937,6 @@ msgstr ""
 
 #. module: l10n_br_sped_ecf
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y570__IR_RET
-#: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y570__IR_RET
 msgid ""
 "IR Retido na Fonte: Valor de todo o imposto de renda retido na fonte durante"
 " o período abrangido pela declaração, incidente sobre as receitas que "
@@ -5608,6 +5962,26 @@ msgid ""
 "IR Retido na Fonte: Valor do imposto de renda retido na fonte por ocasião do"
 " pagamento dos rendimentos a dirigentes ou conselheiros da pessoa jurídica "
 "imune ou isenta de IRPJ."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_withholding_line__p300-14
+msgid "IRPJ pago sobre ganhos no mercado de renda variavel"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_withholding_line__p300-10
+msgid "IRPJ retido na fonte"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_withholding_line__p300-13
+msgid "IRPJ retido pelas demais entidades da administracao federal"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_withholding_line__p300-12
+msgid "IRPJ retido por orgaos, autarquias e fundacoes federais"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -6281,6 +6655,11 @@ msgid ""
 "W200.VL_IR_PAGO_EST seja informado, este campo será calculado pelo sistema, "
 "utilizando como base para conversão tabela do Banco Central para a data de "
 "31 de dezembro do ano da Declaração."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__withheld_tax
+msgid "Imposto de renda retido"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -7150,6 +7529,11 @@ msgid "Investidoras Diretas"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y570__IR_RET
+msgid "Ir Ret"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__message_is_follower
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0000__message_is_follower
 msgid "Is Follower"
@@ -7874,6 +8258,12 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__interest_income
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__12
+msgid "Juros sobre o capital proprio"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_x300__VL_JUR
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_x300__VL_JUR
 msgid ""
@@ -8076,6 +8466,7 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder____last_update
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000____last_update
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010____last_update
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0020____last_update
@@ -8209,6 +8600,7 @@ msgid "Last Modified on"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__write_uid
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__write_uid
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010__write_uid
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0020__write_uid
@@ -8342,6 +8734,7 @@ msgid "Last Updated by"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__write_date
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__write_date
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0010__write_date
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0020__write_date
@@ -8490,6 +8883,39 @@ msgid ""
 " protocolado na RFB: S – Sim N = Não Observação: Deverá ser informado também"
 " para os casos de aquisição ou venda ocorridos antes do período a que se "
 "refere essa ECF."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_account_account__l10n_br_ecf_revenue_line
+msgid ""
+"Linha do registro P200 da ECF em que a receita desta conta e apurada, no "
+"lucro presumido. As cinco primeiras opcoes sao a receita bruta, que entra na"
+" base pelo percentual de presuncao; as demais entram integralmente. Conta de"
+" receita sem classificacao entra em 'Demais receitas e ganhos de capital', "
+"que e o tratamento mais oneroso, e a apuracao registra o aviso no chatter da"
+" declaracao."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_account_account__l10n_br_ecf_csll_line
+msgid ""
+"Linha do registro P400 da ECF em que a receita desta conta entra na base da "
+"CSLL. Em branco, vale a correspondencia usual com a linha do IRPJ (8% -> "
+"12%, 32% -> 32%). Preencha quando as presuncoes divergem: o servico com IRPJ"
+" reduzido a 16% (art. 40 da Lei 9.250/1995, receita bruta anual ate 120 mil)"
+" mantem a CSLL a 32%, enquanto o transporte de passageiros, tambem a 16% no "
+"IRPJ, tem a CSLL a 12%."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_account_account__l10n_br_ecf_withholding_line
+msgid ""
+"Linha dos registros P300 (IRPJ) e P500 (CSLL) em que o saldo desta conta e "
+"deduzido do imposto devido. Classifique aqui as contas de imposto retido a "
+"compensar. A linha depende de QUEM reteve, e nao so do imposto: retencao por"
+" pessoa juridica de direito privado, por orgao federal e por orgao estadual "
+"ou municipal vao para linhas diferentes. Quem atende a administracao publica"
+" precisa das contas segregadas no plano para escriturar corretamente."
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -8647,6 +9073,11 @@ msgid ""
 "relacionado. Observação: Caso o campo W200.LUC_ACUM_EST seja informado, este"
 " campo será calculado pelo sistema, utilizando como base para conversão "
 "tabela do Banco Central para a data de 31 de dezembro do ano da Declaração."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__dividend_income
+msgid "Lucros e dividendos"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -8895,7 +9326,6 @@ msgstr ""
 
 #. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_x320__TIP_MOEDA
-#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_x320__TIP_MOEDA
 msgid "Moeda"
 msgstr ""
 
@@ -8912,6 +9342,11 @@ msgid ""
 "Moeda , conforme tabela do Sped (Disponibilizada no programa da ECF no "
 "diretório Arquivos de Programas/Programas "
 "Sped/ECf/SpedEcf/Recursos/Tabelas)."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_x320__TIP_MOEDA
+msgid "Moeda da negociação"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -8949,6 +9384,11 @@ msgid ""
 "tributário previsto nos incisos II e III do art. 13; 6 – Teve renda ativa "
 "própria inferior a 80% (oitenta por cento) da renda total no período, nos "
 "termos definidos no art. 22."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__16
+msgid "Multas e vantagens por rescisao contratual"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -9235,9 +9675,8 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
-#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__activity_calendar_event_id
-#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0000__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_account_account__l10n_br_ecf_revenue_line
+msgid "Natureza da receita na ECF"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -9259,6 +9698,7 @@ msgid "Next Activity Type"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__name
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_x310__NOME
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_x330__NOME
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y612__NOME
@@ -10987,6 +11427,11 @@ msgid "Pagamentos/Recebimentos do Exterior ou de Não Residentes"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__country_id
+msgid "Pais"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model,name:l10n_br_sped_ecf.model_l10n_br_sped_ecf_9_y650
 #: model:ir.model,name:l10n_br_sped_ecf.model_l10n_br_sped_ecf_y650
 msgid "Participantes do Consórcio"
@@ -11398,6 +11843,16 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_profit_period
+msgid ""
+"Periodo de apuracao do IRPJ e da CSLL declarado no registro 0010 (campo "
+"FORMA_APUR) e usado nos registros de periodo (K030, P030, L030, M030, N030)."
+" O lucro presumido apura sempre por trimestre, por forca de lei, e ignora "
+"esta escolha; o lucro real pode apurar por trimestre ou no ano, por "
+"estimativa mensal."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_k915__PER_APUR
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_k935__PER_APUR
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_k915__PER_APUR
@@ -11545,6 +12000,11 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__partner_id
+msgid "Preenche nome e CPF/CNPJ a partir do contato."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__CNPJ
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0000__CNPJ
 msgid "Preencher este campo com o número de inscrição"
@@ -11571,6 +12031,11 @@ msgstr ""
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_w250__ATIV_7
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_w250__ATIV_7
 msgid "Prestação de Serviços a Partes Não Relacionadas: S - Sim N - Não"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_account_account__l10n_br_ecf_csll_line
+msgid "Presuncao da CSLL na ECF"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -11699,6 +12164,11 @@ msgstr ""
 #: model:ir.actions.act_window,name:l10n_br_sped_ecf.ecf_q100_action
 #: model:ir.ui.menu,name:l10n_br_sped_ecf.ecf_q100
 msgid "Q100 Demonstrativo do Livro Caixa"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__qualification
+msgid "Qualificacao"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -11969,6 +12439,38 @@ msgid "Receita bruta do período anterior"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__2
+msgid "Receita bruta sujeita ao percentual de 1,6%"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_csll_line__2
+msgid "Receita bruta sujeita ao percentual de 12%"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__6
+msgid "Receita bruta sujeita ao percentual de 16%"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_csll_line__4
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__8
+msgid "Receita bruta sujeita ao percentual de 32%"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_csll_line__5
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__9
+msgid "Receita bruta sujeita ao percentual de 38,4%"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__4
+msgid "Receita bruta sujeita ao percentual de 8%"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y640__VL_CONS
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y640__VL_CONS
 msgid "Receita do Consórcio"
@@ -12129,6 +12631,11 @@ msgid ""
 "exclusivamente na fonte, à alíquota de 15% (quinze por cento), quando "
 "auferidos por pessoa jurídica tributada com base no presumido ou arbitrado "
 "(arts. 2º e 3º da Lei nº 12.431, de 2011)."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_revenue_recognition
+msgid "Reconhecimento da receita (presumido)"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -12395,6 +12902,11 @@ msgid "Record ID"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__14
+msgid "Recuperacao de custos e despesas"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0021__IND_RETAERO
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0021__IND_RETAERO
 msgid "Regime Especial"
@@ -12547,6 +13059,16 @@ msgstr ""
 msgid ""
 "Regime Especial para a Indústria Aeronáutica Brasileira (Retaero): S - Sim N"
 " – Não"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model,name:l10n_br_sped_ecf.model_l10n_br_sped_ecf_valores
+msgid "Registro de valores da ECF"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__work_income
+msgid "Remuneracao do trabalho"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -12705,6 +13227,11 @@ msgid ""
 "pagamentos, tais como: pró- labore e aluguéis. Esses valores sujeitam-se à "
 "incidência do imposto de renda na fonte e na declaração de rendimentos dos "
 "beneficiários."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__account_account__l10n_br_ecf_revenue_line__11
+msgid "Rendimentos e ganhos liquidos de aplicacoes financeiras"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -12927,6 +13454,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y620__RES_EQ_PAT
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y620__RES_EQ_PAT
 msgid "Resultado de Equivalência Patrimonial"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_account_account__l10n_br_ecf_withholding_line
+msgid "Retencao na fonte na ECF"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -13303,6 +13835,11 @@ msgid "Seguro: S - Sim N - Não"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_ecf_shareholder__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_y800__ARQ_RTF
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_y800__ARQ_RTF
 msgid "Sequência de Bytes"
@@ -13338,6 +13875,21 @@ msgstr ""
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_w250__ATIV_9
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_w250__ATIV_9
 msgid "Serviços Financeiros Regulamentados: S - Sim N - Não"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model,name:l10n_br_sped_ecf.model_l10n_br_ecf_shareholder
+msgid "Socio ou Titular na ECF"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,help:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_shareholder_ids
+msgid "Socios e titulares informados no registro Y600."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_res_company__l10n_br_ecf_shareholder_ids
+msgid "Socios na ECF"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
@@ -13942,6 +14494,11 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_ecf
+#: model:ir.model.fields.selection,name:l10n_br_sped_ecf.selection__res_company__l10n_br_ecf_profit_period__t
+msgid "T - Trimestral"
+msgstr ""
+
+#. module: l10n_br_sped_ecf
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_x300__DAT_UTIL
 #: model:ir.model.fields,field_description:l10n_br_sped_ecf.field_l10n_br_sped_ecf_x300__DAT_UTIL
 msgid "T A Data Utilizada no Cálculo do Preço Parâmetro"
@@ -14148,6 +14705,15 @@ msgstr ""
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_0000__NOME_ESC
 #: model:ir.model.fields,help:l10n_br_sped_ecf.field_l10n_br_sped_ecf_9_0000__NOME_ESC
 msgid "Texto fixo contendo a identificação do tipo de Sped (LECF)."
+msgstr ""
+
+#. module: l10n_br_sped_ecf
+#. odoo-python
+#: code:addons/l10n_br_sped_ecf/models/sped_ecf.py:0
+#, python-format
+msgid ""
+"The taxes withheld by the customers go to the record Y570 by the CNPJ of the customer and the revenue code of the tax. Fix them before generating the ECF:\n"
+"%(problems)s"
 msgstr ""
 
 #. module: l10n_br_sped_ecf
