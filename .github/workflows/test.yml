@@ -69,5 +69,10 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
       - name: Update .pot files
-        run: oca_export_and_push_pot https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
+        # The repository is private: the checkout keeps no credentials, so the
+        # "git fetch" of oca_git_push_if_remote_did_not_change needs the token
+        # in the origin URL too, not only in the push URL.
+        run: |
+          git remote set-url origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
+          oca_export_and_push_pot https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
         if: ${{ matrix.makepot == 'true' && github.event_name == 'push' && github.repository_owner == 'kmee' }}
