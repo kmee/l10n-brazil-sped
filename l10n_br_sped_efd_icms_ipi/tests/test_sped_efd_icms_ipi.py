@@ -40,7 +40,7 @@ class SpedTest(common.TransactionCase):
 
     def test_h005_name_is_the_inventory_date(self):
         h005 = self._create_inventory(date(2023, 1, 31))
-        name = h005.name_get()[0][1]
+        name = h005.display_name
         self.assertNotIn("l10n_br_sped.efd_icms_ipi.h005", name)
         self.assertIn(format_date(self.env, date(2023, 1, 31)), name)
 

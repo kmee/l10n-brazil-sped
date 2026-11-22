@@ -20,10 +20,7 @@ from odoo.addons.l10n_br_fiscal.constants.fiscal import (
     FISCAL_IN,
     SITUACAO_FISCAL_INUTILIZADO,
 )
-from odoo.addons.l10n_br_sped_base.models.sped_mixin import (
-    EDITABLE_ON_DRAFT,
-    LAYOUT_VERSIONS,
-)
+from odoo.addons.l10n_br_sped_base.models.sped_mixin import LAYOUT_VERSIONS
 
 
 class Registro0000(models.Model):
@@ -210,20 +207,20 @@ class Registro0000(models.Model):
     def _append_top_view_elements(self, group, inline=False):
         res = super()._append_top_view_elements(group)
         group.append(
-            E.field(name="cod_obrigacao", required="1", attrs=EDITABLE_ON_DRAFT)
+            E.field(name="cod_obrigacao", required="1", readonly="state != 'draft'")
         )
-        group.append(E.field(name="cod_receita", required="1", attrs=EDITABLE_ON_DRAFT))
-        group.append(E.field(name="dt_vcto_obrigacao", attrs=EDITABLE_ON_DRAFT))
-        group.append(E.field(name="ind_apur", required="1", attrs=EDITABLE_ON_DRAFT))
+        group.append(E.field(name="cod_receita", required="1", readonly="state != 'draft'"))
+        group.append(E.field(name="dt_vcto_obrigacao", readonly="state != 'draft'"))
+        group.append(E.field(name="ind_apur", required="1", readonly="state != 'draft'"))
         group.append(
             E.field(
                 name="CLAS_ESTAB_IND",
-                attrs="{'readonly': [('state', 'not in', ['draft'])], "
-                "'required': [('IND_ATIV', '=', '0')]}",
+                readonly="state != 'draft'",
+                required="IND_ATIV == '0'",
             )
         )
         group.append(
-            E.field(name="ind_tp_leiaute", required="1", attrs=EDITABLE_ON_DRAFT)
+            E.field(name="ind_tp_leiaute", required="1", readonly="state != 'draft'")
         )
         return res
 
@@ -4815,23 +4812,21 @@ class RegistroH005(models.Model):
             return _("Inventory")
         return _("Inventory of %(date)s", date=format_date(self.env, self.DT_INV))
 
-    def name_get(self):
-        return [(register.id, register._get_inventory_name()) for register in self]
+    @api.depends("DT_INV")
+    def _compute_display_name(self):
+        for register in self:
+            register.display_name = register._get_inventory_name()
 
     @api.model
-    def _name_search(
-        self, name="", args=None, operator="ilike", limit=100, name_get_uid=None
-    ):
+    def name_search(self, name="", args=None, operator="ilike", limit=100):
         """Search by the displayed name, as the register has no name column.
 
         There is one H005 per inventory date, so matching in Python over the
         (already filtered) registers is cheap.
         """
         if not name or operator not in ("ilike", "like", "=ilike", "=like", "="):
-            return super()._name_search(
-                name, args, operator=operator, limit=limit, name_get_uid=name_get_uid
-            )
-        registers = self.with_user(name_get_uid or self.env.uid).search(args or [])
+            return super().name_search(name, args, operator=operator, limit=limit)
+        registers = self.search(args or [])
         needle = name.lower()
         if operator in ("=", "=ilike", "=like"):
             matches = registers.filtered(
@@ -4841,7 +4836,8 @@ class RegistroH005(models.Model):
             matches = registers.filtered(
                 lambda r: needle in r._get_inventory_name().lower()
             )
-        return matches[:limit].ids if limit else matches.ids
+        matches = matches[:limit] if limit else matches
+        return [(register.id, register.display_name) for register in matches]
 
     # @api.model
     # def _map_from_odoo(self, record, parent_record, declaration, index=0):
@@ -5117,7 +5113,7 @@ class RegistroK230(models.Model):
     @api.model
     def _map_from_odoo(self, record, parent_record, declaration, index=0):
         return {
-            "DT_INI_OP": record.date_start or record.date_planned_start,
+            "DT_INI_OP": record.date_start,
             "DT_FIN_OP": record.date_finished,
             "COD_DOC_OP": record.name,
             "COD_ITEM": record.product_id.default_code or str(record.product_id.id),
@@ -5152,7 +5148,7 @@ class RegistroK235(models.Model):
         return {
             "DT_SAIDA": dt_saida,
             "COD_ITEM": record.product_id.default_code or str(record.product_id.id),
-            "QTD": record.quantity_done,  # The actual consumed quantity, NOT the BOM theoretical qty
+            "QTD": record.quantity,  # The actual consumed quantity, NOT the BOM theoretical qty
             "COD_INS_SUBST": "",  # Odoo doesn't natively tag substitute items explicitly without custom mods
         }
 

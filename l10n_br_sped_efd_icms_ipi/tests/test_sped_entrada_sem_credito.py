@@ -37,8 +37,8 @@ class TestSpedEfdIcmsIpiEntradaSemCredito(EntradaHelpers, SpedEntradaCommon):
             limit=1,
         )
         accounts = {
-            "property_tax_payable_account_id": ("IPIPAY", "liability_current"),
-            "property_tax_receivable_account_id": ("IPIREC", "asset_current"),
+            "tax_payable_account_id": ("IPIPAY", "liability_current"),
+            "tax_receivable_account_id": ("IPIREC", "asset_current"),
         }
         group.with_company(self.company).write(
             {

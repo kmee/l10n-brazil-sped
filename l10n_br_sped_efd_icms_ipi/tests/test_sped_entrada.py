@@ -41,7 +41,7 @@ class EntradaHelpers:
             ],
             limit=1,
         )
-        if not group.with_company(self.company).property_tax_payable_account_id:
+        if not group.with_company(self.company).tax_payable_account_id:
             payable = self.env["account.account"].create(
                 {
                     "name": "ICMS a recolher",
@@ -60,8 +60,8 @@ class EntradaHelpers:
             )
             group.with_company(self.company).write(
                 {
-                    "property_tax_payable_account_id": payable.id,
-                    "property_tax_receivable_account_id": receivable.id,
+                    "tax_payable_account_id": payable.id,
+                    "tax_receivable_account_id": receivable.id,
                 }
             )
         assessment = self.env["l10n_br_tax.assessment"].create(
