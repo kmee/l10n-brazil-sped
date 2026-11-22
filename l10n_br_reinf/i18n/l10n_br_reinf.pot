@@ -1,0 +1,2643 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_br_reinf
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "2026-07"
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid ""
+"A batch carries at most %(maximum)s events, and this one has %(count)s. "
+"Split it."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid "A batch only carries events of a single group. This one mixes %s."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation.py:0
+#, python-format
+msgid "A closed competence does not go back to draft."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid ""
+"A closing or reopening event travels alone in its own batch, never with the "
+"events it closes."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__critical
+msgid "A critical exception blocks the closing of the competence."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__state__accepted
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_search
+msgid "Accepted"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indAcordoIsenMulta
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indAcordoIsenMulta
+msgid "Acordo internacional para isencao"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indAcordoIsenMulta
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indAcordoIsenMulta
+msgid "Acordo internacional para isencao de multa"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_needaction
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_needaction
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__active
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__active
+msgid "Active"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__additional_event
+msgid "Additional Event"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__admitted_taxes
+msgid "Admitted Taxes"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__advance_payment
+msgid "Advance payment"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__advice
+msgid "Advice"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__aggregate_partial_not_structural
+msgid "Aggregate refused: partial withholding"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_agreg
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__tax__aggregated
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__tax_type__aggregated
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_nature_income_search
+msgid "Aggregated"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__aggregate_rate_missing
+msgid "Aggregated revenue code without a rate to check"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__aggregate_divergence
+msgid "Aggregated withholding diverges from its parts"
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid "All the events of a batch belong to the same company."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_batch__event_group
+msgid "All the events of a batch belong to the same group."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_evtinfocontri_alteracao
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_alteracao
+msgid "Alteracao de informacoes"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__amount
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Amount"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__amount
+msgid "Amount of the Competence"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_darf__dctfweb_amount
+msgid "Amount of the DARF issued by the DCTFWeb, for the confrontation."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_nature_income_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_nature_income_search
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_revenue_code_form
+msgid "Archived"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Back to Draft"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_darf__carried_amount
+msgid ""
+"Balance of previous competences that was below the minimum and travelled to "
+"this one, under the same revenue code."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__base_amount
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Base"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__batch_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__batch_id
+msgid "Batch"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__lot_receipt_number
+msgid "Batch Receipt Number"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.ui.menu,name:l10n_br_reinf.reinf_batch_menu
+msgid "Batches"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__partner_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__partner_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__partner_id
+msgid "Beneficiary"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__partner_id
+msgid ""
+"Beneficiary of the payment the event declares, when the event has a single "
+"one."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__simples_beneficiary
+msgid "Beneficiary under the Simples Nacional"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__partner_without_cnpj
+msgid "Beneficiary without CNPJ"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infoefr__reinf21_cnpjEFR
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_infoefr__reinf21_cnpjEFR
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__inscription_type__1
+msgid "CNPJ"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_softhouse__reinf21_cnpjSoftHouse
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_softhouse__reinf21_cnpjSoftHouse
+msgid "CNPJ da Software House"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_cofins
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__tax__cofins
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__tax_type__cofins
+msgid "COFINS"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__inscription_type__2
+msgid "CPF"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_csll
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__tax__csll
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__tax_type__csll
+msgid "CSLL"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__cooperative_csll_withheld
+msgid "CSLL withheld from a cooperative of work"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__calculation_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__calculation_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__calculation_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__calculation_id
+msgid "Calculation"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__calculation_line_ids
+msgid "Calculation Lines"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.ui.menu,name:l10n_br_reinf.reinf_calculation_menu
+msgid "Calculations"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__carried_from_id
+msgid "Carried From"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__carried_amount
+msgid "Carried In"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__carried_to_ids
+msgid "Carried To"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_darf__state__carried
+msgid "Carried to the next competence"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Close"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation__state__closed
+msgid "Closed"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__event_group__closing
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_group__closing
+msgid "Closing and reopening events"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__code
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__code
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__code
+msgid "Code"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__company_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__company_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__company_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__company_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__company_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__period
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__period
+msgid "Competence"
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation.py:0
+#, python-format
+msgid "Competence closed: %(events)s R-4020 events generated."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation__period
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_darf__period
+msgid "Competence of the calculation, as AAAA-MM."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__calculation_id
+msgid "Competence this event was generated from."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Compute"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation__state__computed
+msgid "Computed"
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation.py:0
+#, python-format
+msgid ""
+"Computed: %(lines)s lines, %(kept)s kept from a manual check, %(exceptions)s"
+" exceptions (%(critical)s critical)."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.ui.menu,name:l10n_br_reinf.reinf_configuration_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_darf__state__confirmed
+msgid "Confirmed"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_res_partner
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_r1000_form
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__res_partner__reinf_beneficiary_profile__consumer_cooperative
+msgid "Cooperative of consumption"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__res_partner__reinf_beneficiary_profile__work_cooperative
+msgid "Cooperative of work"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__cooperative_csll_only
+msgid "Cooperative: CSLL is waived"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.actions.act_window,help:l10n_br_reinf.reinf_nature_income_action
+msgid "Create the first nature of income"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.actions.act_window,help:l10n_br_reinf.reinf_revenue_code_action
+msgid "Create the first revenue code"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__create_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__create_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__critical
+msgid "Critical"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__critical_exception_count
+msgid "Critical Exception Count"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_contato__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_ideperiodo__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infoefr__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_softhouse__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_alteracao__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_exclusao__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_novavalidade__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_exclusao_ideperiodo__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_infoefr__brl_currency_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_softhouse__brl_currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__darf_id
+msgid "DARF"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__darf_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "DARFs"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__dctfweb_amount
+msgid "DCTFWeb Amount"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__dctfweb_darf_number
+msgid "DCTFWeb DARF Number"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__periodicity__daily
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_revenue_code__periodicity__daily
+msgid "Daily"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_dtTransfFinsLucr
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_dtTransfFinsLucr
+msgid "Data de transformacao em sociedade"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_dtTransfFinsLucr
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_dtTransfFinsLucr
+msgid "Data de transformacao em sociedade com fins lucrativos"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_dtObito
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_dtObito
+msgid "Data do obito do contribuinte"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_fiscal_service_type__reinf_nature_income_id
+msgid ""
+"Default nature of income (natRend) declared for payments of this service "
+"type."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__description
+msgid "Description"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__dctfweb_difference
+msgid "Difference"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_line__divergence_amount
+msgid ""
+"Difference between what is declared on this line and what the accounting "
+"holds. On an aggregated line it is the cents of the rounding of the "
+"collapse."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__display_name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__divergence_amount
+msgid "Divergence"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__state__divergent
+msgid "Divergent"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_fiscal_document_line_mixin
+msgid "Document Fiscal Mixin"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__state__draft
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation__state__draft
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_darf__state__draft
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__state__draft
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_search
+msgid "Draft"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__due_date
+msgid "Due Date"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.ui.menu,name:l10n_br_reinf.reinf_menu
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_res_company_form
+msgid "EFD-Reinf"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_company__reinf_aggregate_tolerance
+msgid "EFD-Reinf Aggregate Tolerance"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.actions.act_window,name:l10n_br_reinf.reinf_batch_action
+msgid "EFD-Reinf Batches"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_calculation
+msgid "EFD-Reinf Calculation"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_calculation_exception
+msgid "EFD-Reinf Calculation Exception"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_calculation_line
+msgid "EFD-Reinf Calculation Line"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.actions.act_window,name:l10n_br_reinf.reinf_calculation_action
+msgid "EFD-Reinf Calculations"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_company__reinf_contact_id
+msgid "EFD-Reinf Contact"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_darf
+msgid "EFD-Reinf DARF Mirror"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_company__reinf_environment
+msgid "EFD-Reinf Environment"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_event
+msgid "EFD-Reinf Event"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_batch
+msgid "EFD-Reinf Event Batch"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.actions.act_window,name:l10n_br_reinf.reinf_event_action
+msgid "EFD-Reinf Events"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_nature_income
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_account_move_line__reinf_nature_income_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_fiscal_document_line__reinf_nature_income_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_fiscal_document_line_mixin__reinf_nature_income_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_fiscal_service_type__reinf_nature_income_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_partner__reinf_nature_income_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_users__reinf_nature_income_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_stock_move__reinf_nature_income_id
+msgid "EFD-Reinf Nature of Income"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_nature_income_tax
+msgid "EFD-Reinf Nature of Income Tax Mapping"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_occurrence
+msgid "EFD-Reinf Processing Occurrence"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_r1000
+msgid "EFD-Reinf R-1000 Taxpayer Information"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_reinf_revenue_code
+msgid "EFD-Reinf Revenue Code"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_res_company_form
+msgid "EFD-Reinf Settings"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_company__reinf_class_trib
+msgid "EFD-Reinf Taxpayer Classification"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infoefr__reinf21_ideEFR
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_infoefr__reinf21_ideEFR
+msgid "EFR"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__date_end
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__date_end
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_email
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_contato__reinf21_email
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_softhouse__reinf21_email
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_softhouse__reinf21_email
+msgid "Endereco eletronico"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_classTrib
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_classTrib
+msgid "Enquadramento do contribuinte"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__environment
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__environment
+msgid "Environment"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__state__error
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_occurrence__type__1
+msgid "Error"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__event_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__event_type
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__event_type
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__event_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__event_id
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_search
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_r1000_form
+msgid "Event"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__event_count
+msgid "Event Count"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__event_group
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__event_group
+msgid "Event Group"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__event_key
+msgid "Event Id"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_line__event_id
+msgid ""
+"Event that declares this line. A competence split by the limits of the "
+"layout has more than one event per beneficiary, and this is what says which "
+"slice each line went to."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__event_type
+msgid "Event the nature is declared in with this mapping."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__event_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__event_ids
+#: model:ir.ui.menu,name:l10n_br_reinf.reinf_event_menu
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_batch_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Events"
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid "Events of type %s are not implemented yet."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid ""
+"Every event of a batch is validated before the batch is sent. %s is not."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation_exception.py:0
+#, python-format
+msgid "Exception %(reason)s of %(partner)s ignored: %(note)s"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__exception_count
+msgid "Exception Count"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__exception_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Exceptions"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__state__excluded
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__state__excluded
+msgid "Excluded"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_evtinfocontri_exclusao
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_exclusao
+msgid "Exclusao de informacoes"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__event_group__exclusion
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_group__exclusion
+msgid "Exclusion events"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__res_partner__reinf_beneficiary_profile__exempt
+msgid "Exempt"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_partner__reinf_exemption_legal_basis
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_users__reinf_exemption_legal_basis
+msgid "Exemption Legal Basis"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_partner__reinf_nature_income_id
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_users__reinf_nature_income_id
+msgid ""
+"Fallback nature of income for payments to this partner that have no service "
+"type to take it from."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_batch_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Files"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__foreign_taxation
+msgid "Foreign Taxation"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__periodicity__fortnightly
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_revenue_code__periodicity__fortnightly
+msgid "Fortnightly"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__event_group
+msgid ""
+"Functional group of the event. A batch only carries events of a single "
+"group."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Generate XML"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_search
+msgid "Group By"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__has_message
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__has_message
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_company__reinf_aggregate_tolerance
+msgid ""
+"How many cents of difference between the aggregated withholding and the sum "
+"of its three rounded components are accepted before the competence raises an"
+" exception. Rounding three values and rounding their sum are not the same "
+"operation, and the difference is cents."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__origin
+msgid "Human readable reference of what generated this event."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__tax__irpf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__tax_type__irpf
+msgid "IRPF"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__tax__irpj
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__tax_type__irpj
+msgid "IRPJ"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_id
+msgid "Identificacao unica do evento"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_batch__message_needaction
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation__message_needaction
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_batch__message_has_error
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation__message_has_error
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__ignored
+msgid "Ignored"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__ignored_reason
+msgid "Ignored Reason"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__lot_receipt_number
+msgid ""
+"In asynchronous processing, a batch receipt number is generated, which is "
+"used for later consultation."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_ir
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_nature_income_search
+msgid "Income Tax"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indPertIRRF
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indPertIRRF
+msgid "Indicador de Pertencimento do IRRF"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indEscrituracao
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indEscrituracao
+msgid "Indicativo da obrigatoriedade"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indEscrituracao
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indEscrituracao
+msgid ""
+"Indicativo da obrigatoriedade do contribuinte em fazer a sua escrituracao "
+"contabil na ECD"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indDesoneracao
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indDesoneracao
+msgid "Indicativo de desoneracao da folha"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indDesoneracao
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indDesoneracao
+msgid "Indicativo de desoneracao da folha pela CPRB"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indUniao
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indUniao
+msgid "Indicativo de entidade vinculada a Uniao"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_infoEFR
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_infoEFR
+msgid "Informacoes"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_alteracao_infoefr
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_inclusao_infoefr
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_infoEFR
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_infoEFR
+msgid "Informacoes da Administracao Publica relativas a EFR"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_softHouse
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_softHouse
+msgid "Informacoes da empresa desenvolvedora"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_alteracao_softhouse
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_inclusao_softhouse
+msgid ""
+"Informacoes da empresa desenvolvedora da aplicacao que gera os\n"
+"arquivos"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_softHouse
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_softHouse
+msgid ""
+"Informacoes da empresa desenvolvedora da aplicacao que gera os arquivos"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_alteracao_contato
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_contato
+msgid "Informacoes de contato"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_alteracao_infocadastro
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_alteracao__reinf21_infoCadastro
+msgid "Informacoes do contribuinte"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_iniValid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_ideperiodo__reinf21_iniValid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_novavalidade__reinf21_iniValid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_exclusao_ideperiodo__reinf21_iniValid
+msgid "Inicio da validade (AAAA-MM)"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__inscription
+msgid "Inscription"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__inscription_type
+msgid "Inscription Type"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_company__reinf_ind_acordo_isen_multa
+msgid "International Agreement on Fines"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__cancelled_after_payment
+msgid "Invoice cancelled after the payment"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__prior_period_invoice
+msgid "Invoice of a prior period paid in this one"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_is_follower
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_is_follower
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000____last_update
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__write_uid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__write_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_partner__reinf_exemption_legal_basis
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_users__reinf_exemption_legal_basis
+msgid ""
+"Legal ground of the exemption or of the zero rate, which the art. 2 of the "
+"IN RFB 459/2004 requires the beneficiary to state, and which is what a "
+"fiscal audit asks for first."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__line_count
+msgid "Line Count"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__line_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Lines"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__location
+msgid "Location"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__manually_verified
+msgid "Manually Verified"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message
+msgid "Message"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_has_error
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_has_error
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_line__darf_id
+msgid "Mirror of the DARF this withholding was grouped into."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__periodicity__monthly
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_revenue_code__periodicity__monthly
+msgid "Monthly"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__name
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__name
+msgid "Name"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__nature_income_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__nature_income_id
+msgid "Nature of Income"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_account_move_line__reinf_nature_income_id
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_fiscal_document_line__reinf_nature_income_id
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_fiscal_document_line_mixin__reinf_nature_income_id
+#: model:ir.model.fields,help:l10n_br_reinf.field_stock_move__reinf_nature_income_id
+msgid ""
+"Nature of income (natRend) this line is declared under. Left empty, it is "
+"taken from the service type of the line, and then from the partner."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__nature_missing
+msgid "Nature of income not set"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.actions.act_window,name:l10n_br_reinf.reinf_nature_income_action
+#: model:ir.ui.menu,name:l10n_br_reinf.reinf_nature_income_menu
+msgid "Natures of Income"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__classification_indicator__no
+msgid "No"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_nmCtt
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_contato__reinf21_nmCtt
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_softhouse__reinf21_nmCont
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_softhouse__reinf21_nmCont
+msgid "Nome do contato"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_softhouse__reinf21_nmRazao
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_softhouse__reinf21_nmRazao
+msgid "Nome ou razao social"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__res_partner__reinf_beneficiary_profile__normal
+msgid "Normal"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__classification_indicator__na
+msgid "Not applicable"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Not generated yet"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__note
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__note
+msgid "Note"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_alteracao__reinf21_novaValidade
+msgid "Novo periodo de validade das informacoes"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_evtinfocontri_novavalidade
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_evtinfocontri_alteracao__reinf21_novaValidade
+msgid "Novo periodo de validade das informacoes que estao sendo alteradas"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_batch__message_needaction_counter
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation__message_needaction_counter
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_batch__message_has_error_counter
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation__message_has_error_counter
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_darf__dctfweb_darf_number
+msgid ""
+"Number of the DARF the DCTFWeb issued, written here by hand: it is the third"
+" leg of the conference."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_nrInsc
+msgid "Numero de Inscricao"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_cpfCtt
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_contato__reinf21_cpfCtt
+msgid "Numero de Inscricao no CPF"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_softhouse__reinf21_telefone
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_softhouse__reinf21_telefone
+msgid "Numero do telefone com DDD"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_foneFixo
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_contato__reinf21_foneFixo
+msgid "Numero do telefone, com DDD"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_company__reinf_ind_escrituracao
+msgid "Obligated to the ECD"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__occurrence_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__occurrence_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_batch_form
+msgid "Occurrences"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__state__ok
+msgid "Ok"
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation.py:0
+#, python-format
+msgid "Only a computed competence can be verified."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation.py:0
+#, python-format
+msgid "Only a computed or verified competence can be closed."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid "Only a draft batch can be sent, and %s is not draft."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid "Only a draft event can be validated, and %s is not draft."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid ""
+"Only an accepted event with a receipt number can be rectified, and %s is not"
+" one."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Open source"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__rectify_indicator__1
+msgid "Original"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_pp
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__tax__pis_pasep
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__tax_type__pis_pasep
+msgid "PIS/PASEP"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__partial_payment
+msgid "Partial payment"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__payment_without_invoice
+msgid "Payment without an invoice"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_company__reinf_ind_desoneracao
+msgid "Payroll Relief (CPRB)"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__state__pending
+msgid "Pending Transmission"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__period
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_search
+msgid "Period"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__event_group__periodic
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_group__periodic
+msgid "Periodic events"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__periodicity
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__periodicity
+msgid "Periodicity"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__periodicity
+msgid ""
+"Periodicity of the collection of the revenue code. It says in which "
+"totalizer group of the R-9015 the code is answered."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_revenue_code__periodicity
+msgid ""
+"Periodicity of the collection of this revenue code. It says in which "
+"totalizer group of the R-9015 the code is answered."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_alteracao__reinf21_idePeriodo
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_exclusao__reinf21_idePeriodo
+msgid "Periodo de validade"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_evtinfocontri_alteracao__reinf21_idePeriodo
+msgid "Periodo de validade das informacoes alteradas"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_evtinfocontri_exclusao__reinf21_idePeriodo
+msgid "Periodo de validade das informacoes excluidas"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_alteracao_ideperiodo
+#: model:ir.model,name:l10n_br_reinf.model_reinf_21_exclusao_ideperiodo
+msgid "Periodo de validade das informacoes incluidas"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_fimValid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_ideperiodo__reinf21_fimValid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_evtinfocontri_novavalidade__reinf21_fimValid
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_exclusao_ideperiodo__reinf21_fimValid
+msgid "Periodo final da validade"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_fimValid
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_alteracao_ideperiodo__reinf21_fimValid
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_evtinfocontri_novavalidade__reinf21_fimValid
+#: model:ir.model.fields,help:l10n_br_reinf.field_reinf_21_exclusao_ideperiodo__reinf21_fimValid
+msgid "Periodo final da validade, no formato (AAAA-MM)"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_company__reinf_contact_id
+msgid ""
+"Person the tax authority contacts about the EFD-Reinf. The R-1000 asks for "
+"the name and the CPF, so the partner needs a CPF."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__state__done
+msgid "Processed"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__state__processing
+msgid "Processing"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_procEmi
+msgid "Processo de emissao do evento"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__environment__1
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__environment__1
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__res_company__reinf_environment__1
+msgid "Production"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__protocol_date
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__protocol_date
+msgid "Protocol Date"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__protocol_number
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__protocol_number
+msgid "Protocol Number"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__r1000_id
+msgid "R-1000 Detail"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-1000
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-1000
+msgid "R-1000 Taxpayer information"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-1050
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-1050
+msgid "R-1050 Related entities"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-1070
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-1070
+msgid "R-1070 Administrative and judicial proceedings"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2010
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2010
+msgid "R-2010 Withholding on services taken"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2020
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2020
+msgid "R-2020 Withholding on services rendered"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2030
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2030
+msgid "R-2030 Resources received by a sport association"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2040
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2040
+msgid "R-2040 Resources passed on to a sport association"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2050
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2050
+msgid "R-2050 Commercialization of rural production"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2055
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2055
+msgid "R-2055 Acquisition of rural production"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2060
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2060
+msgid "R-2060 Social contribution on gross revenue (CPRB)"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2098
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2098
+msgid "R-2098 Reopening of the R-2000 series"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-2099
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-2099
+msgid "R-2099 Closing of the R-2000 series"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-3010
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-3010
+msgid "R-3010 Revenue of a sport event"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-4010
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-4010
+msgid "R-4010 Payments to an individual"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-4020
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-4020
+msgid "R-4020 Payments to a legal entity"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-4040
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-4040
+msgid "R-4040 Payments to an unidentified beneficiary"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-4080
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-4080
+msgid "R-4080 Withholding on receipt"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-4099
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-4099
+msgid "R-4099 Closing and reopening of the R-4000 series"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_type__r-9000
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__event_type__r-9000
+msgid "R-9000 Event exclusion"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_line__tax__rra
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__tax_type__rra
+msgid "RRA"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__rate
+msgid "Rate (%)"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_revenue_code__rate
+msgid ""
+"Rate the collection under this code applies over the base. It is data with "
+"validity, and not a constant in the source, because the rates change by law:"
+" the aggregated code of PIS/PASEP, COFINS and CSLL stops existing as it is "
+"when the two first are extinguished."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__reason
+msgid "Reason"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__receipt_date
+msgid "Receipt Date"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__receipt_number
+msgid "Receipt Number"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_darf__state__reconciled
+msgid "Reconciled"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__rectify_indicator
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__rectify_indicator__2
+msgid "Rectification"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__rectification_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Rectifications"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__state__rectified
+msgid "Rectified"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__rectified_event_id
+msgid "Rectified Event"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Rectify"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__name
+msgid "Reference"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_r1000_form
+msgid "Registration"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_partner__reinf_beneficiary_profile
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_res_users__reinf_beneficiary_profile
+msgid "Reinf Beneficiary Profile"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_softhouse__reinf21_softHouse_infoCadastro_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_inclusao_softhouse__reinf21_softHouse_infoCadastro_id
+msgid "Reinf21 Softhouse Infocadastro"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__state__rejected
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_search
+msgid "Rejected"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Response"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__response
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__response
+msgid "Response Message"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__environment__2
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__environment__2
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__res_company__reinf_environment__2
+msgid "Restricted Production"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__revenue_code
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__revenue_code
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__revenue_code
+msgid "Revenue Code"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.actions.act_window,name:l10n_br_reinf.reinf_revenue_code_action
+#: model:ir.ui.menu,name:l10n_br_reinf.reinf_revenue_code_menu
+msgid "Revenue Codes"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__revenue_code
+msgid ""
+"Revenue code (CR) of the DARF the tax is collected under, as the official "
+"table gives it, with the check digits. It can be empty: some natures have a "
+"withholding informed and generate no code of their own because the "
+"collection happens in another event, and the event of the line is what says "
+"which one."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_darf__revenue_code
+msgid "Revenue code (CR) of the collection, as the Annex I gives it."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_line__revenue_code
+msgid ""
+"Revenue code (CR) this withholding is collected under, read from the mapping"
+" of the Annex I of the nature of income."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_darf__due_date
+msgid ""
+"Second ten-day period of the month after the competence, anticipated when it"
+" falls on a weekend."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_batch_form
+msgid "Send"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__state__sent
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__state__sent
+msgid "Sent"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__sequence
+msgid "Sequential"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model,name:l10n_br_reinf.model_l10n_br_fiscal_service_type
+msgid "Service Type LC 166"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_indSitPJ
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_infocadastro__reinf21_indSitPJ
+msgid "Situacao da PJ"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__ignored
+msgid "Somebody decided this one does not block the competence."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_line__manually_verified
+msgid ""
+"Somebody looked at this line and confirmed it. Recomputing the calculation "
+"keeps it instead of throwing it away."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Source"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__origin
+msgid "Source Document"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__origin_id
+msgid "Source Id"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__source_move_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__source_move_id
+msgid "Source Invoice"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__source_move_line_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__source_move_line_id
+msgid "Source Line"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__origin_model
+msgid "Source Model"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__source_payment_id
+msgid "Source Payment"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__date_start
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__date_start
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__state
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__state
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__state
+msgid "State"
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/res_partner.py:0
+#, python-format
+msgid ""
+"State the legal basis of the exemption of %s: the art. 2 of the IN RFB "
+"459/2004 requires it, and without it the withholding is due."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__state
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__state
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_search
+msgid "Status"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__status_code
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__status_code
+msgid "Status Code"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__res_partner__reinf_beneficiary_profile__judicial
+msgid "Suspended by a judicial measure"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_batch__event_group__table
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__event_group__table
+msgid "Table events"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__tax
+msgid "Tax"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__classification_indicator
+msgid "Tax Classification 85"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__tax_type
+msgid "Tax Type"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__tax_type
+msgid ""
+"Tax the revenue code collects. The tables of the R-4040 and of the R-4080 do"
+" not break the withholding down by tax, so it is empty there."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__fg_date
+msgid "Taxable Event Date"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__tax_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_nature_income_form
+msgid "Taxes and Revenue Codes"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income__admitted_taxes
+msgid ""
+"Taxes this nature admits, as the column Tributo of the Tabela 01 gives it. "
+"It is the authorization of the aggregated withholding AND the list of "
+"components the aggregate carries, which is not always the three: the "
+"cooperatives of work of the nature 15001 admit IR, COFINS, PP, AGREGADO, "
+"with no CSLL."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_r1000_form
+msgid "Taxpayer"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_foneCel
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_reinf_21_alteracao_contato__reinf21_foneCel
+msgid "Telefone celular, com DDD"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__periodicity__ten_day
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_revenue_code__periodicity__ten_day
+msgid "Ten-day"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__sequence
+msgid "The 5 last positions of the event id."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_darf__carried_from_id
+msgid "The DARF of the previous competence whose balance came here."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid ""
+"The EFD-Reinf REST transport is not implemented yet. Install the transport "
+"of the EFD-Reinf to query a batch."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid ""
+"The EFD-Reinf REST transport is not implemented yet. Install the transport "
+"of the EFD-Reinf to send a batch."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/events/reinf_r1000.py:0
+#, python-format
+msgid "The EFD-Reinf contact %s must have a CPF with 11 digits."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/res_company.py:0
+#, python-format
+msgid ""
+"The EFD-Reinf environment of the company %s is not set. Choose between "
+"production and restricted production in the company form before "
+"transmitting."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid ""
+"The XML of the event %(event)s does not match the layout:\n"
+"%(errors)s"
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_r4020.py:0
+#, python-format
+msgid ""
+"The aggregated withholding and the separate withholdings of CSLL, COFINS and"
+" PIS/PASEP cannot travel in the same payment: it duplicates the debt in the "
+"DCTFWeb. Found together: %s."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_batch.py:0
+#, python-format
+msgid "The batch %s has no event to send."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/events/reinf_r1000.py:0
+#: code:addons/l10n_br_reinf/models/reinf_r4020.py:0
+#, python-format
+msgid ""
+"The binding module %s is not available. Install a nfelib with the EFD-Reinf "
+"bindings."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/res_company.py:0
+#, python-format
+msgid ""
+"The company %s has no CNPJ or CPF, so no EFD-Reinf event can be identified."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/events/reinf_r1000.py:0
+#, python-format
+msgid ""
+"The company %s has no EFD-Reinf contact. The R-1000 asks for the name and "
+"the CPF of a person to be contacted."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/events/reinf_r1000.py:0
+#, python-format
+msgid "The company %s has no EFD-Reinf taxpayer classification (classTrib)."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation.py:0
+#, python-format
+msgid ""
+"The competence %(period)s has %(count)s critical exceptions. Solve them, or "
+"ignore them with a reason, before closing."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation.py:0
+#, python-format
+msgid "The competence %(period)s is not valid: write it as AAAA-MM."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_calculation.py:0
+#, python-format
+msgid "The competence %s is closed. Reopen it before recomputing."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid "The event %s cannot go back to draft from the status it is in."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid "The event %s has no R-1000 detail record."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_r4020.py:0
+#, python-format
+msgid "The event %s has no calculation line, so there is nothing to declare."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid "The event %s has no calculation to declare."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__rectified_event_id
+msgid "The event this one rectifies."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__event_key
+msgid ""
+"The id attribute of the event: ID, the type and the number of the "
+"inscription of the taxpayer, the moment of the generation and a sequential, "
+"in 36 positions."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.constraint,message:l10n_br_reinf.constraint_l10n_br_reinf_event_reinf_event_key_uniq
+msgid "The id of an EFD-Reinf event must be unique."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_cofins
+msgid "The nature is subject to the withholding of COFINS."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_csll
+msgid "The nature is subject to the withholding of CSLL."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_pp
+msgid "The nature is subject to the withholding of PIS/PASEP."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_ir
+msgid ""
+"The nature is subject to the withholding of income tax (IRPF, IRPJ or RRA)."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_nature_income.py:0
+#, python-format
+msgid ""
+"The nature of income %(code)s is not valid: the layout asks for exactly 5 "
+"digits."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.constraint,message:l10n_br_reinf.constraint_l10n_br_reinf_nature_income_reinf_nature_income_code_uniq
+msgid "The nature of income code must be unique."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.actions.act_window,help:l10n_br_reinf.reinf_nature_income_action
+msgid ""
+"The nature of income is the natRend of the R-4010 and of the\n"
+"                R-4020, and it says which withholdings a payment may carry."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid ""
+"The period %(period)s is not valid: write it as AAAA-MM, or as AAAA for the "
+"events whose period is a year."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__date_start
+msgid ""
+"The published tables version their lines: a revenue code is replaced without"
+" the nature changing, and an event of a closed competence has to keep "
+"answering the code that was valid then."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_revenue_code.py:0
+#, python-format
+msgid ""
+"The revenue code %(code)s is not valid: the layout asks for 4 to 6 "
+"characters."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.actions.act_window,help:l10n_br_reinf.reinf_revenue_code_action
+msgid ""
+"The revenue code is the code a withholding is collected under in\n"
+"                a DARF, and the key the totalizers of the tax authority answer\n"
+"                with."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.constraint,message:l10n_br_reinf.constraint_l10n_br_reinf_revenue_code_reinf_revenue_code_code_uniq
+msgid "The revenue code must be unique."
+msgstr ""
+
+#. module: l10n_br_reinf
+#. odoo-python
+#: code:addons/l10n_br_reinf/models/reinf_event.py:0
+#, python-format
+msgid ""
+"The sequence %s is missing. Reinstall or update the l10n_br_reinf module to "
+"restore it."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income__ret_agreg
+msgid ""
+"The withholdings of CSLL, PIS/PASEP and COFINS may be declared aggregated in"
+" a single value, under a single revenue code."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.constraint,message:l10n_br_reinf.constraint_l10n_br_reinf_calculation_reinf_calculation_period_uniq
+msgid "There is already a calculation of this competence for this company."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_tpInsc
+msgid "Tipo de Inscricao"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_tpAmb
+msgid "Tipo de ambiente"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_darf__total_amount
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Total"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__total_base_amount
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_tree
+msgid "Total Base"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__total_divergence_amount
+msgid "Total Divergence"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__total_wh_amount
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_tree
+msgid "Total Withheld"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Totals"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_batch_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Transmission"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation__state__transmitted
+msgid "Transmitted"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__on_credit
+msgid "Triggered by the Credit"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_occurrence__type
+msgid "Type"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_nature_income__code_unmasked
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_revenue_code__code_unmasked
+msgid "Unmasked Code"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_event_form
+msgid "Validate"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_event__state__validated
+msgid "Validated"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_nature_income_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_revenue_code_form
+msgid "Validity"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation__state__verified
+msgid "Verified"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Verify"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_r1000__reinf21_verProc
+msgid "Versao do processo de emissao do evento"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_occurrence__type__2
+msgid "Warning"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__website_message_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation__website_message_ids
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_batch__website_message_ids
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation__website_message_ids
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__periodicity__weekly
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_revenue_code__periodicity__weekly
+msgid "Weekly"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_exception__advice
+msgid "What to do about it."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__classification_indicator
+msgid ""
+"Whether the line applies to a declarant of the tax classification 85. It is "
+"what picks between the pair of revenue codes of a nature: the aggregated "
+"withholding of a private company answers 595207, and a body of the public "
+"administration answers its own pair."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_line__on_credit
+msgid ""
+"Whether the taxable event of this tax is the credit and not the payment."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_nature_income_tax__foreign_taxation
+msgid ""
+"Whether this line applies to the taxation of income of a beneficiary "
+"resident or domiciled abroad (the trib_exterior column of the Annex I)."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_partner__reinf_beneficiary_profile
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_users__reinf_beneficiary_profile
+msgid ""
+"Why the withholding of this beneficiary may differ from the rule of the "
+"nature of income. It matters for the aggregated withholding: a dispensation "
+"that belongs to the NATURE keeps the aggregate (a cooperative of work owes "
+"no CSLL and still aggregates PIS/PASEP and COFINS), while an exemption or a "
+"zero rate OF THE BENEFICIARY, and a judicial measure, require the specific "
+"revenue codes instead."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_calculation_line__wh_amount
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_calculation_form
+msgid "Withheld"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__below_minimum
+msgid "Withholding below the minimum to collect"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_calculation_exception__reason__judicial_suspension
+msgid "Withholding suspended by a judicial decision"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model_terms:ir.ui.view,arch_db:l10n_br_reinf.reinf_nature_income_form
+msgid "Withholdings (read from the mapping below)"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__file_request_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__file_request_id
+msgid "XML"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_batch__file_response_id
+#: model:ir.model.fields,field_description:l10n_br_reinf.field_l10n_br_reinf_event__file_response_id
+msgid "XML Response"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__l10n_br_reinf_nature_income_tax__classification_indicator__yes
+msgid "Yes"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields.selection,name:l10n_br_reinf.selection__res_partner__reinf_beneficiary_profile__zero_rate
+msgid "Zero rate"
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_company__reinf_class_trib
+msgid ""
+"classTrib of the R-1000: the classification of the taxpayer, in 2 digits, as"
+" listed in the table of classifications of the manual of the EFD-Reinf."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_occurrence__code
+msgid "codResp of the answer."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_occurrence__description
+msgid "dscResp of the answer."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_calculation_line__fg_date
+msgid ""
+"dtFG of the line: the date of the credit for the income tax, the date of the"
+" payment for PIS/PASEP, COFINS and CSLL."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__additional_event
+msgid ""
+"ideEvtAdic: which slice of a beneficiary this event declares, when the "
+"competence had to be split because of the limits of the layout."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_company__reinf_ind_acordo_isen_multa
+msgid ""
+"indAcordoIsenMulta of the R-1000: whether an international agreement exempts"
+" the taxpayer from fines."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_company__reinf_ind_desoneracao
+msgid ""
+"indDesoneracao of the R-1000: whether the payroll of the taxpayer is "
+"relieved by the social contribution on gross revenue."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_company__reinf_ind_escrituracao
+msgid ""
+"indEscrituracao of the R-1000: whether the taxpayer is obligated to keep its"
+" accounting books in the ECD."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__rectify_indicator
+msgid "indRetif of the event."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_occurrence__location
+msgid ""
+"localErroAviso of the answer: where in the event the occurrence was raised."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__inscription
+msgid "nrInsc used to build the event id."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_batch__protocol_number
+msgid ""
+"nrProtLote returned by the reception of the batch. It is what the later "
+"query asks about."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__receipt_number
+msgid ""
+"nrRecibo returned by the tax authority. It is what a rectification and an "
+"exclusion point to."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__period
+msgid ""
+"perApur of the event, as AAAA-MM, or AAAA for the events whose period is a "
+"year."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_res_company__reinf_environment
+msgid ""
+"tpAmb of the EFD-Reinf events of this company. It has no default on purpose:"
+" choosing between production and restricted production is a decision of the "
+"taxpayer, and a wrong guess sends real data to the wrong environment. It is "
+"required to transmit anything."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__environment
+msgid "tpAmb the event was transmitted with."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_event__inscription_type
+msgid "tpInsc used to build the event id."
+msgstr ""
+
+#. module: l10n_br_reinf
+#: model:ir.model.fields,help:l10n_br_reinf.field_l10n_br_reinf_occurrence__type
+msgid "tpOcorr of the answer: an error rejects the event, a warning does not."
+msgstr ""
