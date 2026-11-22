@@ -270,7 +270,7 @@
     <menuitem
         id="menu_dctfweb_assessment"
         name="DCTFWeb/MIT"
-        parent="account.menu_finance_entries_actions"
+        parent="account.menu_finance_entries"
         action="action_dctfweb_assessment"
         sequence="95"
     />
