@@ -91,6 +91,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[l10n_br_sped_ecd](l10n_br_sped_ecd/) | 18.0.1.0.0 | <a href='https://github.com/rvalyi'><img src='https://github.com/rvalyi.png' width='32' height='32' style='border-radius:50%;' alt='rvalyi'/></a> <a href='https://github.com/renatonlima'><img src='https://github.com/renatonlima.png' width='32' height='32' style='border-radius:50%;' alt='renatonlima'/></a> | Arquivo ECD do SPED
 [l10n_br_sped_efd_icms_ipi](l10n_br_sped_efd_icms_ipi/) | 18.0.1.0.0 | <a href='https://github.com/rvalyi'><img src='https://github.com/rvalyi.png' width='32' height='32' style='border-radius:50%;' alt='rvalyi'/></a> <a href='https://github.com/renatonlima'><img src='https://github.com/renatonlima.png' width='32' height='32' style='border-radius:50%;' alt='renatonlima'/></a> | Arquivo EFD ICMS IPI do SPED / SPED Fiscal
 [l10n_br_sped_setup_tests](l10n_br_sped_setup_tests/) | 18.0.1.0.0 | <a href='https://github.com/mileo'><img src='https://github.com/mileo.png' width='32' height='32' style='border-radius:50%;' alt='mileo'/></a> | Instala no CI o que os testes do SPED esperam do OCA/l10n-brazil completo
 [l10n_br_tax_assessment](l10n_br_tax_assessment/) | 18.0.1.0.0 | <a href='https://github.com/mileo'><img src='https://github.com/mileo.png' width='32' height='32' style='border-radius:50%;' alt='mileo'/></a> | Conta gráfica mensal de ICMS, IPI, PIS e COFINS

@@ -12,8 +12,8 @@ from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 @tagged("post_install", "-at_install")
 class TestSpedEcdGenerate(AccountTestInvoicingCommon):
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.company = cls.company_data["company"]
         cls.journal = cls.company_data["default_journal_misc"]
         # the accountant of the account test common is not a fiscal manager,
@@ -32,8 +32,7 @@ class TestSpedEcdGenerate(AccountTestInvoicingCommon):
                 "code": "ECD10",
                 "name": "Caixa",
                 "account_type": "asset_cash",
-                "company_id": cls.company.id,
-                "group_id": cls.group.id,
+                "company_ids": [cls.company.id],
             }
         )
         cls.acc_receita = cls.env["account.account"].create(
@@ -41,7 +40,7 @@ class TestSpedEcdGenerate(AccountTestInvoicingCommon):
                 "code": "ECD90",
                 "name": "Vendas",
                 "account_type": "income",
-                "company_id": cls.company.id,
+                "company_ids": [cls.company.id],
             }
         )
 

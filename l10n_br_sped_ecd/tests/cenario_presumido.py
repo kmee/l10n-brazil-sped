@@ -118,7 +118,7 @@ class CenarioPresumido:
             }
         )
         # NIRE de Sao Paulo com o digito calculado pela regra do PVA
-        self.company.l10n_br_nire = "35200123458"
+        self.company.l10n_br_nire_code = "35200123458"
 
     def _plano_de_contas(self):
         grupos = {}
@@ -138,7 +138,7 @@ class CenarioPresumido:
                     "code": codigo,
                     "name": nome,
                     "account_type": tipo,
-                    "company_id": self.company.id,
+                    "company_ids": [self.company.id],
                     "l10n_br_sped_referential_code": referencial,
                 }
             )

@@ -125,7 +125,7 @@ class Registro0000(models.Model):
             WHERE l.company_id = %(company)s
               AND m.state = 'posted'
               AND l.date <= %(fim)s
-              AND (a.internal_group NOT IN ('income', 'expense')
+              AND (split_part(a.account_type, '_', 1) NOT IN ('income', 'expense')
                    OR l.date >= %(exercicio)s)
             GROUP BY l.account_id
             """,
@@ -141,7 +141,9 @@ class Registro0000(models.Model):
         for account_id, ini, fin, result, moved in self.env.cr.fetchall():
             if not moved and currency.is_zero(ini) and currency.is_zero(fin):
                 continue
-            account = self.env["account.account"].browse(account_id)
+            account = (
+                self.env["account.account"].with_company(company).browse(account_id)
+            )
             balances[account] = {"ini": ini, "fin": fin, "result": result}
         return balances
 
@@ -152,7 +154,7 @@ class Registro0000(models.Model):
         is a total, and a total cannot be a detail line)."""
         self.ensure_one()
         groups = self.env["account.group"].search(
-            [("company_id", "=", self.company_id.id)]
+            self.env["account.group"]._check_company_domain(self.company_id)
         )
         with_subgroups = set(groups.mapped("parent_id").ids)
         codes = {}
@@ -192,7 +194,7 @@ class Registro0000(models.Model):
             # "DT_INI": (will use the declaration field directly),
             # "DT_FIN": (will use the declaration field directly),
             "NOME": record.legal_name,
-            "CNPJ": misc.punctuation_rm(record.cnpj_cpf),
+            "CNPJ": misc.punctuation_rm(record.vat),
             "UF": record.state_id.code,
             "IE": misc.punctuation_rm(record.l10n_br_ie_code),
             "COD_MUN": record.city_id.ibge_code,
@@ -200,7 +202,7 @@ class Registro0000(models.Model):
             # "IND_SIT_ESP": (will use the declaration field directly),
             # "IND_SIT_INI_PER": (will use the declaration field directly),
             # 1 when the company has the registration of the commercial board
-            "IND_NIRE": "1" if record.l10n_br_nire else "0",
+            "IND_NIRE": "1" if record.l10n_br_nire_code else "0",
             # "IND_FIN_ESC"
             # hash of the replaced bookkeeping and CNPJ of the SCP: only for a
             # replacement and for a SCP, blank otherwise
@@ -318,8 +320,8 @@ class Registro0150(models.Model):
             "COD_PART": record.id,
             "NOME": record.name,  # Nome pessoal ou empresarial do participante.
             "COD_PAIS": record.country_id.ibge_code or "BR",
-            "CNPJ": record.is_company and misc.punctuation_rm(record.cnpj_cpf) or "",
-            "CPF": not record.is_company and misc.punctuation_rm(record.cnpj_cpf) or "",
+            "CNPJ": record.is_company and misc.punctuation_rm(record.vat) or "",
+            "CPF": not record.is_company and misc.punctuation_rm(record.vat) or "",
             "NIT": 0,  # Número de Identificação do Trabalhador, Pis, Pasep, SUS.
             "UF": record.state_id.code,
             "IE": misc.punctuation_rm(record.l10n_br_ie_code),
@@ -432,8 +434,8 @@ class RegistroI030(models.Model):
             # the number of lines is written by the generation of the file
             "QTD_LIN": 1,
             "NOME": company.legal_name or company.name,
-            "NIRE": misc.punctuation_rm(company.l10n_br_nire or ""),
-            "CNPJ": misc.punctuation_rm(company.cnpj_cpf),
+            "NIRE": misc.punctuation_rm(company.l10n_br_nire_code or ""),
+            "CNPJ": misc.punctuation_rm(company.vat),
             # the PVA warns when neither date is there (REGRA_PREENCHE_DATA_I030)
             "DT_ARQ": company.l10n_br_articles_filing_date,
             "DT_ARQ_CONV": company.l10n_br_conversion_filing_date,
@@ -478,12 +480,12 @@ class RegistroI050(models.Model):
         groups = (
             self.env["account.group"]
             .with_company(company)
-            .search([("company_id", "=", company.id)])
+            .search(self.env["account.group"]._check_company_domain(company))
         )
         accounts = (
             self.env["account.account"]
             .with_company(company)
-            .search([("company_id", "=", company.id)])
+            .search(self.env["account.account"]._check_company_domain(company))
         )
 
         # o grupo herda a natureza das contas que reúne
@@ -691,7 +693,7 @@ class RegistroI155(models.Model):
         encerramento. Só entra conta com movimento ou saldo.
         """
         query = """
-            SELECT a.code AS cod_cta,
+            SELECT a.code_store->>%(root)s AS cod_cta,
                    COALESCE(SUM(
                        CASE WHEN l.date < %(ini)s THEN l.balance ELSE 0 END
                    ), 0) AS vl_sld_ini,
@@ -712,9 +714,9 @@ class RegistroI155(models.Model):
             WHERE l.company_id = %(company)s
               AND m.state = 'posted'
               AND l.date <= %(fim)s
-              AND (a.internal_group NOT IN ('income', 'expense')
+              AND (split_part(a.account_type, '_', 1) NOT IN ('income', 'expense')
                    OR l.date >= %(exercicio)s)
-            GROUP BY a.code
+            GROUP BY 1
             HAVING COALESCE(SUM(
                        CASE WHEN l.date <= %(fim)s THEN l.balance ELSE 0 END
                    ), 0) <> 0
@@ -726,12 +728,13 @@ class RegistroI155(models.Model):
                        CASE WHEN l.date BETWEEN %(ini)s AND %(fim)s
                             THEN l.credit ELSE 0 END
                    ), 0) <> 0
-            ORDER BY a.code
+            ORDER BY 1
         """
         params = {
             "ini": parent_record["dt_ini"],
             "fim": parent_record["dt_fin"],
             "company": declaration.company_id.id,
+            "root": str(declaration.company_id.root_id.id),
             "exercicio": declaration.company_id.compute_fiscalyear_dates(
                 parent_record["dt_ini"]
             )["date_from"],

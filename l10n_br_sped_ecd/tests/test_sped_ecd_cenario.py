@@ -134,7 +134,7 @@ class TestEcdCenario(common.TransactionCase):
             ["35200123458", "91827364000103", "10032015", ""],
         )
         self.assertEqual(self._campos(linhas, "0000")[0][12], "1")
-        self.cenario.company.l10n_br_nire = False
+        self.cenario.company.l10n_br_nire_code = False
         _declaracao, linhas = self._arquivo()
         self.assertEqual(self._campos(linhas, "I030")[0][6], "")
         self.assertEqual(self._campos(linhas, "0000")[0][12], "0")
