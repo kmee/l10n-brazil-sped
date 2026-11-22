@@ -66,6 +66,12 @@ A branch também carrega versões de `l10n_br_sped_efd_icms_ipi`, `l10n_br_sped_
 deste repositório, e só os addons listados no `test-requirements.txt` vêm do fork. Por
 isso o job "Detect unreleased dependencies" do template acusa as linhas com URL: elas
 saem quando cada addon for publicado no PyPI com a mudança.
+Até lá, o vermelho desse job é esperado e não impede o merge.
+
+O `pyopenssl` fica fixado em 22.1.0, como no `test-requirements.txt` do OCA/l10n-brazil
+16.0: a imagem `oca-ci` traz uma `cryptography` antiga, e as versões novas do `pyopenssl`
+exigem uma recente. Ele só entra como dependência de teste, e os módulos não usam as
+funções de servidor TLS dos alertas de segurança; o Dependabot ignora o pacote.
 
 ## Documentação
 
