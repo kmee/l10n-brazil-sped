@@ -3,17 +3,14 @@
 
 from pathlib import Path
 
-from odoo import SUPERUSER_ID, api
 
-
-def post_init_hook(cr, registry):
+def post_init_hook(env):
     """Importa a ECF de exemplo, para quem instala o modulo com dados demo.
 
     O arquivo e gerado pela propria escrituracao (ver o teste
     ``test_gerar_arquivo_de_exemplo``), e nao escrito a mao: importa-lo aqui
     exercita o caminho de leitura logo na instalacao.
     """
-    env = api.Environment(cr, SUPERUSER_ID, {})
     if env.ref("base.module_l10n_br_sped_ecf").demo:
         caminho = Path(__file__).resolve().parent / "demo" / "demo_ecf.txt"
         env["l10n_br_sped.mixin"]._flush_registers("ecf")

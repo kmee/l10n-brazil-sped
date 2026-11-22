@@ -5,7 +5,7 @@
     "name": "SPED - ECF",
     "summary": """
         Arquivo ECF do SPED""",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "author": "Akretion, KMEE, Odoo Community Association (OCA)",
     "website": "https://github.com/kmee/l10n-brazil-sped",
