@@ -18,6 +18,9 @@ class TestMitPayload(AccountTestInvoicingCommon):
     schema 1.0 published with it (ADE CORAT 19/2024).
     """
 
+    # without it the common guesses the chart of the country, l10n_br
+    chart_template = "generic_coa"
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()

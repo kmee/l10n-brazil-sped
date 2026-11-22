@@ -11,6 +11,9 @@ from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 class TestDctfwebAssessment(AccountTestInvoicingCommon):
     """The MIT confesses what the tax assessment already persisted."""
 
+    # without it the common guesses the chart of the country, l10n_br
+    chart_template = "generic_coa"
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
