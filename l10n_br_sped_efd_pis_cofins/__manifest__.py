@@ -5,7 +5,7 @@
     "name": "SPED - EFD PIS COFINS",
     "summary": """
         Registros do EFD PIS COFINS do SPED""",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "author": "Akretion, Odoo Community Association (OCA)",
     "website": "https://github.com/kmee/l10n-brazil-sped",

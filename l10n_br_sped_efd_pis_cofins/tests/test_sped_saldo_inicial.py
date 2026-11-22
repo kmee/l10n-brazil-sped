@@ -210,7 +210,7 @@ class TestCreditOpeningChain(CreditMixin, SpedEntradaCommon):
         self.assertIn("opening balance of the credit", pis.opening_balance_warning)
         account = pis.tax_group_id.with_company(
             self.company
-        ).property_tax_receivable_account_id
+        ).tax_receivable_account_id
         other = self.env["account.account"].create(
             {
                 "name": "Opening balance",

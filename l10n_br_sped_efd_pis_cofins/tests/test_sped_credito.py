@@ -96,10 +96,10 @@ class CreditMixin(SpedPisCofinsEntradaMixin):
         if regime:
             group.regime = regime
         accounts = {
-            "property_tax_payable_account_id": ("PAY", "liability_current"),
-            "property_tax_receivable_account_id": ("REC", "asset_current"),
+            "tax_payable_account_id": ("PAY", "liability_current"),
+            "tax_receivable_account_id": ("REC", "asset_current"),
         }
-        if not group.with_company(self.company).property_tax_payable_account_id:
+        if not group.with_company(self.company).tax_payable_account_id:
             group.with_company(self.company).write(
                 {
                     field: self.env["account.account"]

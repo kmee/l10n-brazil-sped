@@ -78,7 +78,7 @@ class TaxAssessment(models.Model):
                 continue
             account = record.tax_group_id.with_company(
                 record.company_id
-            ).property_tax_receivable_account_id
+            ).tax_receivable_account_id
             if not openings or not account:
                 continue
             lines = (
