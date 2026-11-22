@@ -28,7 +28,9 @@ class SpedEcfGenerateTest(common.TransactionCase):
         dates = lines.mapped("date")
         if not dates:
             return None, None
-        return date(min(dates).year, 1, 1), date(max(dates).year, 12, 31)
+        # the ECF is the book of one calendar year: the last one with entries
+        year = max(dates).year
+        return date(year, 1, 1), date(year, 12, 31)
 
     def test_generate_ecf(self):
         if not self.company:
