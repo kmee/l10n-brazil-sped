@@ -11,7 +11,7 @@ on:
 
 jobs:
   pre-commit:
-    runs-on: [kmee-l10n-br]
+    runs-on: ubuntu-22.04
     container: python:3.11-bookworm
     steps:
       - run: apt-get update -qq && apt-get install -y -qq git >/dev/null
