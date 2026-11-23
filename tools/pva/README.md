@@ -47,14 +47,16 @@ python3 -I tools/pva/resumo.py /tmp/pva/relatorios /tmp/pva/arquivos
 O PVA é uma aplicação Swing e o container não tem gerenciador de janelas. O
 `pva_driver.py` espera cada janela pelo título (`xdotool search`), responde os diálogos
 de pergunta com Enter (botão padrão: Sim ou Ok), cancela a atualização de tabelas com
-Esc e clica em coordenadas só onde não há janela própria: menus da janela principal,
-caixas do relatório e os diálogos que a ECF desenha dentro da janela principal (campos
-de transporte: Não; linhas desprezadas na importação: Sim, para guardar o relatório de
-importação). A tela tem sempre 1280x1024 e a janela principal de cada PVA abre sempre no
-mesmo lugar. Cada passo deixa uma captura de tela no artefato.
+Esc e clica em coordenadas onde não há botão padrão: menus da janela principal, caixas
+do relatório, "Ok" da importação por blocos e, na ECF, "Não" em "Campos de transporte
+devem ser atualizados automaticamente?" (para o PVA julgar os valores escritos pelo
+Odoo). Na ECF o relatório de importação também é guardado. A tela tem sempre 1280x1024 e
+a janela principal de cada PVA abre sempre no mesmo lugar. Cada passo deixa uma captura
+de tela no artefato.
 
-O container roda sem rede, então o PVA não atualiza as tabelas oficiais (é como foram as
-validações manuais de referência). Para atualizar, rode à mão com "atualizar_tabelas".
+O container roda sem rede, então o PVA não verifica a versão nem atualiza as tabelas
+oficiais e segue com as tabelas do instalador (é como foram as validações manuais de
+referência). Para atualizar, rode à mão com "atualizar_tabelas".
 
 ## Quando sai versão nova de um PVA
 

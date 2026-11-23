@@ -69,6 +69,7 @@ KINDS = {
             "show": (872, 356),
             "save": (449, 400),
         },
+        "split": 407,
         "success_report": None,
     },
     "ecf": {
@@ -81,12 +82,14 @@ KINDS = {
             "save": (572, 400),
         },
         "success_report": None,
-        # the ECF asks inside the main window (no X window): "Campos de
-        # transporte devem ser atualizados automaticamente?" (answered Nao,
-        # so the validation judges the values written by Odoo) and "linhas
-        # desprezadas" (answered Sim, to keep the import report). Then the
-        # file is opened from the tree and validated by the Passo a Passo.
-        "frame_dialogs": True,
+        # after the import the ECF asks "Campos de transporte devem ser
+        # atualizados automaticamente?" in a dialog wider than 1000 pixels
+        # (answered Nao, so the validation judges the values written by
+        # Odoo) and, when it rewrote lines, whether to show the import
+        # report (answered Sim, to keep it). Then the file is opened from
+        # the tree and validated by the Passo a Passo.
+        "transport_question": True,
+        "split": 528,
         "close_tab": (699, 224),
         "tree_item": (154, 299),
         "validate": (795, 575),
@@ -102,7 +105,10 @@ CHOOSER = re.compile(r"^Importar Escritura")
 SAVE = re.compile(r"^(Save|Salvar)$")
 TABLES = re.compile(r"^Atualizar Tabelas")
 BLOCKS = re.compile(r"^Importa\S+ por blocos")
-VALIDATING = re.compile(r"^Validando")
+# "Validando assinaturas" shows up during the import: not the validation
+VALIDATING = re.compile(r"^Validando a escritura")
+# one pixel of "convert ... txt:-": "209,0: (220,143,63) #DC8F3F ..."
+PIXEL = re.compile(r"(\d+),0:\s*\(\s*(\d+),\s*(\d+),\s*(\d+)")
 RESULT = {"Mensagem": "sucesso", "Aviso": "advertencias", "Erro": "erros"}
 
 
@@ -210,23 +216,45 @@ class Driver:
         self.screens.append(os.path.basename(path))
         return path
 
-    def pixel(self, x, y):
-        run("import", "-window", "root", "/tmp/pva-ci-pixel.png")
+    def split_x(self):
+        """Column of the divider of the main window (its orange arrows).
+
+        In the ECD and the ECF the right panel starts at a divider that moves
+        a few pixels from one run to the other: the positions of the right
+        panel are written for the divider at cfg["split"] and shifted here.
+        """
+        run("import", "-window", "root", "/tmp/pva-ci-linha.png")
         out = run(
             "convert",
-            "/tmp/pva-ci-pixel.png",
+            "/tmp/pva-ci-linha.png",
             "-crop",
-            f"1x1+{x}+{y}",
+            "400x1+300+300",
             "-depth",
             "8",
             "txt:-",
         )
-        match = re.search(r"\((\d+),(\d+),(\d+)", out)
-        return tuple(int(v) for v in match.groups()) if match else (0, 0, 0)
+        for line in out.splitlines()[1:]:
+            match = PIXEL.match(line)
+            if match:
+                x, r, g, b = (int(v) for v in match.groups())
+                if r > 180 and 60 < g < 150 and b < 90:
+                    return 300 + x
+        return None
 
-    def dimmed(self):
-        """The ECF dims the main window under a dialog of its own."""
-        return sum(self.pixel(1100, 860)) < 600
+    def at(self, point, centered=False):
+        """Point of the right panel, shifted with its divider."""
+        reference = self.cfg.get("split")
+        if not reference:
+            return point
+        found = self.split_x()
+        if found is None:
+            return point
+        delta = found - reference
+        if centered:
+            delta //= 2
+        if delta:
+            self.log(f"divider at {found}, shifting {delta}")
+        return (point[0] + delta, point[1])
 
     def wait_for(self, pattern, timeout, what):
         limit = time.time() + timeout
@@ -326,20 +354,6 @@ class Driver:
         self.shot("seletor_preso")
         raise Lost(f"the file chooser did not take {path}")
 
-    def frame_dialog(self, answered):
-        """Dialog drawn inside the ECF main window: no X window to find."""
-        self.shot("dialogo_interno")
-        # the "campos de transporte" dialog is wider than the main window
-        wide = sum(self.pixel(110, 511)) > 500
-        if wide:
-            self.log("frame dialog: campos de transporte -> Nao")
-            self.click(680, 581)
-            answered.add("transporte")
-        else:
-            self.log("frame dialog: Sim (default button)")
-            self.key("Return")
-            answered.add("linhas")
-
     def handle(self, win, state):
         """Answer one dialog of the import or the validation.
 
@@ -347,10 +361,7 @@ class Driver:
         import) was read.
         """
         title = win["title"]
-        # EFD: the tables dialog only shows up when the validation starts
-        expect_result = state["validating"] or (
-            state["tables"] and self.kind.startswith("efd")
-        )
+        expect_result = state["validating"]
         if QUESTION.match(title) and (expect_result or title == "Erro"):
             self.result_title = title
             if expect_result:
@@ -362,7 +373,18 @@ class Driver:
             self.shot("resultado")
             self.key("Return")
             return True
-        if QUESTION.match(title):
+        if self.cfg.get("transport_question") and QUESTION.match(title):
+            self.shot(f"pergunta_{win['w']}x{win['h']}")
+            if win["w"] >= 1000:
+                self.log("campos de transporte: Nao")
+                self.click(win["x"] + win["w"] // 2 + 40, win["y"] + win["h"] - 27)
+                state["answered"].add("transporte")
+            else:
+                self.log(f"{title} {win['w']}x{win['h']}: Return")
+                self.key("Return")
+                if "transporte" in state["answered"]:
+                    state["answered"].add("linhas")
+        elif QUESTION.match(title):
             self.log(f"{title} {win['w']}x{win['h']}: Return")
             self.shot(f"pergunta_{win['w']}x{win['h']}")
             self.key("Return")
@@ -379,14 +401,10 @@ class Driver:
                 raise Lost(f"unknown window {title!r}")
         return False
 
-    def frame_step(self, state):
-        """ECF: dialogs drawn in the main window, then the validation."""
-        if self.dimmed():
-            self.frame_dialog(state["answered"])
-            state["quiet"] = None
-            return
+    def ecf_step(self, state):
+        """ECF: once the import is quiet, open the file and validate it."""
         state["quiet"] = state["quiet"] or time.time()
-        wait = 8 if "transporte" in state["answered"] else 45
+        wait = 10 if "transporte" in state["answered"] else 60
         if time.time() - state["quiet"] > wait and not state["validated"]:
             self.ecf_validate(state["answered"])
             state["validated"] = True
@@ -419,10 +437,8 @@ class Driver:
                     return
             if titles:
                 state["quiet"] = None
-            elif (
-                not titles and self.cfg.get("frame_dialogs") and not state["validating"]
-            ):
-                self.frame_step(state)
+            elif self.cfg.get("transport_question") and not state["validating"]:
+                self.ecf_step(state)
             time.sleep(0.4)
         self.shot("validacao_timeout")
         raise Lost("no result from the validation")
@@ -430,25 +446,35 @@ class Driver:
     def ecf_validate(self, answered):
         if "linhas" in answered:
             self.save_report("importacao")
-        self.click(*self.cfg["close_tab"])
+        self.click(*self.at(self.cfg["close_tab"]))
         time.sleep(2)
         self.click(*self.cfg["tree_item"], double=True)
         time.sleep(6)
         self.shot("passo_a_passo")
-        self.log("Passo a Passo: Validar")
-        self.click(*self.cfg["validate"])
+        # the icon only takes the click once the Passo a Passo is drawn:
+        # click again until the PVA shows a window
+        for attempt in range(6):
+            self.log(f"Passo a Passo: Validar (attempt {attempt + 1})")
+            self.click(*self.at(self.cfg["validate"]))
+            limit = time.time() + 40
+            while time.time() < limit:
+                if self.dialogs():
+                    return
+                time.sleep(1)
+        self.shot("validar_sem_resposta")
+        raise Lost("the Validar icon of the ECF never answered")
 
     def save_report(self, label, cfg=None):
         """On a report screen: tick the boxes, show, save as PDF, to text."""
         cfg = cfg or self.cfg["report"]
         time.sleep(2)
-        for x, y in cfg.get("boxes", []):
-            self.click(x, y)
+        for point in cfg.get("boxes", []):
+            self.click(*self.at(point, centered=True))
         if cfg.get("show"):
-            self.click(*cfg["show"])
+            self.click(*self.at(cfg["show"], centered=True))
             time.sleep(8)
         self.shot(f"relatorio_{label}")
-        self.click(*cfg["save"])
+        self.click(*self.at(cfg["save"]))
         try:
             dialog = self.wait_for(SAVE, 30, "salvar")
         except Lost:
