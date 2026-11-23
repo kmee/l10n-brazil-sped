@@ -1,0 +1,5 @@
+escrituracao,versao,url,sha256
+efd_icms_ipi,6.2.0,https://servicos.receita.fazenda.gov.br/publico/programas/Sped/SpedFiscal/SpedEFD_linux_x86_64-6.2.0.sh,41f8e1b51dad4eb508a26e3ad5cbb4e265d793a3a0d86b0f50601c382ea90e29
+efd_pis_cofins,6.2.0,https://servicos.receita.fazenda.gov.br/publico/programas/SpedPisCofinsPVA/EFD-Contribuicoes_linux_x86_64-6.2.0.sh,5d7d6fce92a13ab13c13a03379dab039d4156c4c66a10f8951420f9514eb8d80
+ecd,10.4.1,https://servicos.receita.fazenda.gov.br/publico/programas/Sped/SpedContabil/SpedContabil_linux_x86_64-10.4.1.sh,fde8f27767d15aec6fdf96e65cf4e7309a08d1b684df643192f97ffd104c575d
+ecf,12.2.8,https://servicos.receita.fazenda.gov.br/publico/programas/Sped/ECF/SpedECF_linux_x86_64-12.2.8.sh,77b75ab297faca08c6e2443c0ae96a98b13440a32eeec4a0bd2849a31ca27123

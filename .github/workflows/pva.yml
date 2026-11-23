@@ -1,0 +1,162 @@
+name: pva
+
+# Validates in the PVA of the Receita Federal the files that the modules
+# generate (tools/pva). Runs on the self-hosted runner of the KMEE, so it
+# never runs for a pull request from a fork: only by hand, for a pull request
+# of this repository with the "pva" label, and every night on 16.0 and 18.0.
+
+on:
+  workflow_dispatch:
+    inputs:
+      serie:
+        description: "Serie"
+        type: choice
+        options:
+          - "16.0"
+          - "18.0"
+        default: "16.0"
+      escrituracoes:
+        description: "Escrituracoes, separadas por virgula"
+        default: "efd_icms_ipi,efd_pis_cofins,ecd,ecf"
+      atualizar_tabelas:
+        description: "Atualizar as tabelas do PVA (o container ganha rede)"
+        type: boolean
+        default: false
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+    branches:
+      - "16.0"
+      - "18.0"
+  schedule:
+    # 02:37 in Brasilia
+    - cron: "37 5 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pva-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}-${{ inputs.serie }}
+  cancel-in-progress: true
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    if: >-
+      github.repository_owner == 'kmee' && (
+        github.event_name != 'pull_request' || (
+          github.event.pull_request.head.repo.full_name == github.repository &&
+          contains(github.event.pull_request.labels.*.name, 'pva')
+        )
+      )
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      kinds: ${{ steps.plan.outputs.kinds }}
+      update: ${{ steps.plan.outputs.update }}
+    steps:
+      - id: plan
+        env:
+          EVENT: ${{ github.event_name }}
+          SERIE: ${{ inputs.serie }}
+          KINDS: ${{ inputs.escrituracoes }}
+          UPDATE: ${{ inputs.atualizar_tabelas }}
+          BASE: ${{ github.base_ref }}
+          SHA: ${{ github.sha }}
+        run: |
+          case "$EVENT" in
+            schedule)
+              matrix='[{"serie":"16.0","ref":"16.0"},{"serie":"18.0","ref":"18.0"}]' ;;
+            workflow_dispatch)
+              matrix="[{\"serie\":\"$SERIE\",\"ref\":\"$SERIE\"}]" ;;
+            pull_request)
+              matrix="[{\"serie\":\"$BASE\",\"ref\":\"$SHA\"}]" ;;
+          esac
+          echo "matrix=$matrix" >>"$GITHUB_OUTPUT"
+          echo "kinds=${KINDS:-efd_icms_ipi,efd_pis_cofins,ecd,ecf}" >>"$GITHUB_OUTPUT"
+          [ "$UPDATE" = true ] && update=1 || update=0
+          echo "update=$update" >>"$GITHUB_OUTPUT"
+
+  generate:
+    needs: plan
+    runs-on: [kmee-l10n-br]
+    timeout-minutes: 90
+    name: generate ${{ matrix.serie }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    container: ghcr.io/oca/oca-ci/py3.10-odoo${{ matrix.serie }}:latest
+    services:
+      postgres:
+        image: postgres:12
+        env:
+          POSTGRES_USER: odoo
+          POSTGRES_PASSWORD: odoo
+          POSTGRES_DB: odoo
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.ref }}
+          persist-credentials: false
+      - name: Generate the files of the scenarios
+        run: tools/pva/gerar.sh pva-saida/arquivos "${{ needs.plan.outputs.kinds }}"
+      - name: Static check (confere.py)
+        run: tools/pva/confere.sh pva-saida/arquivos
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pva-arquivos-${{ matrix.serie }}
+          path: pva-saida/arquivos
+          if-no-files-found: warn
+      - name: Give the workspace back to the runner user
+        if: always()
+        run: chown -R "$(stat -c %u:%g "$GITHUB_WORKSPACE/..")" "$GITHUB_WORKSPACE"
+
+  validate:
+    needs: [plan, generate]
+    runs-on: [kmee-l10n-br]
+    timeout-minutes: 240
+    name: pva ${{ matrix.serie }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      PVA_PREFIXO: pva-ci-${{ github.run_id }}-${{ matrix.serie }}
+      PVA_ATUALIZAR_TABELAS: ${{ needs.plan.outputs.update }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.ref }}
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: pva-arquivos-${{ matrix.serie }}
+          path: pva-saida/arquivos
+      - name: Validate in the PVA
+        run: tools/pva/validar.sh pva-saida/arquivos pva-saida/pva
+      - name: Summary of the reports
+        if: always()
+        run: python3 -I tools/pva/resumo.py pva-saida/pva pva-saida/arquivos
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pva-relatorios-${{ matrix.serie }}
+          path: |
+            pva-saida/arquivos
+            pva-saida/pva
+          if-no-files-found: warn
+      - name: Remove the containers of this run
+        if: always()
+        run: |
+          pid=pva-saida/pva/validar.pid
+          if [ -f "$pid" ]; then kill "$(cat "$pid")" 2>/dev/null || true; fi
+          docker ps -aq --filter "name=^${PVA_PREFIXO}-" | xargs -r docker rm -f
+          # containers left by a job killed in the middle: no job lasts 5 hours
+          limit=$(date -d "5 hours ago" +%s)
+          docker ps -a --filter "name=^pva-ci-" --format '{{.ID}} {{.CreatedAt}}' |
+            while read -r id day time zone _; do
+              if [ "$(date -d "$day $time $zone" +%s)" -lt "$limit" ]; then
+                docker rm -f "$id"
+              fi
+            done
+          docker ps -a --filter "name=^pva-ci-" --format '{{.Names}} {{.Status}}'
