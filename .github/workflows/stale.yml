@@ -6,7 +6,7 @@ on:
 
 jobs:
   stale:
-    runs-on: [kmee-l10n-br]
+    runs-on: ubuntu-latest
     steps:
       - name: Stale PRs and issues policy
         uses: actions/stale@v9
