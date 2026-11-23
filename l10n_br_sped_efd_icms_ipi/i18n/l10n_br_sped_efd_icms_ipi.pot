@@ -8448,6 +8448,11 @@ msgid "Data relativa a última entrada da mercadoria"
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_e310__DEB_ESP_FCP
+msgid "Deb Esp Fcp"
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_0000__debug
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_0000__debug
 msgid "Debug"
@@ -21661,6 +21666,15 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
+#. odoo-python
+#: code:addons/l10n_br_sped_efd_icms_ipi/models/sped_efd_icms_ipi.py:0
+msgid ""
+"There is ICMS-ST or DIFAL in the period for %(states)s, and the tax "
+"assessment has no ICMS-ST nor DIFAL by state yet: the E210 and the E310 of "
+"these states cannot be generated."
+msgstr ""
+
+#. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_d100__TP_CT_E
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_d100__TP_CT_E
 msgid "Tipo de Conhecimento"
@@ -25386,7 +25400,6 @@ msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_e310__DEB_ESP_FCP
-#: model:ir.model.fields,field_description:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_e310__DEB_ESP_FCP
 msgid "Valores recolhidos ou a recolher (DEB_ESP_FCP)"
 msgstr ""
 
@@ -25402,7 +25415,6 @@ msgstr ""
 
 #. module: l10n_br_sped_efd_icms_ipi
 #: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_20_e310__DEB_ESP_FCP
-#: model:ir.model.fields,help:l10n_br_sped_efd_icms_ipi.field_l10n_br_sped_efd_icms_ipi_e310__DEB_ESP_FCP
 msgid "Valores recolhidos ou a recolher, extra-apuração - FCP"
 msgstr ""
 
