@@ -1,0 +1,51 @@
+name: confere
+
+# Static check of the EFD files that the modules generate, against the layout
+# that sped-extractor extracted from the descriptor of the PVA (tools/pva).
+# Hosted runner: safe for pull requests from forks. The PVA itself runs in
+# pva.yml, on the self-hosted runner.
+
+on:
+  pull_request:
+    branches:
+      - "16.0"
+      - "18.0"
+    paths:
+      - "l10n_br_sped_**"
+      - "l10n_br_tax_assessment/**"
+      - "tools/pva/**"
+      - ".github/workflows/confere.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: confere-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  confere:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    container: ghcr.io/oca/oca-ci/py3.10-odoo${{ github.base_ref }}:latest
+    services:
+      postgres:
+        image: postgres:12
+        env:
+          POSTGRES_USER: odoo
+          POSTGRES_PASSWORD: odoo
+          POSTGRES_DB: odoo
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Generate the EFD files of the scenarios
+        run: tools/pva/gerar.sh pva-saida/arquivos efd_icms_ipi,efd_pis_cofins
+      - name: Static check (confere.py)
+        run: tools/pva/confere.sh pva-saida/arquivos
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: confere-arquivos
+          path: pva-saida/arquivos
+          if-no-files-found: warn

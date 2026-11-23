@@ -1,0 +1,4 @@
+escrituracao,arquivo,etapa,tipo,mensagem,motivo
+ecd,*,validacao,advertencia,Não houve recuperação da ECD anterior,O PVA não tem a ECD do ano anterior do cenário para recuperar.
+ecf,*,validacao,erro,Deve haver recuperação de ECD pois a pessoa jurídica indicou possuir contabilidade,O PVA da ECF não tem a ECD do ano do cenário para recuperar (registro C040).
+ecf,*,importacao,advertencia,Dados atualizados na Linha de acordo com a tabela da RFB,"Na importação o PVA reescreve as linhas das tabelas dinâmicas (P100, P150 e afins) pela tabela da Receita."
