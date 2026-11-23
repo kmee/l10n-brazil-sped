@@ -23,6 +23,7 @@ import os
 import re
 import subprocess
 import sys
+import threading
 import time
 
 DISPLAY = ":99"
@@ -410,8 +411,27 @@ class Driver:
             state["validated"] = True
             state["quiet"] = None
 
+    def watch_validation(self, seen, stop):
+        """The validation window can last less than a poll of the main loop:
+        a light loop of its own catches it."""
+        while not stop.is_set():
+            if run("xdotool", "search", "--onlyvisible", "--name", VALIDATING.pattern):
+                seen.set()
+                return
+            time.sleep(0.1)
+
     def import_and_validate(self, timeout=1800):
         """From the file chooser to the result of the validation."""
+        seen, stop = threading.Event(), threading.Event()
+        watcher = threading.Thread(target=self.watch_validation, args=(seen, stop))
+        watcher.start()
+        try:
+            self._import_and_validate(timeout, seen)
+        finally:
+            stop.set()
+            watcher.join()
+
+    def _import_and_validate(self, timeout, seen):
         chooser = self.open_import()
         self.choose_file(chooser, self.path)
         limit = time.time() + timeout
@@ -430,7 +450,7 @@ class Driver:
             if titles != last:
                 self.log(f"windows {titles}")
                 last = titles
-            if any(VALIDATING.search(t) for t in titles):
+            if seen.is_set() or any(VALIDATING.search(t) for t in titles):
                 state["validating"] = True
             for win in dialogs:
                 if self.handle(win, state):
@@ -439,6 +459,15 @@ class Driver:
                 state["quiet"] = None
             elif self.cfg.get("transport_question") and not state["validating"]:
                 self.ecf_step(state)
+            else:
+                state["quiet"] = state["quiet"] or time.time()
+                if time.time() - state["quiet"] > 120:
+                    # the result went by unseen: read whatever report is on
+                    # the screen and let resumo.py judge it
+                    self.log("no window for 120s: reading the report as it is")
+                    self.result = "desconhecido"
+                    self.shot("sem_resultado")
+                    return
             time.sleep(0.4)
         self.shot("validacao_timeout")
         raise Lost("no result from the validation")
