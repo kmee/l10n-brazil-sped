@@ -12,11 +12,16 @@ out=$2
 prefix=${PVA_PREFIXO:-pva-ci-local}
 update=${PVA_ATUALIZAR_TABELAS:-0}
 mkdir -p "$out"
+# a cancelled job must not start one more container
+echo $$ >"$out/validar.pid"
+stop=
+trap 'stop=1' INT TERM HUP
 network=(--network none)
 [ "$update" = 1 ] && network=()
 rc=0
 shopt -s nullglob
 for file in "$files"/*__*.txt; do
+    [ -n "$stop" ] && break
     name=$(basename "$file" .txt)
     kind=${name%%__*}
     if ! tag=$("$here/imagem.sh" "$kind"); then
@@ -42,4 +47,6 @@ for file in "$files"/*__*.txt; do
         rc=1
     fi
 done
+[ -n "$stop" ] && rc=130
+rm -f "$out/validar.pid"
 exit $rc

@@ -148,5 +148,15 @@ jobs:
       - name: Remove the containers of this run
         if: always()
         run: |
+          pid=pva-saida/pva/validar.pid
+          if [ -f "$pid" ]; then kill "$(cat "$pid")" 2>/dev/null || true; fi
           docker ps -aq --filter "name=^${PVA_PREFIXO}-" | xargs -r docker rm -f
+          # containers left by a job killed in the middle: no job lasts 5 hours
+          limit=$(date -d "5 hours ago" +%s)
+          docker ps -a --filter "name=^pva-ci-" --format '{{.ID}} {{.CreatedAt}}' |
+            while read -r id day time zone _; do
+              if [ "$(date -d "$day $time $zone" +%s)" -lt "$limit" ]; then
+                docker rm -f "$id"
+              fi
+            done
           docker ps -a --filter "name=^pva-ci-" --format '{{.Names}} {{.Status}}'
