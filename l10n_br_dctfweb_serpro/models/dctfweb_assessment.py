@@ -119,7 +119,7 @@ class DctfwebAssessment(models.Model):
 
     def _taxpayer_cnpj(self):
         self.ensure_one()
-        digits = "".join(filter(str.isdigit, self.company_id.cnpj_cpf or ""))
+        digits = "".join(filter(str.isdigit, self.company_id.vat or ""))
         if len(digits) != 14:
             raise UserError(
                 _("The company %s has no valid CNPJ.") % self.company_id.display_name
@@ -167,7 +167,7 @@ class DctfwebAssessment(models.Model):
         refusal has to travel as a return value.
         """
         self.ensure_one()
-        handler = getattr(self, "_serpro_%s" % service_key)
+        handler = getattr(self, f"_serpro_{service_key}")
         try:
             return handler()
         except ServiceRefused as refusal:
@@ -220,7 +220,7 @@ class DctfwebAssessment(models.Model):
         if pendencies:
             raise UserError(
                 _("The MIT still has pendencies:\n%s")
-                % "\n".join("- %s" % pendency for pendency in pendencies)
+                % "\n".join(f"- {pendency}" for pendency in pendencies)
             )
         data = self._build_mit_payload()
         data["TransmissaoImediata"] = self.immediate_transmission
@@ -421,6 +421,6 @@ class DctfwebAssessment(models.Model):
             "type": "ir.actions.act_window",
             "name": _("Transmissions"),
             "res_model": "l10n_br_dctfweb.transmission",
-            "view_mode": "tree,form",
+            "view_mode": "list,form",
             "domain": [("assessment_id", "=", self.id)],
         }

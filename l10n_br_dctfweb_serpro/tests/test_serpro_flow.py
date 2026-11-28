@@ -317,7 +317,7 @@ class TestSerproFlow(TestSerproCommon):
             self.mit.action_serpro_consult_assessment()
 
     def test_a_company_without_cnpj_is_refused_before_the_call(self):
-        self.company.sudo().cnpj_cpf = False
+        self.company.sudo().vat = False
         with mock.patch(MOCK_POST) as post, self.assertRaises(UserError):
             self.mit.action_serpro_close_mit()
         post.assert_not_called()

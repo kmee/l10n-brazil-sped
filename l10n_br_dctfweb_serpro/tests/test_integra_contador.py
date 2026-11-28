@@ -72,15 +72,17 @@ class TestIntegraContador(TestSerproCommon):
         self.assertTrue(self.transport.succeeded(body))
 
     def test_a_timeout_becomes_a_user_error(self):
-        with mock.patch(
-            MOCK_POST, side_effect=requests.exceptions.Timeout
-        ), self.assertRaises(UserError):
+        with (
+            mock.patch(MOCK_POST, side_effect=requests.exceptions.Timeout),
+            self.assertRaises(UserError),
+        ):
             self.transport.call(self.company, "12345678000195", "close_assessment", {})
 
     def test_a_connection_error_becomes_a_user_error(self):
-        with mock.patch(
-            MOCK_POST, side_effect=requests.exceptions.ConnectionError
-        ), self.assertRaises(UserError):
+        with (
+            mock.patch(MOCK_POST, side_effect=requests.exceptions.ConnectionError),
+            self.assertRaises(UserError),
+        ):
             self.transport.call(self.company, "12345678000195", "close_assessment", {})
 
     def test_an_http_error_without_a_body_becomes_a_user_error(self):
@@ -156,8 +158,9 @@ class TestIntegraContador(TestSerproCommon):
 
     def test_the_token_never_reaches_the_log(self):
         """The log gets the service and the record, never the credential."""
-        with mock.patch.object(integra_contador._logger, "info") as info, mock.patch(
-            MOCK_POST, return_value=answer({})
+        with (
+            mock.patch.object(integra_contador._logger, "info") as info,
+            mock.patch(MOCK_POST, return_value=answer({})),
         ):
             self.transport.call(
                 self.company,

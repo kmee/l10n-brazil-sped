@@ -87,7 +87,7 @@ class IntegraContador(models.AbstractModel):
                     SERPRO_TOKEN_URL[company.serpro_environment],
                     data={"grant_type": "client_credentials"},
                     headers={
-                        "Authorization": "Basic %s" % basic,
+                        "Authorization": f"Basic {basic}",
                         "Content-Type": "application/x-www-form-urlencoded",
                     },
                     cert=certificate,
@@ -179,7 +179,7 @@ class IntegraContador(models.AbstractModel):
                     url,
                     json=body,
                     headers={
-                        "Authorization": "Bearer %s" % token,
+                        "Authorization": f"Bearer {token}",
                         "jwt_token": company.sudo().serpro_jwt_token or "",
                         "Content-Type": "application/json",
                     },

@@ -77,12 +77,12 @@ class ResCompany(models.Model):
 
     def _serpro_contractor_cnpj(self):
         self.ensure_one()
-        return self._serpro_digits(self.serpro_contractor_cnpj or self.cnpj_cpf)
+        return self._serpro_digits(self.serpro_contractor_cnpj or self.vat)
 
     def _serpro_author_cnpj(self):
         self.ensure_one()
         return self._serpro_digits(
-            self.serpro_author_cnpj or self.serpro_contractor_cnpj or self.cnpj_cpf
+            self.serpro_author_cnpj or self.serpro_contractor_cnpj or self.vat
         )
 
     def _serpro_token_expired(self):

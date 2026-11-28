@@ -34,11 +34,14 @@ def answer(data=None, status=200, messages=None, http_status=200):
 class TestSerproCommon(AccountTestInvoicingCommon):
     """A company with credentials and an assessed MIT to send."""
 
+    # without it the common guesses the chart of the country, l10n_br
+    chart_template = "generic_coa"
+
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.company = cls.company_data["company"]
-        cls.company.write({"cnpj_cpf": "12.345.678/0001-95"})
+        cls.company.write({"vat": "12.345.678/0001-95"})
         cls.company.sudo().write(
             {
                 "serpro_environment": "trial",

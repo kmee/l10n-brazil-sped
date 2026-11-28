@@ -12,38 +12,38 @@
                     name="action_serpro_close_mit"
                     type="object"
                     string="Close at the authority"
-                    states="assessed,closed"
+                    invisible="state not in ('assessed', 'closed')"
                     class="oe_highlight"
                 />
                 <button
                     name="action_serpro_closing_status"
                     type="object"
                     string="Closing status"
-                    attrs="{'invisible': [('serpro_protocol', '=', False)]}"
+                    invisible="not serpro_protocol"
                 />
                 <button
                     name="action_serpro_transmit_dctfweb"
                     type="object"
                     string="Transmit DCTFWeb"
-                    states="closed"
+                    invisible="state != 'closed'"
                 />
                 <button
                     name="action_serpro_issue_darf"
                     type="object"
                     string="Issue DARF"
-                    states="closed,transmitted"
+                    invisible="state not in ('closed', 'transmitted')"
                 />
                 <button
                     name="action_serpro_receipt"
                     type="object"
                     string="Receipt"
-                    states="transmitted"
+                    invisible="state != 'transmitted'"
                 />
                 <button
                     name="action_serpro_full_declaration"
                     type="object"
                     string="Full declaration"
-                    states="transmitted"
+                    invisible="state != 'transmitted'"
                 />
             </button>
 
@@ -85,17 +85,17 @@
                         name="action_serpro_fetch_xml"
                         type="object"
                         string="Fetch declaration XML"
-                        states="closed,transmitted"
+                        invisible="state not in ('closed', 'transmitted')"
                     />
                     <button
                         name="action_serpro_consult_assessment"
                         type="object"
                         string="Consult assessment"
-                        attrs="{'invisible': [('serpro_assessment_id', '=', False)]}"
+                        invisible="not serpro_assessment_id"
                     />
                     <field name="transmission_count" invisible="1" />
                     <field name="transmission_ids">
-                        <tree create="false">
+                        <list create="false">
                             <field name="create_date" />
                             <field name="system" />
                             <field name="service" />
@@ -103,7 +103,7 @@
                             <field name="status" />
                             <field name="success" />
                             <field name="messages" optional="show" />
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>
