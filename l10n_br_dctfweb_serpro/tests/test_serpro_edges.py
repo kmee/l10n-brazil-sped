@@ -10,6 +10,7 @@ import requests
 
 from odoo.exceptions import UserError
 from odoo.tests import tagged
+from odoo.tools import mute_logger
 
 from ..models.integra_contador import _CertificateFiles
 from .common import MOCK_POST, FakeResponse, TestSerproCommon, answer
@@ -91,6 +92,7 @@ class TestTransportEdges(TestSerproCommon):
         with self.assertRaises(UserError):
             self.transport._get_token(self.company)
 
+    @mute_logger("odoo.addons.l10n_br_dctfweb_serpro.models.integra_contador")
     def test_a_token_request_timeout_becomes_a_user_error(self):
         self._production_without_token()
         with (
@@ -99,6 +101,7 @@ class TestTransportEdges(TestSerproCommon):
         ):
             self.transport._get_token(self.company)
 
+    @mute_logger("odoo.addons.l10n_br_dctfweb_serpro.models.integra_contador")
     def test_a_token_request_failure_becomes_a_user_error(self):
         self._production_without_token()
         with (

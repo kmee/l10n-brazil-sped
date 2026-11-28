@@ -25,14 +25,14 @@ class ServiceRefused(Exception):
         super().__init__(messages)
         self.messages = messages
 
-    def notification(self):
+    def notification(self, env):
         return {
             "type": "ir.actions.client",
             "tag": "display_notification",
             "params": {
                 "type": "danger",
                 "sticky": True,
-                "title": _("The authority refused the request"),
+                "title": env._("The authority refused the request"),
                 "message": self.messages,
             },
         }
@@ -171,7 +171,7 @@ class DctfwebAssessment(models.Model):
         try:
             return handler()
         except ServiceRefused as refusal:
-            return refusal.notification()
+            return refusal.notification(self.env)
 
     def _call(self, service_key, data):
         """Call the transport and keep the trail."""

@@ -9,6 +9,7 @@ import requests
 
 from odoo.exceptions import UserError
 from odoo.tests import tagged
+from odoo.tools import mute_logger
 
 from ..models import integra_contador
 from .common import MOCK_POST, TestSerproCommon, answer
@@ -71,6 +72,7 @@ class TestIntegraContador(TestSerproCommon):
         self.assertEqual(body["dados"], {"idApuracao": 7})
         self.assertTrue(self.transport.succeeded(body))
 
+    @mute_logger("odoo.addons.l10n_br_dctfweb_serpro.models.integra_contador")
     def test_a_timeout_becomes_a_user_error(self):
         with (
             mock.patch(MOCK_POST, side_effect=requests.exceptions.Timeout),
@@ -78,6 +80,7 @@ class TestIntegraContador(TestSerproCommon):
         ):
             self.transport.call(self.company, "12345678000195", "close_assessment", {})
 
+    @mute_logger("odoo.addons.l10n_br_dctfweb_serpro.models.integra_contador")
     def test_a_connection_error_becomes_a_user_error(self):
         with (
             mock.patch(MOCK_POST, side_effect=requests.exceptions.ConnectionError),
