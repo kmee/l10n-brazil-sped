@@ -16,6 +16,10 @@ from .common import AccountExportCommon
 
 @tagged("post_install", "-at_install")
 class LayoutCase(AccountExportCommon):
+    # On 18.0 the test loader only takes the methods a class defines itself;
+    # without this, a layout that only inherits the contract runs no test.
+    allow_inherited_tests_method = True
+
     _layout = None  # o modulo de layout preenche
     _is_spreadsheet = False
     _fixed_width = None  # largura unica, ou tupla de larguras aceitas
