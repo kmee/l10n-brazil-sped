@@ -15,7 +15,7 @@ class AccountExport(models.Model):
         cabecalho = (
             fh.zero_pad(2, 8)
             + fh.format_date(self.date_end)
-            + fh.only_digits(self.company_id.cnpj_cpf)
+            + fh.only_digits(self.company_id.vat)
             + fh.format_date(self.date_start)
             + fh.format_date(self.date_end)
             + fh.pad("Arquivo de integracao dos lancamentos contabeis.", 100)

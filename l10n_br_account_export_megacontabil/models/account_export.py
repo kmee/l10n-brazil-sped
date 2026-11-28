@@ -16,7 +16,7 @@ class AccountExport(models.Model):
         """
         out = self._new_buffer()
         out.write("00MEGACONTABIL\n")
-        out.write("01" + (self.company_id.cnpj_cpf or "") + "\n")
+        out.write("01" + (self.company_id.vat or "") + "\n")
         for move in self.move_ids:
             for conta_d, conta_c, valor, hist, data in self._pair_entries(move):
                 linha = (
