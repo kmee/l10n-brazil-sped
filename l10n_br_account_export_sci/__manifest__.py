@@ -3,14 +3,15 @@
 
 {
     "name": "Exportacao Contabil - SCI (Visual Sucessor / Unico)",
-    "summary": "Exporta lancamentos contabeis no layout do SCI (Visual Sucessor / Unico)",
+    "summary": "Exporta lancamentos contabeis no layout do SCI "
+    "(Visual Sucessor / Unico)",
     "version": "18.0.1.0.0",
     "category": "Localisation",
     "license": "AGPL-3",
     "author": "KMEE, Odoo Community Association (OCA)",
     "maintainers": ["mileo"],
     "development_status": "Alpha",
-    "website": "https://github.com/KMEE/kmee-odoo-addons",
+    "website": "https://github.com/kmee/l10n-brazil-sped",
     "depends": ["l10n_br_account_export"],
     "data": ["data/account_export_config.xml"],
     "installable": True,
