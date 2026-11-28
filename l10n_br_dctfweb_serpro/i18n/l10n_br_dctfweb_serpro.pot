@@ -1,0 +1,677 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_br_dctfweb_serpro
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "%(service)s: %(messages)s"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__rfb_situation
+msgid ""
+"A declaration that was not transmitted is in progress; once it is, it "
+"becomes active."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__rfb_situation__active
+msgid "Active"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_transmission__endpoint__apoiar
+msgid "Apoiar"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__immediate_transmission
+msgid ""
+"Ask the authority to transmit the DCTFWeb as soon as the MIT assessment is "
+"closed, which spares signing the declaration XML."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__assessment_id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__assessment_id
+msgid "Assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "At the authority"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_jwt_token
+msgid "Attorney token"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__serpro_assessment_id
+msgid "Authority assessment id"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__billed
+msgid "Billed"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__billed_count
+msgid "Billed calls already made"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_cost_warning_form
+msgid "Cancel"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__dctfweb_category
+msgid ""
+"Category of the DCTFWeb the MIT feeds. The monthly assessment of a legal "
+"entity is the general monthly one."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Close at the authority"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "Close the MIT at the authority first."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "Close the MIT locally before sending it."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__closing_status
+msgid "Closing Status"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__serpro_protocol
+msgid "Closing protocol"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Closing status"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model,name:l10n_br_dctfweb_serpro.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_cost_warning_form
+msgid "Confirm"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_cost_warning_form
+msgid "Confirm and stop warning"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Consult assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_transmission__endpoint__consultar
+msgid "Consultar"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_contractor_cnpj
+msgid "Contractor CNPJ"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__create_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__create_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_transmission__system__dctfweb
+msgid "DCTFWeb"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model,name:l10n_br_dctfweb_serpro.model_l10n_br_dctfweb_cost_warning
+msgid "DCTFWeb billed call warning"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.actions.act_window,name:l10n_br_dctfweb_serpro.action_dctfweb_transmission
+msgid "DCTFWeb transmissions"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model,name:l10n_br_dctfweb_serpro.model_l10n_br_dctfweb_assessment
+msgid "DCTFWeb/MIT Assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model,name:l10n_br_dctfweb_serpro.model_l10n_br_dctfweb_transmission
+msgid "DCTFWeb/MIT Transmission"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__darf_file
+msgid "Darf File"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__darf_filename
+msgid "Darf Filename"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__dctfweb_category
+msgid "Dctfweb Category"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_transmission__endpoint__declarar
+msgid "Declarar"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__declaration_xml
+msgid "Declaration Xml"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__declaration_xml_filename
+msgid "Declaration Xml Filename"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__display_name
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Documents"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_transmission__endpoint__emitir
+msgid "Emitir"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__endpoint
+msgid "Endpoint"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__environment
+msgid "Environment"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Fetch declaration XML"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid ""
+"Fetch the declaration XML, sign it with the e-CNPJ certificate and attach it"
+" before transmitting. Closing the MIT with immediate transmission avoids "
+"this step."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__full_declaration_file
+msgid "Full Declaration File"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__full_declaration_filename
+msgid "Full Declaration Filename"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Full declaration"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__dctfweb_category__geral_13o_salario
+msgid "General 13th salary"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__dctfweb_category__geral_mensal
+msgid "General monthly"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__id
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__immediate_transmission
+msgid "Immediate Transmission"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__rfb_situation__in_progress
+msgid "In progress"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__dctfweb_category__pf_13o_salario
+msgid "Individual 13th salary"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__dctfweb_category__pf_mensal
+msgid "Individual monthly"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_company_form_dctfweb_serpro
+msgid "Integra Contador"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_consumer_key
+msgid "Integra Contador consumer key"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_consumer_secret
+msgid "Integra Contador consumer secret"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_environment
+msgid "Integra Contador environment"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_access_token
+msgid "Integra Contador token"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model,name:l10n_br_dctfweb_serpro.model_l10n_br_dctfweb_integra_contador
+msgid "Integra Contador transport"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Issue DARF"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_res_company__serpro_access_token
+msgid "Kept only to avoid asking for a new token on every call."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__dctfweb_category__reclamatoria_trabalhista
+msgid "Labour claim"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__write_uid
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__write_date
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_transmission__system__mit
+msgid "MIT"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__messages
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_transmission_form
+msgid "Messages"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_transmission__endpoint__monitorar
+msgid "Monitorar"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__name
+msgid "Name"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__res_company__serpro_environment__production
+msgid "Production"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__protocol
+msgid "Protocol"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__receipt
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Receipt"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__receipt_number
+msgid "Receipt Number"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__request
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_transmission_form
+msgid "Request"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_author_cnpj
+msgid "Request author CNPJ"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__response
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_transmission_form
+msgid "Response"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__service_key
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__service_key
+msgid "Service Key"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_cost_warning__service_name
+msgid "Service Name"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__service
+msgid "Service id"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/integra_contador.py:0
+msgid "Set the Integra Contador environment of the company %s."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__signed_declaration_xml
+msgid "Signed declaration XML"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__rfb_situation
+msgid "Situation at the authority"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__dctfweb_category__espetaculo_desportivo
+msgid "Sporting event"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__status
+msgid "Status"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__success
+msgid "Success"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__system
+msgid "System"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_res_company__serpro_author_cnpj
+msgid ""
+"The CNPJ asking for the data, the accounting firm when it files for a "
+"client. Leave it empty to use the contractor."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_res_company__serpro_contractor_cnpj
+msgid ""
+"The CNPJ that signed the Integra Contador contract. Leave it empty to use "
+"the CNPJ of this company."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__billed
+msgid "The Integra Contador charges for this call."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_cost_warning_form
+msgid ""
+"The Integra Contador charges for this request. Confirm to\n"
+"                    send it."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/integra_contador.py:0
+msgid "The Integra Contador did not answer the token request in time."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_res_company__serpro_warn_cost
+msgid ""
+"The Integra Contador is billed per request. With this on, every billed call "
+"asks for confirmation first."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/integra_contador.py:0
+msgid "The Integra Contador refused the credentials (HTTP %s)."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/integra_contador.py:0
+msgid "The Integra Contador token request failed."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid ""
+"The MIT still has pendencies:\n"
+"%s"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "The authority answered no collection document."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "The authority answered no declaration XML."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "The authority has not given this MIT an id yet."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "The authority refused the request"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__request
+msgid "The body that was sent, without any credential."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/integra_contador.py:0
+msgid "The call to the service %s failed."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/integra_contador.py:0
+msgid ""
+"The company %s has no Integra Contador consumer key and secret. They are "
+"issued by the Serpro store."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "The company %s has no valid CNPJ."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__signed_declaration_xml
+msgid ""
+"The declaration XML signed with the e-CNPJ certificate. The authority "
+"requires it character by character identical to the one it answered."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_res_company__serpro_jwt_token
+msgid ""
+"The jwt_token the Authenticate Attorney service answers, used when an "
+"accounting firm files for its client."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/integra_contador.py:0
+msgid "The service %(name)s answered HTTP %(status)s."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/integra_contador.py:0
+msgid "The service %s did not answer in time."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_token_expiration
+msgid "Token expiration"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Transmission"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__transmission_count
+msgid "Transmission Count"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__transmission_ids
+msgid "Transmissions"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model_terms:ir.ui.view,arch_db:l10n_br_dctfweb_serpro.view_dctfweb_assessment_form_serpro
+msgid "Transmit DCTFWeb"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__res_company__serpro_environment__trial
+msgid "Trial"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,field_description:l10n_br_dctfweb_serpro.field_res_company__serpro_warn_cost
+msgid "Warn before a billed call"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_transmission__messages
+msgid "What the authority answered, code and text."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields.selection,name:l10n_br_dctfweb_serpro.selection__l10n_br_dctfweb_assessment__dctfweb_category__afericao
+msgid "Works assessment"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__serpro_assessment_id
+msgid "idApuracao, the identifier the authority gave the assessment."
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#. odoo-python
+#: code:addons/l10n_br_dctfweb_serpro/models/dctfweb_assessment.py:0
+msgid "no message"
+msgstr ""
+
+#. module: l10n_br_dctfweb_serpro
+#: model:ir.model.fields,help:l10n_br_dctfweb_serpro.field_l10n_br_dctfweb_assessment__serpro_protocol
+msgid "protocoloEncerramento: what the closing status is asked about."
+msgstr ""
