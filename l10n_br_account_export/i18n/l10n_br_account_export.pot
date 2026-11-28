@@ -440,11 +440,6 @@ msgid "Nenhum lancamento encontrado para o periodo e os filtros informados."
 msgstr ""
 
 #. module: l10n_br_account_export
-#: model:ir.model.fields,field_description:l10n_br_account_export.field_l10n_br_account_export__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
-msgstr ""
-
-#. module: l10n_br_account_export
 #: model:ir.model.fields,field_description:l10n_br_account_export.field_l10n_br_account_export__activity_date_deadline
 msgid "Next Activity Deadline"
 msgstr ""
