@@ -8,7 +8,7 @@ Um cabeçalho por lançamento (`LC1`) e um detalhe por partida (`LC2`).
 
 ## Estrutura
 
-### Registro `LC1` (cabeçalho do lançamento)
+**Registro `LC1` (cabeçalho do lançamento)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|
@@ -20,7 +20,7 @@ Um cabeçalho por lançamento (`LC1`) e um detalhe por partida (`LC2`).
 | 30-34 | reservado | espaços |
 | 35-64 | origem | `Omie` |
 
-### Registro `LC2` (partida)
+**Registro `LC2` (partida)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

@@ -8,7 +8,7 @@ Uma linha por partida: o lado sem valor fica com a conta vazia.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

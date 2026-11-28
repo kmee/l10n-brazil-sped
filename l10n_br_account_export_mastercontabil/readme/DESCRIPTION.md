@@ -8,7 +8,7 @@ Data no início, valor com ponto decimal e sufixo fixo.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

@@ -8,7 +8,7 @@ Híbrido: os campos são delimitados, mas cada um tem largura fixa própria.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

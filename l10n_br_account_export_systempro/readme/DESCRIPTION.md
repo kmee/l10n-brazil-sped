@@ -8,7 +8,7 @@ Uma linha por partida, competência no início.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

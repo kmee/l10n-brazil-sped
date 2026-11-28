@@ -8,7 +8,7 @@ Igual ao layout Domínio, mais um segundo arquivo com o plano de contas.
 
 ## Estrutura
 
-### Registro `0200` (conta do plano)
+**Registro `0200` (conta do plano)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

@@ -8,7 +8,7 @@ Uma linha por partida, com moeda explícita.
 
 ## Estrutura
 
-### Cabeçalho
+**Cabeçalho**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

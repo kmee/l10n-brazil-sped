@@ -8,7 +8,7 @@ Campos numéricos zero-padded, data compacta no fim.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

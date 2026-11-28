@@ -8,7 +8,7 @@ Registro de abertura seguido de um registro por partida.
 
 ## Estrutura
 
-### Registro `0010` (abertura)
+**Registro `0010` (abertura)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|
@@ -20,7 +20,7 @@ Registro de abertura seguido de um registro por partida.
 | 37-44 | data final | `AAAAMMDD` |
 | 45-84 | descrição | 40 |
 
-### Registro `1004` (partida)
+**Registro `1004` (partida)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

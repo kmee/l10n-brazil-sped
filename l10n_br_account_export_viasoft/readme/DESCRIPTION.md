@@ -8,7 +8,7 @@ Sequencial, data compacta, contas e valor em largura fixa.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

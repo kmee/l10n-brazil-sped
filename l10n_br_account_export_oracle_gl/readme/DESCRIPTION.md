@@ -8,7 +8,7 @@ Colunas no vocabulário da interface do General Ledger.
 
 ## Estrutura
 
-### Cabeçalho
+**Cabeçalho**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

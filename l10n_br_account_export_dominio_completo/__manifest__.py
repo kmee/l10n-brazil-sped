@@ -10,7 +10,7 @@
     "author": "KMEE, Odoo Community Association (OCA)",
     "maintainers": ["mileo"],
     "development_status": "Alpha",
-    "website": "https://github.com/KMEE/kmee-odoo-addons",
+    "website": "https://github.com/kmee/l10n-brazil-sped",
     "depends": ["l10n_br_account_export", "l10n_br_account_export_dominio"],
     "data": ["data/account_export_config.xml"],
     "installable": True,

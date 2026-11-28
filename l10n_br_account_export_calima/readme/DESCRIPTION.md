@@ -8,7 +8,7 @@ Registro de abertura (252 posições) e um registro `301` por partida (597).
 
 ## Estrutura
 
-### Registro `abertura` (identificação)
+**Registro `abertura` (identificação)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|
@@ -19,7 +19,7 @@ Registro de abertura (252 posições) e um registro `301` por partida (597).
 | 43-52 | data final | `dd/mm/aaaa` |
 | 53-152 | descrição | 100 |
 
-### Registro `301` (partida)
+**Registro `301` (partida)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

@@ -8,7 +8,7 @@ Uma linha por partida, com débito e crédito em **colunas separadas**.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

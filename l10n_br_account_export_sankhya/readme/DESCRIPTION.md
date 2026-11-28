@@ -8,7 +8,7 @@ Uma linha por partida, com cabeçalho de colunas.
 
 ## Estrutura
 
-### Cabeçalho
+**Cabeçalho**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

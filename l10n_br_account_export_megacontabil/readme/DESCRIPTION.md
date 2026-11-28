@@ -8,21 +8,21 @@ Cabeçalho de identificação seguido das partidas.
 
 ## Estrutura
 
-### Registro `00` (identificação do sistema)
+**Registro `00` (identificação do sistema)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|
 | 1-2 | tipo | `00` |
 | 3+ | nome | `MEGACONTABIL` |
 
-### Registro `01` (empresa)
+**Registro `01` (empresa)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|
 | 1-2 | tipo | `01` |
 | 3+ | CNPJ | formatado |
 
-### Registro `02` (partida)
+**Registro `02` (partida)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

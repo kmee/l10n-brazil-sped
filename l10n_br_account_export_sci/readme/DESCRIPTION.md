@@ -8,7 +8,7 @@ Uma linha por partida, com sequencial próprio e conta `0` no lado vazio.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

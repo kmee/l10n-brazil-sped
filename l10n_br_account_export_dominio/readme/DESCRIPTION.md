@@ -8,14 +8,14 @@ Cada linha começa **e termina** com o separador. Registros hierárquicos.
 
 ## Estrutura
 
-### Registro `0000` (abertura do arquivo)
+**Registro `0000` (abertura do arquivo)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|
 | 1 | tipo de registro | `0000` |
 | 2 | CNPJ da empresa | só dígitos |
 
-### Registro `6000` (abertura do lançamento)
+**Registro `6000` (abertura do lançamento)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|
@@ -23,7 +23,7 @@ Cada linha começa **e termina** com o separador. Registros hierárquicos.
 | 2 | indicador | `X` (lançamento com partidas) |
 | 3-5 | reservados | vazios |
 
-### Registro `6100` (partida)
+**Registro `6100` (partida)**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

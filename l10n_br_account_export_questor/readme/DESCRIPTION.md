@@ -8,7 +8,7 @@ Campos numéricos com zeros à esquerda e a data em dois formatos.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

@@ -8,7 +8,7 @@ Prefixo fixo `68`, data sem ano e valor com três decimais.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|

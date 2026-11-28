@@ -8,7 +8,7 @@ Largura fixa, valor em centavos sem separador.
 
 ## Estrutura
 
-### Partida
+**Partida**
 
 | Campo | Conteúdo | Formato |
 |---|---|---|
